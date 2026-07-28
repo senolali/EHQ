@@ -595,12 +595,21 @@ Return STRICT JSON ONLY (no markdown):
 
 
 def _gen_call(prompt: str, temperature: float = 0.8) -> Optional[str]:
+    # use_cache=False: ayni fact bloguyla tekrar tekrar cagriliyoruz ve HER
+    # seferinde FARKLI bir soru istiyoruz (temperature=0.8 rastgeleligi
+    # bunun icin var). asu_client'in diski cache'i (model+prompt+query hash)
+    # temperature'i anahtara katmiyor -- prompt ayni kaldiginda (bir alt
+    # kategoride art arda "duplicate question" ile reddedilen denemeler
+    # seen_questions'i buyutmedigi surece prompt degismez) her cagriyi
+    # ayni cache'lenmis yanita yonlendirip sonsuz ayni-soru dongusune
+    # sokuyordu (900 denemede tek soru). Cache burada kapatilmali.
     return asu_query(
         model_name=GENERATOR_MODEL,
         model_provider=GENERATOR_PROVIDER,
         query=prompt,
         temperature=temperature,
         request_delay=1.5,
+        use_cache=False,
     )
 
 

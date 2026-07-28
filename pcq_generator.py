@@ -435,7 +435,6 @@ Economic Events, June-July 2026:
 - South Korea's Kospi index plunged roughly 10% on July 28, 2026, its weakest close since April, on chipmaking-stock selling
 - IBM shares crashed 25.2% on July 14, 2026, the worst single day in company history, after missing Q2 earnings estimates
 - The "Magnificent Seven" tech stocks lost a combined $797 billion in market value on July 23, 2026, their worst single day since April 2025
-- US nonfarm payrolls rose just 57,000 in June 2026 (released July 2, 2026); unemployment held at 4.2%
 - US housing starts jumped 19% to a seasonally adjusted 1,427,000 units in June 2026, driven by multifamily construction
 - 3M raised its full-year adjusted EPS guidance to $8.80-$8.95 after Q2 2026 results reported July 21, 2026
 - ExxonMobil pre-announced on June 7, 2026 that it expected a Q2 profit increase of approximately $3.7 billion from the oil price surge

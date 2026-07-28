@@ -52,7 +52,7 @@ SOURCE_FACTS = {
 - Final venue: New York New Jersey Stadium (MetLife Stadium), East Rutherford, New Jersey
 - Argentina's Enzo Fernandez was sent off (red card, two yellows) in second half
 - Third place: England defeated France 6-4 (Bukayo Saka hat-trick), July 18, Hard Rock Stadium, Miami
-- Golden Boot: Kylian Mbappe (France), 8 goals in tournament, 20 career World Cup goals
+- Golden Boot: Kylian Mbappe (France), 10 goals in tournament, becoming the tournament's all-time leading scorer; Messi runner-up with 8 goals
 - Golden Glove: Emiliano Martinez (Argentina)
 - Host nations eliminated in Round of 16: Canada (lost to Morocco), Mexico (lost to England), USA (lost to Belgium)
 - Tournament format: 48 teams, 12 groups of 4
@@ -117,6 +117,33 @@ SOURCE_FACTS = {
 - At the 2026 World Cup semifinals, Spain beat France 2-0 in Dallas (July 14, 2026) and Argentina beat England 2-1 in Atlanta (July 15, 2026)
 - The Netherlands beat Sweden 5-1 in 2026 World Cup group play (June 20, 2026)
 - Turkiye beat the USA 3-2 in an upset result in the final 2026 World Cup group match (June 25, 2026)
+- The 2026 World Cup opening match was Mexico 2-0 South Africa at Estadio Azteca (June 11, 2026); goals by Julian Quinones and Raul Jimenez
+- 2026 World Cup Round of 32: Belgium beat Senegal 3-2 after extra time
+- 2026 World Cup Round of 32: Morocco eliminated the Netherlands 3-2 on penalties after a 1-1 draw
+- 2026 World Cup Round of 16: Belgium beat the USA 4-1
+- 2026 World Cup Round of 16: Morocco beat Canada 3-0
+- 2026 World Cup quarterfinal: Spain beat Belgium 2-1
+- 2026 World Cup quarterfinal: England beat Norway 2-1 after extra time
+- 2026 World Cup quarterfinal: Argentina came from behind to beat Switzerland 3-1 after extra time
+- 2026 World Cup semifinal (Dallas, July 14): Spain beat France 2-0, goals by Mikel Oyarzabal (penalty) and Pedro Porro
+- 2026 World Cup semifinal (July 15): Argentina beat England 2-1, with Messi assisting both Argentina goals
+- In the 2026 World Cup final, Argentina keeper Emiliano Martinez set a World Cup final record with 11 saves
+- Cristiano Ronaldo became the oldest player to score a multi-goal haul in a World Cup match (41 years, 138 days) with a brace in Portugal's 5-0 win over Uzbekistan
+- Lamine Yamal became the youngest Spanish player ever to score at a World Cup, scoring vs. Saudi Arabia at 18 years, 343 days
+- MetLife Stadium hosted 7 matches at the 2026 World Cup for a tournament-high 564,523 total spectators
+- Madison Keys defeated Tatjana Maria 7-5, 6-4 to win the 2026 Eastbourne Open, her third Eastbourne title
+- Zizou Bergs defeated Ugo Humbert to win the 2026 Eastbourne Open men's title, his first ATP Tour title
+- Alejandro Davidovich Fokina defeated Ethan Quinn to win the 2026 Mallorca Championships, his first ATP singles title
+- Karolina Muchova beat Naomi Osaka (retired injured) to win the 2026 Bad Homburg Open, her first grass-court title
+- Tom Kim won the 2026 Genesis Scottish Open at The Renaissance Club, North Berwick
+- Chris Gotterup won the 2026 John Deere Classic at TPC Deere Run, his third PGA Tour win of 2026
+- Viktor Hovland beat Scottie Scheffler in a playoff to win the 2026 Travelers Championship, the first Norwegian to win the event
+- Cooper Lutkenhaus won the men's 800m at the Stockholm Diamond League (June 7, 2026) in 1:42.70
+- Ai Ogura won the MotoGP Dutch TT at Assen (June 28, 2026), his first MotoGP career win
+- Alex Palou won the IndyCar Chevrolet Detroit Grand Prix 2026, his 4th win of the season
+- New South Wales beat Queensland 30-12 in NRL State of Origin Game 3 (July 8, 2026) to win the series 2-1; Nathan Cleary won Player of the Series
+- Luke Littler defeated Gerwyn Price 18-9 in the final of the 2026 World Matchplay darts, retaining his title
+- Sawyer Lindblad won the World Surf League's VIVO Rio Pro, concluding June 26, 2026
 """,
 
 "PCQ-POL": """
@@ -191,6 +218,28 @@ SOURCE_FACTS = {
 - The "21st Century Road to Housing Act" became US law without Trump's signature around July 10, 2026, described as the largest housing affordability legislation in decades
 - The US House passed the Sunshine Protection Act (permanent daylight saving time) in mid-July 2026 by a vote of 308-117
 - The UN Security Council unanimously adopted Resolution 2823 on June 23, 2026, on accountability for crimes against UN peacekeepers, put forward by Denmark and Pakistan
+- Japan PM Sanae Takaichi visited Delhi on July 2, 2026, attending the Japan-India Joint Economic Forum with PM Modi
+- French President Macron chaired an emergency cabinet meeting on July 27, 2026 over wildfires approaching Bordeaux
+- Italy's Chamber of Deputies rejected an amendment to Meloni's electoral reform by one vote (188-187) on July 14, 2026, her government's first parliamentary defeat
+- Italy's lower house approved Meloni's electoral reform bill 217-152 on July 16, 2026, shifting toward a proportional system
+- Spain's Congress of Deputies passed a resolution (177-171) on June 25, 2026 urging PM Pedro Sanchez to resign or call a confidence vote
+- Jaroslaw Kaczynski expelled former PM Mateusz Morawiecki and about 30 MPs from Poland's Law and Justice (PiS) party on July 24, 2026
+- Hungary's parliament voted 139-6 on July 14, 2026 to remove President Tamas Sulyok from office
+- Viktor Orban called for a new era of "resistance politics" for Fidesz on July 25, 2026 following its election defeat
+- Kosovo held parliamentary elections June 7, 2026 (its third election in about a year); PM Albin Kurti's Vetevendosje won the most votes but no majority
+- Kazakhstan's Constitutional Court ruled July 7, 2026 that President Tokayev may seek another term under the new 2026 Constitution
+- A VTsIOM poll released July 10, 2026 showed Russian President Putin's approval falling to 71%
+- Philippines VP Sara Duterte's impeachment trial began in early July 2026
+- Thailand's Constitutional Court ruled July 9, 2026 that PM Anutin Charnvirakul's 400-billion-baht emergency borrowing decree was constitutional
+- Canadian PM Mark Carney called by-elections for August 31, 2026 in three ridings, announced July 26, 2026
+- ICC member states voted 82-13 on July 24, 2026 to remove Chief Prosecutor Karim Khan over misconduct findings, the first removal of a sitting ICC chief prosecutor
+- The EU and UK signed the Gibraltar Treaty in Brussels on July 14, 2026, resolving Gibraltar's post-Brexit border status
+- The US-Iran war resumed in July 2026 after a ceasefire collapsed, with US strikes on Iran for 13+ consecutive nights
+- Yemen's Houthis declared a naval blockade on Saudi Arabia in July 2026, opening a new front in the Iran war
+- Pope Leo XIV used his Angelus address on July 26, 2026 to appeal for a halt to Mideast attacks
+- Pope Leo XIV made a pastoral visit to Lampedusa on July 4, 2026, celebrating Holy Mass there
+- Ireland began its six-month EU Council presidency on July 1, 2026
+- Irish Taoiseach Micheal Martin visited Kyiv on July 23, 2026 and announced a new 125 million euro support package for Ukraine
 """,
 
 "PCQ-SCI": """
@@ -275,6 +324,18 @@ AI and Technology Events, June-July 2026:
 - China's securities regulator approved Unitree Robotics' Shanghai STAR Market IPO registration around July 1-3, 2026, valuing the company at roughly $6 billion
 - China's "Implementation Opinions on AI Agents," the world's first dedicated AI-agent regulatory category, became enforceable July 15, 2026
 - June 2026 was Earth's second-warmest June on record (1.09C above the 20th-century average), the 50th consecutive above-average June
+- The LHCb Collaboration announced observation of the Omega-cc+ baryon, completing the family of doubly charmed baryons first predicted over 50 years ago (June 2026)
+- An Aalto University-led team used AI to discover two new kagome superconductors, YRu3B2 and LuRu3B2, published June 17, 2026
+- Vattenfall selected Rolls-Royce SMR on June 15, 2026 to build three small modular reactors in Sweden, its first new nuclear build in over 40 years
+- Anthropic's Claude Fable 5 and Mythos 5 models were suspended under a US Commerce Department export-control order around June 12, 2026
+- OpenAI disclosed on July 21-22, 2026 that experimental models breached Hugging Face's production infrastructure after breaking out of a test environment
+- President Trump signed an executive order "Promoting Advanced Artificial Intelligence Innovation and Security" on June 2, 2026
+- Microsoft's July 2026 Patch Tuesday (July 14, 2026) fixed a record 570 vulnerabilities, including two actively-exploited zero-days
+- Citrix disclosed CVE-2026-8451, a NetScaler ADC/Gateway vulnerability, on June 30, 2026; it was exploited in the wild within 24 hours
+- DJI filed a patent-infringement lawsuit against Insta360 around June 11, 2026 over its Ultra product line
+- "Halo: Campaign Evolved" launched in early access July 23, 2026, with full release July 28, 2026
+- The Esports World Cup 2026 began in Paris, France on July 6, 2026, with a prize pool exceeding $75 million
+- Wear OS 7 began rolling out June 16, 2026, starting with Pixel Watch 2, 3, and 4
 """,
 
 "PCQ-ECO": """
@@ -365,6 +426,22 @@ Economic Events, June-July 2026:
 - Gold fell below $4,000/oz in late June 2026, a steep pullback from January 2026's record above $5,500/oz
 - The US dollar hit its best 2026 exchange rate against the yen, 162.6103, on June 30, 2026
 - Crypto hacks/losses totaled $75.87 million across 40 incidents in June 2026, with the Humanity Protocol breach the largest single incident at over $30 million
+- Brazil's central bank cut the Selic rate to 14.25% at its June 16-17, 2026 meeting, its third consecutive quarter-point cut
+- Mexico's Banxico held its rate at 6.50% on June 25, 2026, unanimously, after two years of cuts
+- South Korea's central bank raised its base rate to 2.75% on July 16, 2026, its first hike in roughly 3.5 years
+- South Africa's central bank held its repo rate at 7% on July 23, 2026, surprising analysts who expected a hike
+- Russia's central bank cut its key rate to 14.25% on June 19, 2026, then to 14.00% on July 24, 2026
+- South Korea's Kospi index plunged roughly 10% on July 28, 2026, its weakest close since April, on chipmaking-stock selling
+- IBM shares crashed 25.2% on July 14, 2026, the worst single day in company history, after missing Q2 earnings estimates
+- The "Magnificent Seven" tech stocks lost a combined $797 billion in market value on July 23, 2026, their worst single day since April 2025
+- US nonfarm payrolls rose just 57,000 in June 2026 (released July 2, 2026); unemployment held at 4.2%
+- US housing starts jumped 19% to a seasonally adjusted 1,427,000 units in June 2026, driven by multifamily construction
+- 3M raised its full-year adjusted EPS guidance to $8.80-$8.95 after Q2 2026 results reported July 21, 2026
+- ExxonMobil pre-announced on June 7, 2026 that it expected a Q2 profit increase of approximately $3.7 billion from the oil price surge
+- The EU-US trade framework formally entered into force July 1, 2026, eliminating tariffs on most US-origin industrial goods
+- Gulf sovereign wealth funds invested a record $53.9 billion across 108 transactions in H1 2026, nearly half directed to the US
+- The IMF's July 2026 World Economic Outlook Update projected global growth at 3.0% for 2026, with inflation revised up to 4.7%
+- 16 startups reached unicorn ($1B+) status in June 2026, per Crunchbase tracking
 """,
 
 "PCQ-WOR": """
@@ -446,6 +523,19 @@ World Events, June-July 2026:
 - Idaho's David Rush balanced 195 rolls of toilet paper on his head for 30 seconds to recapture a Guinness World Record, reported July 20, 2026
 - A fossilized Edmontosaurus skull with a Tyrannosaurus tooth still embedded in its face was announced July 14, 2026, rare direct evidence of a predator-prey attack
 - A Dutch archaeological mission from Leiden University discovered a previously unknown 3,000-year-old tomb belonging to a man named Paser near Luxor, Egypt, announced July 14, 2026
+- 1992 Nobel Chemistry laureate Rudolph A. Marcus died July 16, 2026 at Caltech, aged 102
+- Saxophonist Plas Johnson, who played the famous sax line on "The Pink Panther" theme, died July 15, 2026 in Los Angeles, aged 94
+- Olympic cycling silver medalist Toshiaki Fushimi died July 19, 2026 of injuries from a keirin race crash in Matsusaka, Japan, aged 50
+- The 2026 Kumamoto earthquake struck Kyushu Island, Japan on July 28, 2026 (magnitude 6.8)
+- Super Typhoon Bavi passed over the Northern Mariana Islands around July 5-6, 2026 before making landfall in Zhejiang, China on July 11
+- Typhoon Noul made landfall in Huidong county, Guangdong province, China at about 3:50am local time on July 26, 2026
+- Two passenger trains collided near Bedford, England on June 19, 2026, killing one driver and hospitalizing more than 80 people
+- A giant panda cub was born June 3, 2026 at Panda World, Everland Zoo, South Korea, to parents Ai Bao and Le Bao
+- The Pentagon released its third batch of declassified UAP files on June 12, 2026 (53 documents, 10 images, 6 videos)
+- Pope Leo XIV made an apostolic journey to Spain June 6-12, 2026, inaugurating the Tower of Jesus Christ at the Sagrada Familia
+- King Charles III led the Order of the Garter ceremony at St George's Chapel, Windsor Castle, on June 15, 2026
+- France's Fete de la Musique (June 21, 2026) saw over 240 arrests nationwide per the interior ministry
+- The US Department of Energy issued an emergency order activating dormant power sources across 17 states due to heat straining the grid, in effect through August 3, 2026
 """
 }
 
@@ -594,14 +684,14 @@ def build_one(subcode: str, idx: int,
     return item
 
 
-def build_dataset(per_subcategory: int = 60,
+def build_dataset(per_subcategory: int = 75,
                   out_path: str = "PCQ_dataset.json") -> list:
     """EHQ-3000 nihai hedefi 5 x 150 = 750'dir, ancak SOURCE_FACTS havuzu
-    (en dar kategoriler PCQ-SPO/PCQ-POL icin ~70 benzersiz gercek) su an
-    bunu desteklemiyor -- seen_answers dedup'i gercek sayisindan fazla
-    soru uretilmesini zaten engeller. per_subcategory=60 mevcut havuzla
-    ulasilabilir guvenli bir hedeftir (iki arastirma turu sonrasi
-    275->382 gercege genisletildi); havuz buyudukce yukselt."""
+    (en dar kategori PCQ-WOR icin ~89 benzersiz gercek) su an bunu
+    desteklemiyor -- seen_answers dedup'i gercek sayisindan fazla soru
+    uretilmesini zaten engeller. per_subcategory=75 mevcut havuzla
+    ulasilabilir guvenli bir hedeftir (uc arastirma turu sonrasi
+    77->472 gercege genisletildi); havuz buyudukce yukselt."""
     all_items = []
     # Kategoriler arasi paylasilan setler: SOURCE_FACTS kategorileri ortak
     # olaylar icerdiginden (orn. Venezuela depremi PCQ-ECO ve PCQ-WOR'da da
@@ -636,7 +726,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--full", action="store_true",
-                        help="Tam uretim: 5 alt kategori x 60 = ~300 hedef "
+                        help="Tam uretim: 5 alt kategori x 75 = ~375 hedef "
                              "(PCQ_dataset.json, mevcut SOURCE_FACTS havuzuyla "
                              "ulasilabilir azami). Verilmezse smoke test calisir.")
     args = parser.parse_args()
@@ -646,8 +736,8 @@ if __name__ == "__main__":
     if not os.environ.get("ASU_CREATEAI_TOKEN"):
         logger.info("ASU_CREATEAI_TOKEN yok; import OK.")
     elif args.full:
-        logger.info("PCQ TAM URETIM | 5 alt kategori x 60 = ~300 hedef")
-        build_dataset(per_subcategory=60, out_path="PCQ_dataset.json")
+        logger.info("PCQ TAM URETIM | 5 alt kategori x 75 = ~375 hedef")
+        build_dataset(per_subcategory=75, out_path="PCQ_dataset.json")
     else:
         logger.info("PCQ smoke test | Her kategoriden 2 soru")
         build_dataset(per_subcategory=2, out_path="PCQ_smoke.json")

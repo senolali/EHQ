@@ -88,6 +88,35 @@ SOURCE_FACTS = {
 - 2026 F1 Belgian GP winner: Kimi Antonelli, his 6th win of the season, ahead of Leclerc and Verstappen (July 19, 2026)
 - 2026 F1 Hungarian GP winner: Lando Norris, ahead of Verstappen and Antonelli by ~15 seconds (July 26, 2026)
 - 2026 MLB All-Star Game: American League beat National League 4-0 (July 14, 2026, Citizens Bank Park, Philadelphia); MVP Cody Bellinger (New York Yankees)
+- New Zealand won a 3-match Test cricket series in England 2-1, despite losing the 1st Test at Lord's (June 4-7) by 115 runs
+- Ireland swept India 2-0 in a two-match T20I series in Belfast (June 26 and June 28, 2026), India's first-ever bilateral T20I series loss to Ireland
+- Bangladesh won a 3-match ODI cricket series against Australia 2-1 (June 9-14, 2026, Dhaka/Chattogram)
+- The 2026 Major League Cricket (US) season ran June 18 - July 18, 2026
+- UFC 329 "McGregor vs. Holloway 2" was held July 11, 2026 at T-Mobile Arena, Paradise, Nevada
+- UFC Fight Night: Fiziev vs. Torres was held June 27, 2026 in Baku, Azerbaijan
+- Jesse "Bam" Rodriguez defeated Antonio Vargas by 6th-round KO on June 13, 2026 in Glendale, Arizona to win the WBA bantamweight title, becoming a three-division world champion
+- At the Rome Golden Gala (June 4, 2026) Diamond League meet, Noah Lyles won the men's 100m in 9.88 seconds
+- At the Paris Diamond League (June 28, 2026), Armand Duplantis cleared a meet-record 6.13m in the pole vault
+- At the Paris Diamond League (June 28, 2026), Busang Collen Kebinatshipi won the 400m in a meeting-record 43.54
+- At the Monaco Diamond League (July 10, 2026), Miltiadis Tentoglou produced a world-leading 8.61m long jump
+- At the Prefontaine Classic, Eugene (July 3-4, 2026), Melissa Jefferson-Wooden won the women's 100m in 10.78, ahead of Sha'Carri Richardson
+- Donna Vekic defeated Emma Raducanu 6-0, 7-6 in the 2026 Queen's Club Championships women's singles final (June 8-14)
+- Frances Tiafoe defeated Taylor Fritz 6-4, 6-4 in the 2026 Halle Open final, his 4th ATP title
+- Nelly Korda won the 2026 US Women's Open golf title by one stroke over Charley Hull and Gaby Lopez at Riviera Country Club (June 4-7, 2026), her 4th career major
+- Haeran Ryu won the 2026 KPMG Women's PGA Championship at Hazeltine National, her first major title
+- Haeran Ryu won the 2026 Evian Championship (July 9-12, 2026), her second consecutive major of the year, beating Brooke Henderson in a playoff
+- The 2026 NBA Draft was held June 23-24, 2026 at Barclays Center, Brooklyn; the Washington Wizards used the No. 1 pick on AJ Dybantsa
+- The New York Liberty defeated the Las Vegas Aces 93-85 to win the 2026 WNBA Commissioner's Cup (June 30, 2026), becoming the first two-time champions
+- The 2026 WNBA All-Star Game was scheduled for July 25, 2026 at the United Center in Chicago
+- Leviatan defeated Paper Rex 3-2 to win Valorant Masters London 2026 (June 21, 2026), their first international VCT title
+- The 2026 Commonwealth Games opened in Glasgow on July 23, 2026 with an OVO Hydro ceremony
+- Corey Heim won the 2026 Brickyard 400 NASCAR Cup race at Indianapolis on July 26, 2026, his second career Cup Series win
+- The 2026 FIFA World Cup drew a record total attendance of 6,810,966 fans across the tournament, nearly double the 1994 USA record
+- FIFA recorded its highest-ever single-day World Cup attendance on June 25, 2026, with 426,834 spectators
+- At the 2026 World Cup quarterfinals, France beat Morocco 2-0, a rematch of the 2022 semifinal
+- At the 2026 World Cup semifinals, Spain beat France 2-0 in Dallas (July 14, 2026) and Argentina beat England 2-1 in Atlanta (July 15, 2026)
+- The Netherlands beat Sweden 5-1 in 2026 World Cup group play (June 20, 2026)
+- Turkiye beat the USA 3-2 in an upset result in the final 2026 World Cup group match (June 25, 2026)
 """,
 
 "PCQ-POL": """
@@ -146,6 +175,22 @@ SOURCE_FACTS = {
 - The European Union filed a Memorial in the ICJ case Lithuania v. Belarus on July 20, 2026
 - Nicolas Maduro and US DOJ prosecutors proposed a June 2027 trial start date on narco-terrorism charges (July 21, 2026)
 - The Philippines hosted ASEAN foreign ministers' meetings in Manila July 20-24, 2026, marking the 50th anniversary of the Treaty of Amity and Cooperation
+- Keiko Fujimori won Peru's June 7, 2026 presidential runoff with 50.135% of valid votes vs. Roberto Sanchez's 49.865%
+- Keiko Fujimori was sworn in as Peru's president on July 28, 2026 in Lima, becoming Peru's first elected female head of state
+- South African President Cyril Ramaphosa reshuffled his cabinet around June 30-July 1, 2026 at the Democratic Alliance's request, affecting six ministries
+- On June 12, 2026, Nigerian President Tinubu's Democracy Day address announced recruitment of over 50,000 new police officers
+- The 49th Ordinary Session of the African Union Executive Council was held June 24-25, 2026 in El Alamein, Egypt
+- New UK PM Andy Burnham was formally appointed by King Charles at Buckingham Palace on July 20, 2026; Rachel Reeves left as Chancellor and David Lammy departed as Deputy PM
+- The UK Supreme Court ruled by a 3-2 majority (reported July 27, 2026) that Bahrain cannot claim state immunity in a spyware lawsuit brought by activists Saeed Shehabi and Moosa Mohammed
+- On June 2, 2026, the UK Supreme Court overruled its own precedent in P v Cheshire West and Chester Council, redefining "deprivation of liberty" under the Mental Capacity Act 2005
+- A referendum was held in Slovakia on July 4, 2026 on cancelling lifelong payments for former PMs/parliament speakers and restoring the Special Prosecutor's Office
+- Xi Jinping spoke at the Great Hall of the People in Beijing on July 1, 2026, marking the 105th anniversary of the Chinese Communist Party
+- China hosted the World AI Conference and High-Level Meeting on Global AI Governance in Shanghai, July 17-20, 2026, where Xi announced the Global AI Governance Initiative
+- On June 3-4, 2026, Kim Jong Un inspected a new North Korean plant producing weapons-grade nuclear material
+- Xi Jinping visited Pyongyang June 8-9, 2026, his first North Korea visit in nearly seven years
+- The "21st Century Road to Housing Act" became US law without Trump's signature around July 10, 2026, described as the largest housing affordability legislation in decades
+- The US House passed the Sunshine Protection Act (permanent daylight saving time) in mid-July 2026 by a vote of 308-117
+- The UN Security Council unanimously adopted Resolution 2823 on June 23, 2026, on accountability for crimes against UN peacekeepers, put forward by Denmark and Pakistan
 """,
 
 "PCQ-SCI": """
@@ -208,6 +253,28 @@ AI and Technology Events, June-July 2026:
 - Peregrine Technologies secured $250 million in a Series D round, valuing the company at $6.8 billion
 - Cyera raised $600 million in June 2026, reaching a $12 billion valuation
 - Fintech company Ramp secured funding in June 2026 at a $44 billion valuation
+- NASA's "Swift Boost" mission launched July 3, 2026 from Kwajalein Atoll to grapple and raise the decaying orbit of the Neil Gehrels Swift Observatory
+- UC Irvine astronomers announced discovery of exoplanet GJ 3378b on June 30, 2026, roughly twice Earth's size, in its star's habitable zone
+- A NASA-led study (published July 16, 2026) revealed that near-Earth object 1998 SH2, long classified as an asteroid, is actually a weakly active "dark comet"
+- The FDA approved Lumvoa (veligrotug-vvze) on June 26, 2026, the first thyroid eye disease drug labeled effective across both active and chronic stages
+- The FDA approved Tregzi on June 30, 2026, the first regulatory T-cell-based immunotherapy for chronic GVHD-free survival after stem cell transplant
+- An FDA advisory committee voted unanimously 9-0 on June 18, 2026 to endorse Moderna's mRNA flu vaccine mFlusiva for adults 50-64
+- France notified WHO on June 24, 2026 of a lab-confirmed Ebola (Bundibugyo virus) case in a doctor returning from the DRC
+- WHO's mpox external situation report #67 was published June 26, 2026
+- Ransomware group WorldLeaks claimed an attack on Tata Electronics, posting 204,341 files (630.4 GB) to its dark-web leak site on June 12, 2026
+- Samsung and Broadcom signed a five-year, $200 billion chip-supply agreement, announced July 24-25, 2026 at an AI summit in San Francisco
+- Intel announced layoffs on July 21, 2026 cutting roughly 4,000 US Data Center group positions, including 2,392 in Oregon
+- ASML reported Q2 2026 results on July 15, 2026: EPS of $8.82, beating estimates, with net sales of 9.3 billion euros
+- Micron reported record Q3 FY2026 results on June 24, 2026: revenue of $41.46 billion, up 346% year-over-year
+- China's Jiangmen Underground Neutrino Observatory (JUNO) published its first physics result as a Nature cover article on June 10-11, 2026
+- Mistral AI released "Robostral Navigate," a robotics navigation model, reported July 8, 2026
+- Alibaba announced Qwen3.8-Max on July 19, 2026 at the World AI Conference in Shanghai, a 2.4-trillion-parameter multimodal model
+- Midjourney made V8.1 the default model for all users on June 11, 2026, replacing V7
+- Amazon's Zoox unveiled its redesigned "production intent" robotaxi on June 24, 2026, ahead of expansion to Austin and Miami
+- Tesla's FSD v14 Lite for Hardware 3 vehicles began wide release on July 21, 2026
+- China's securities regulator approved Unitree Robotics' Shanghai STAR Market IPO registration around July 1-3, 2026, valuing the company at roughly $6 billion
+- China's "Implementation Opinions on AI Agents," the world's first dedicated AI-agent regulatory category, became enforceable July 15, 2026
+- June 2026 was Earth's second-warmest June on record (1.09C above the 20th-century average), the 50th consecutive above-average June
 """,
 
 "PCQ-ECO": """
@@ -278,6 +345,26 @@ Economic Events, June-July 2026:
 - The EU Council formally adopted regulations enacting the US-EU trade deal on June 25, 2026, effective July 1, 2026 (15% US tariff on most EU goods)
 - New UK PM Andy Burnham named John Healey as Chancellor of the Exchequer (July 20, 2026)
 - Anthropic filed confidentially for an IPO on June 1, 2026, at a $965 billion valuation after closing a $65 billion Series H round
+- The Bank of England held Bank Rate at 3.75% on June 17, 2026, voting 7-2, with two dissenters wanting a hike to 4.00%
+- The Swiss National Bank left its policy rate unchanged at 0% on June 18, 2026
+- The Bank of Canada held its overnight rate target at 2.25% on July 15, 2026, its sixth consecutive hold
+- Alphabet's Q2 2026 revenue was $119.8 billion, up 24% year-over-year, reported July 22, 2026
+- Alphabet raised its 2026 capex guidance to as high as $205 billion, up from a prior $180-190 billion forecast
+- Bank of America's Q2 2026 net income was $9.1 billion (+27% year-over-year), reported July 14, 2026
+- Citigroup's Q2 2026 revenue was $24.8 billion, its best quarterly revenue in a decade, reported July 14, 2026
+- Wells Fargo's Q2 2026 investment banking fees set a quarterly record above $900 million, reported July 14, 2026
+- Morgan Stanley's Q2 2026 net revenue was $21.35 billion (+27% year-over-year); its Wealth/Investment Management client assets hit a $10 trillion milestone
+- Southwest Airlines' Q2 2026 adjusted operating revenue of $8.7 billion was the highest in company history
+- UPS's Q2 2026 revenue was $22.8 billion, reported July 28, 2026, though shares fell about 4% despite beating estimates
+- FedEx changed its fiscal year end from May 31 to December 31, effective June 1, 2026, and completed the spin-off of FedEx Freight
+- Coca-Cola's Q2 2026 net revenue was $13.38 billion (+7% year-over-year), reported July 28, 2026, with shares rising over 7% to a record high
+- PepsiCo's Q2 2026 revenue was $24.18 billion (+6.4% year-over-year), reported July 9, 2026
+- PayPal's Q2 2026 revenue was $8.68 billion (+5% year-over-year), reported July 28, 2026
+- 372 larger US companies filed for bankruptcy protection in the first half of 2026, the highest first-half total since 2010
+- President Trump signed a proclamation on June 1, 2026 further adjusting Section 232 tariffs on aluminum, steel, and copper
+- Gold fell below $4,000/oz in late June 2026, a steep pullback from January 2026's record above $5,500/oz
+- The US dollar hit its best 2026 exchange rate against the yen, 162.6103, on June 30, 2026
+- Crypto hacks/losses totaled $75.87 million across 40 incidents in June 2026, with the Humanity Protocol breach the largest single incident at over $30 million
 """,
 
 "PCQ-WOR": """
@@ -339,6 +426,26 @@ World Events, June-July 2026:
 - A prehistoric painted cave with nearly 100 human/animal figures was identified in Malatya's Tohma Canyon, Turkey, in June 2026
 - A 5-year-old girl, Daleyza Fregoso, subject of an AMBER Alert, was found safe in Mexico on June 15, 2026
 - A 93-year-old Hoke County, NC woman, Catherine Peterkin, reported missing, was found safe on June 19, 2026
+- Welsh singer Bonnie Tyler ("Total Eclipse of the Heart") died unexpectedly July 9, 2026, in a hospital in Portugal
+- Village People co-founder and lead singer Victor Willis died June 30, 2026, age 74
+- Grammy-winning R&B singer Peabo Bryson, known for Disney's "Beauty and the Beast"/"Aladdin" theme songs, died June 2, 2026
+- Actor Anthony Head, known for "Buffy the Vampire Slayer" and "Ted Lasso," died June 5, 2026 at age 72
+- Brenda Fricker, the first Irish actress to win an Oscar ("My Left Foot," 1989), died July 16, 2026 in Dublin at age 81
+- Belgian Nobel physics laureate Francois Englert died June 18, 2026 in Uccle, Belgium, at age 93
+- Twin strike-slip earthquakes struck northwestern and central Venezuela on June 24, 2026, killing at least 164 people
+- A landslide at Renzang village, Longnan City, Gansu Province, China on July 7, 2026 killed 21 people
+- A landslide on the Wujiang River at Hanjia, Chongqing, China on July 17, 2026 killed at least 8 people with 34 missing
+- The ferry MV Barima capsized and sank on July 18, 2026 en route from Georgetown to Port Kaituma, Guyana, with 73 confirmed dead, called Guyana's worst maritime disaster on record
+- A coach bus flipped over the median into oncoming traffic on the Long Island Expressway in Queens, NY around 11:45pm on June 29, 2026, killing the driver and a passenger
+- An explosion at Hanwha Aerospace's Daejeon, South Korea plant on June 1, 2026 killed 5 workers
+- A crush at Hashemite Square in Amman, Jordan on June 23, 2026 during a public World Cup screening killed 1 person and injured 8
+- Teyana Taylor won four awards including Icon of the Year at the BET Awards 2026 (held June 28, 2026, Peacock Theater, Los Angeles)
+- Cardi B won Best Female Hip-Hop Artist and Kendrick Lamar won Best Male Hip-Hop Artist at the 2026 BET Awards
+- The Guggenheim Museum in New York opened "Guggenheim Pop," a major survey of 20th-century Pop art, in June 2026
+- Red panda twins were born June 3, 2026 to parents Nila and Ash at Hertfordshire Zoo, UK, its first red panda twins in 12 years
+- Idaho's David Rush balanced 195 rolls of toilet paper on his head for 30 seconds to recapture a Guinness World Record, reported July 20, 2026
+- A fossilized Edmontosaurus skull with a Tyrannosaurus tooth still embedded in its face was announced July 14, 2026, rare direct evidence of a predator-prey attack
+- A Dutch archaeological mission from Leiden University discovered a previously unknown 3,000-year-old tomb belonging to a man named Paser near Luxor, Egypt, announced July 14, 2026
 """
 }
 
@@ -487,13 +594,14 @@ def build_one(subcode: str, idx: int,
     return item
 
 
-def build_dataset(per_subcategory: int = 35,
+def build_dataset(per_subcategory: int = 60,
                   out_path: str = "PCQ_dataset.json") -> list:
     """EHQ-3000 nihai hedefi 5 x 150 = 750'dir, ancak SOURCE_FACTS havuzu
-    (en dar kategori PCQ-SPO icin ~41 benzersiz gercek) su an bunu
-    desteklemiyor -- seen_answers dedup'i gercek sayisindan fazla soru
-    uretilmesini zaten engeller. per_subcategory=35 mevcut havuzla
-    ulasilabilir guvenli bir hedeftir; havuz buyudukce yukselt."""
+    (en dar kategoriler PCQ-SPO/PCQ-POL icin ~70 benzersiz gercek) su an
+    bunu desteklemiyor -- seen_answers dedup'i gercek sayisindan fazla
+    soru uretilmesini zaten engeller. per_subcategory=60 mevcut havuzla
+    ulasilabilir guvenli bir hedeftir (iki arastirma turu sonrasi
+    275->382 gercege genisletildi); havuz buyudukce yukselt."""
     all_items = []
     # Kategoriler arasi paylasilan setler: SOURCE_FACTS kategorileri ortak
     # olaylar icerdiginden (orn. Venezuela depremi PCQ-ECO ve PCQ-WOR'da da
@@ -528,7 +636,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--full", action="store_true",
-                        help="Tam uretim: 5 alt kategori x 35 = ~175 hedef "
+                        help="Tam uretim: 5 alt kategori x 60 = ~300 hedef "
                              "(PCQ_dataset.json, mevcut SOURCE_FACTS havuzuyla "
                              "ulasilabilir azami). Verilmezse smoke test calisir.")
     args = parser.parse_args()
@@ -538,8 +646,8 @@ if __name__ == "__main__":
     if not os.environ.get("ASU_CREATEAI_TOKEN"):
         logger.info("ASU_CREATEAI_TOKEN yok; import OK.")
     elif args.full:
-        logger.info("PCQ TAM URETIM | 5 alt kategori x 35 = ~175 hedef")
-        build_dataset(per_subcategory=35, out_path="PCQ_dataset.json")
+        logger.info("PCQ TAM URETIM | 5 alt kategori x 60 = ~300 hedef")
+        build_dataset(per_subcategory=60, out_path="PCQ_dataset.json")
     else:
         logger.info("PCQ smoke test | Her kategoriden 2 soru")
         build_dataset(per_subcategory=2, out_path="PCQ_smoke.json")

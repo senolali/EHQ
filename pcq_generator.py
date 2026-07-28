@@ -636,7 +636,10 @@ def generate_raw_item(subcode: str, existing_questions: set) -> Optional[dict]:
 # QC filtreleri
 # ----------------------------------------------------------------------
 
-def run_qc(item: PCQItem, seen_questions: set, seen_answers: set) -> PCQItem:
+MAX_ANSWER_REUSE = 2   # ayni gercek/cevaptan en fazla 2 soru uretilebilir
+
+
+def run_qc(item: PCQItem, seen_questions: set, answer_counts: dict) -> PCQItem:
     notes = []
     if len(item.question.split()) < 5:
         notes.append("question too short")
@@ -644,14 +647,14 @@ def run_qc(item: PCQItem, seen_questions: set, seen_answers: set) -> PCQItem:
         notes.append("empty correct_answer")
     if len(item.correct_answer.split()) > 15:
         notes.append("answer too long (>15 words)")
-    # Tekrar kontrolu (seen_questions/seen_answers TUM kategoriler arasinda
+    # Tekrar kontrolu (seen_questions/answer_counts TUM kategoriler arasinda
     # paylasilir; farkli alt kategoriler ayni kaynak olayi sormasin)
     q_norm = item.question.lower().strip()
     if q_norm in seen_questions:
         notes.append("duplicate question")
     ans_norm = item.correct_answer.lower().strip()
-    if ans_norm in seen_answers:
-        notes.append("duplicate answer (same underlying fact already used)")
+    if answer_counts.get(ans_norm, 0) >= MAX_ANSWER_REUSE:
+        notes.append(f"answer reused >{MAX_ANSWER_REUSE}x (same underlying fact)")
     # Cevap soruda gizleniyor mu?
     if item.correct_answer.lower() in item.question.lower():
         notes.append("answer appears in question")
@@ -665,7 +668,7 @@ def run_qc(item: PCQItem, seen_questions: set, seen_answers: set) -> PCQItem:
 # ----------------------------------------------------------------------
 
 def build_one(subcode: str, idx: int,
-              seen_questions: set, seen_answers: set) -> Optional[PCQItem]:
+              seen_questions: set, answer_counts: dict) -> Optional[PCQItem]:
     raw = generate_raw_item(subcode, seen_questions)
     if not raw:
         return None
@@ -677,36 +680,36 @@ def build_one(subcode: str, idx: int,
         event_date=raw["event_date"].strip(),
         source_fact=raw["source_fact"].strip(),
     )
-    item = run_qc(item, seen_questions, seen_answers)
+    item = run_qc(item, seen_questions, answer_counts)
     status = "PASS" if item.qc_passed else f"FAIL({'; '.join(item.qc_notes)})"
     logger.info("[%s] %s | Q: %s", item.question_id, status,
                 item.question[:60])
     return item
 
 
-def build_dataset(per_subcategory: int = 75,
+def build_dataset(per_subcategory: int = 150,
                   out_path: str = "PCQ_dataset.json") -> list:
-    """EHQ-3000 nihai hedefi 5 x 150 = 750'dir, ancak SOURCE_FACTS havuzu
-    (en dar kategori PCQ-WOR icin ~89 benzersiz gercek) su an bunu
-    desteklemiyor -- seen_answers dedup'i gercek sayisindan fazla soru
-    uretilmesini zaten engeller. per_subcategory=75 mevcut havuzla
-    ulasilabilir guvenli bir hedeftir (uc arastirma turu sonrasi
-    77->472 gercege genisletildi); havuz buyudukce yukselt."""
+    """EHQ-3000 nihai hedefi 5 x 150 = 750'dir. SOURCE_FACTS havuzu (en dar
+    kategori PCQ-WOR icin ~89 benzersiz gercek) uc arastirma turuyla
+    77->472 gercege genisletildi; her gercekten en fazla MAX_ANSWER_REUSE
+    (2) farkli soru turetilmesine izin verilerek (run_qc/answer_counts)
+    per_subcategory=150 hedefi artik ulasilabilir sinirin icinde."""
     all_items = []
-    # Kategoriler arasi paylasilan setler: SOURCE_FACTS kategorileri ortak
+    # Kategoriler arasi paylasilan yapilar: SOURCE_FACTS kategorileri ortak
     # olaylar icerdiginden (orn. Venezuela depremi PCQ-ECO ve PCQ-WOR'da da
     # var), dedup tek bir alt kategoriyle sinirli kalamaz.
     seen_q = set()
-    seen_answers = set()
+    answer_counts: dict = {}
     for subcode in PCQ_DOMAINS:
         collected, attempts = 0, 0
         max_attempts = per_subcategory * 6
         while collected < per_subcategory and attempts < max_attempts:
             attempts += 1
-            item = build_one(subcode, collected + 1, seen_q, seen_answers)
+            item = build_one(subcode, collected + 1, seen_q, answer_counts)
             if item and item.qc_passed:
                 seen_q.add(item.question.lower().strip())
-                seen_answers.add(item.correct_answer.lower().strip())
+                ans_norm = item.correct_answer.lower().strip()
+                answer_counts[ans_norm] = answer_counts.get(ans_norm, 0) + 1
                 all_items.append(item)
                 collected += 1
         logger.info("Subcategory %s: %d/%d in %d attempts",
@@ -726,9 +729,10 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--full", action="store_true",
-                        help="Tam uretim: 5 alt kategori x 75 = ~375 hedef "
-                             "(PCQ_dataset.json, mevcut SOURCE_FACTS havuzuyla "
-                             "ulasilabilir azami). Verilmezse smoke test calisir.")
+                        help="Tam uretim: 5 alt kategori x 150 = 750 hedef "
+                             "(EHQ-3000 nihai hedefi; her gercekten en fazla "
+                             "2 soru turetilerek PCQ_dataset.json'a yazilir). "
+                             "Verilmezse smoke test calisir.")
     args = parser.parse_args()
 
     logger.info("Pencere: %s | Uretici: Mistral-Large(ASU)", EVENT_WINDOW)
@@ -736,8 +740,8 @@ if __name__ == "__main__":
     if not os.environ.get("ASU_CREATEAI_TOKEN"):
         logger.info("ASU_CREATEAI_TOKEN yok; import OK.")
     elif args.full:
-        logger.info("PCQ TAM URETIM | 5 alt kategori x 75 = ~375 hedef")
-        build_dataset(per_subcategory=75, out_path="PCQ_dataset.json")
+        logger.info("PCQ TAM URETIM | 5 alt kategori x 150 = 750 hedef")
+        build_dataset(per_subcategory=150, out_path="PCQ_dataset.json")
     else:
         logger.info("PCQ smoke test | Her kategoriden 2 soru")
         build_dataset(per_subcategory=2, out_path="PCQ_smoke.json")

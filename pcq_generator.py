@@ -215,7 +215,7 @@ def generate_raw_item(subcode: str, existing_questions: set) -> Optional[dict]:
     # Tekrar onlemek icin mevcut sorulari prompt'a ekle
     avoid = ""
     if existing_questions:
-        sample = list(existing_questions)[-5:]  # son 5 sorudan kac
+        sample = list(existing_questions)[-10:]  # (seen_questions kategoriler arasi paylasilir)
         avoid = f"\n\nAVOID generating questions similar to these already generated:\n" + \
                 "\n".join(f"- {q}" for q in sample)
     
@@ -241,7 +241,7 @@ def generate_raw_item(subcode: str, existing_questions: set) -> Optional[dict]:
 # QC filtreleri
 # ----------------------------------------------------------------------
 
-def run_qc(item: PCQItem, seen_questions: set) -> PCQItem:
+def run_qc(item: PCQItem, seen_questions: set, seen_answers: set) -> PCQItem:
     notes = []
     if len(item.question.split()) < 5:
         notes.append("question too short")
@@ -249,10 +249,14 @@ def run_qc(item: PCQItem, seen_questions: set) -> PCQItem:
         notes.append("empty correct_answer")
     if len(item.correct_answer.split()) > 15:
         notes.append("answer too long (>15 words)")
-    # Tekrar kontrolu
+    # Tekrar kontrolu (seen_questions/seen_answers TUM kategoriler arasinda
+    # paylasilir; farkli alt kategoriler ayni kaynak olayi sormasin)
     q_norm = item.question.lower().strip()
     if q_norm in seen_questions:
         notes.append("duplicate question")
+    ans_norm = item.correct_answer.lower().strip()
+    if ans_norm in seen_answers:
+        notes.append("duplicate answer (same underlying fact already used)")
     # Cevap soruda gizleniyor mu?
     if item.correct_answer.lower() in item.question.lower():
         notes.append("answer appears in question")
@@ -266,7 +270,7 @@ def run_qc(item: PCQItem, seen_questions: set) -> PCQItem:
 # ----------------------------------------------------------------------
 
 def build_one(subcode: str, idx: int,
-              seen_questions: set) -> Optional[PCQItem]:
+              seen_questions: set, seen_answers: set) -> Optional[PCQItem]:
     raw = generate_raw_item(subcode, seen_questions)
     if not raw:
         return None
@@ -278,7 +282,7 @@ def build_one(subcode: str, idx: int,
         event_date=raw["event_date"].strip(),
         source_fact=raw["source_fact"].strip(),
     )
-    item = run_qc(item, seen_questions)
+    item = run_qc(item, seen_questions, seen_answers)
     status = "PASS" if item.qc_passed else f"FAIL({'; '.join(item.qc_notes)})"
     logger.info("[%s] %s | Q: %s", item.question_id, status,
                 item.question[:60])
@@ -289,15 +293,20 @@ def build_dataset(per_subcategory: int = 100,
                   out_path: str = "PCQ_dataset.json") -> list:
     """5 alt kategori x 100 = 500 PCQ sorusu hedefi."""
     all_items = []
+    # Kategoriler arasi paylasilan setler: SOURCE_FACTS kategorileri ortak
+    # olaylar icerdiginden (orn. Venezuela depremi PCQ-ECO ve PCQ-WOR'da da
+    # var), dedup tek bir alt kategoriyle sinirli kalamaz.
+    seen_q = set()
+    seen_answers = set()
     for subcode in PCQ_DOMAINS:
         collected, attempts = 0, 0
-        seen_q = set()
-        max_attempts = per_subcategory * 4
+        max_attempts = per_subcategory * 6
         while collected < per_subcategory and attempts < max_attempts:
             attempts += 1
-            item = build_one(subcode, collected + 1, seen_q)
+            item = build_one(subcode, collected + 1, seen_q, seen_answers)
             if item and item.qc_passed:
                 seen_q.add(item.question.lower().strip())
+                seen_answers.add(item.correct_answer.lower().strip())
                 all_items.append(item)
                 collected += 1
         logger.info("Subcategory %s: %d/%d in %d attempts",

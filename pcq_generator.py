@@ -24,6 +24,7 @@ Ortam degiskeni: ASU_CREATEAI_TOKEN
 import os
 import re
 import json
+import random
 import logging
 from dataclasses import dataclass, field, asdict
 from typing import Optional
@@ -571,38 +572,48 @@ class PCQItem:
 # Uretici: Mistral Large (ASU)
 # ----------------------------------------------------------------------
 
-_GEN_PROMPT = """You are generating factual quiz questions for an AI benchmark.
+def split_facts(subcode: str) -> list:
+    """SOURCE_FACTS blogundaki '- ' ile baslayan her satiri ayri bir
+    gercek olarak dondurur (soru uretimini tek-gercek hedefli yapmak icin)."""
+    return [line.strip()[2:].strip()
+            for line in SOURCE_FACTS[subcode].splitlines()
+            if line.strip().startswith("- ")]
 
-Based on the following verified facts about events in {window}, generate ONE question that:
-1. Has a single, specific, unambiguous factual answer
-2. Can be answered from the facts below WITHOUT needing external information
-3. Is NOT answerable from general knowledge about events BEFORE {window}
-   (it must be about a specific result, name, number, date, or decision from this period)
-4. Has a concise gold answer (1-10 words maximum)
 
-VERIFIED FACTS:
-{facts}
+_GEN_PROMPT = """You are generating ONE factual quiz question for an AI benchmark.
 
-Generate a different question each time - vary the topic, entity, and type of fact asked.
+Based ONLY on this single verified fact about {window}, write ONE question that:
+1. Has a single, specific, unambiguous factual answer drawn from this fact
+2. Is NOT answerable from general knowledge about events BEFORE {window}
+3. Has a concise gold answer (1-10 words maximum)
+4. Does NOT reveal the answer within the question itself
+
+FACT:
+{fact}
+{avoid_clause}
 
 Return STRICT JSON ONLY (no markdown):
 {{
-  "question": "<specific factual question about {window} events>",
+  "question": "<specific factual question testing this exact fact>",
   "correct_answer": "<concise factual answer, 1-10 words>",
   "event_date": "<approximate date within {window}>",
-  "source_fact": "<the specific fact from above that supports this answer>"
+  "source_fact": "<restate the fact given above>"
 }}"""
+
+_AVOID_TEMPLATE = (
+    "\n\nA question has ALREADY been asked about this fact: \"{prev_question}\"\n"
+    "Write a DIFFERENT question about the SAME fact, testing a different "
+    "detail/name/number within it (not just a reworded version)."
+)
 
 
 def _gen_call(prompt: str, temperature: float = 0.8) -> Optional[str]:
-    # use_cache=False: ayni fact bloguyla tekrar tekrar cagriliyoruz ve HER
-    # seferinde FARKLI bir soru istiyoruz (temperature=0.8 rastgeleligi
-    # bunun icin var). asu_client'in diski cache'i (model+prompt+query hash)
-    # temperature'i anahtara katmiyor -- prompt ayni kaldiginda (bir alt
-    # kategoride art arda "duplicate question" ile reddedilen denemeler
-    # seen_questions'i buyutmedigi surece prompt degismez) her cagriyi
-    # ayni cache'lenmis yanita yonlendirip sonsuz ayni-soru dongusune
-    # sokuyordu (900 denemede tek soru). Cache burada kapatilmali.
+    # use_cache=False: ayni prompt'u (ozellikle 2. gecistte prev_question
+    # sabitken) tekrar cagirabiliyoruz ve HER seferinde gercek bir model
+    # cevabi istiyoruz (temperature=0.8 rastgeleligi bunun icin var).
+    # asu_client'in disk cache'i (model+prompt+query hash) temperature'i
+    # anahtara katmiyor; cache acik olsaydi ayni prompt her zaman ayni
+    # cache'lenmis yanita yonlenip tekrar dongusune sokardi.
     return asu_query(
         model_name=GENERATOR_MODEL,
         model_provider=GENERATOR_PROVIDER,
@@ -613,20 +624,11 @@ def _gen_call(prompt: str, temperature: float = 0.8) -> Optional[str]:
     )
 
 
-def generate_raw_item(subcode: str, existing_questions: set) -> Optional[dict]:
-    """Kaynak havuzundan tek PCQ uret."""
-    facts = SOURCE_FACTS[subcode]
-    # Tekrar onlemek icin mevcut sorulari prompt'a ekle
-    avoid = ""
-    if existing_questions:
-        sample = list(existing_questions)[-10:]  # (seen_questions kategoriler arasi paylasilir)
-        avoid = f"\n\nAVOID generating questions similar to these already generated:\n" + \
-                "\n".join(f"- {q}" for q in sample)
-    
-    prompt = _GEN_PROMPT.format(
-        window=EVENT_WINDOW,
-        facts=facts + avoid,
-    )
+def generate_raw_item(fact: str, prev_question: Optional[str] = None) -> Optional[dict]:
+    """Tek bir hedef gercekten PCQ uret (prev_question verilirse ayni
+    gercekten FARKLI bir 2. soru istenir)."""
+    avoid_clause = _AVOID_TEMPLATE.format(prev_question=prev_question) if prev_question else ""
+    prompt = _GEN_PROMPT.format(window=EVENT_WINDOW, fact=fact, avoid_clause=avoid_clause)
     raw = _gen_call(prompt)
     if not raw:
         return None
@@ -637,7 +639,7 @@ def generate_raw_item(subcode: str, existing_questions: set) -> Optional[dict]:
                                     "event_date", "source_fact")):
             return data
     except json.JSONDecodeError:
-        logger.warning("JSON parse failed for %s", subcode)
+        logger.warning("JSON parse failed for fact: %s", fact[:60])
     return None
 
 
@@ -676,9 +678,10 @@ def run_qc(item: PCQItem, seen_questions: set, answer_counts: dict) -> PCQItem:
 # Tek uretim + toplu uretim
 # ----------------------------------------------------------------------
 
-def build_one(subcode: str, idx: int,
-              seen_questions: set, answer_counts: dict) -> Optional[PCQItem]:
-    raw = generate_raw_item(subcode, seen_questions)
+def build_one(subcode: str, idx: int, fact: str,
+              seen_questions: set, answer_counts: dict,
+              prev_question: Optional[str] = None) -> Optional[PCQItem]:
+    raw = generate_raw_item(fact, prev_question=prev_question)
     if not raw:
         return None
     item = PCQItem(
@@ -696,13 +699,25 @@ def build_one(subcode: str, idx: int,
     return item
 
 
+RETRIES_PER_SLOT = 3   # bir gercek-slotu icin JSON parse hatasi vb. gecici sorunlarda tekrar dene
+
+
 def build_dataset(per_subcategory: int = 150,
                   out_path: str = "PCQ_dataset.json") -> list:
     """EHQ-3000 nihai hedefi 5 x 150 = 750'dir. SOURCE_FACTS havuzu (en dar
     kategori PCQ-WOR icin ~89 benzersiz gercek) uc arastirma turuyla
-    77->472 gercege genisletildi; her gercekten en fazla MAX_ANSWER_REUSE
-    (2) farkli soru turetilmesine izin verilerek (run_qc/answer_counts)
-    per_subcategory=150 hedefi artik ulasilabilir sinirin icinde."""
+    77->472 gercege genisletildi.
+
+    Onceki tasarim modele TUM fact blogunu (~90+ satir) birden verip "farkli
+    bir soru sec" diyordu -- model guvenilir sekilde cesitlenmiyor, ayni
+    belirgin gercege (orn. "NBA Finals MVP") tekrar tekrar donuyordu ve
+    max_attempts (per_subcategory*6) gercek API cagrilariyla bosa harcaniyordu.
+    Bu surum bunun yerine SOURCE_FACTS'i tek tek gerceklere bolup (split_facts)
+    her cagriya SADECE BIR hedef gercek veriyor; her gercekten en fazla
+    MAX_ANSWER_REUSE (2) soru istenir (2.'sinde 1. soru "farkli sor" olarak
+    modele gecilir). Bu hem tekrari yapisal olarak imkansiz kilar hem de
+    toplam deneme sayisini facts*MAX_ANSWER_REUSE*RETRIES_PER_SLOT ile sinirli
+    tutar (900 yerine ~perkategori facts*2*3)."""
     all_items = []
     # Kategoriler arasi paylasilan yapilar: SOURCE_FACTS kategorileri ortak
     # olaylar icerdiginden (orn. Venezuela depremi PCQ-ECO ve PCQ-WOR'da da
@@ -710,19 +725,35 @@ def build_dataset(per_subcategory: int = 150,
     seen_q = set()
     answer_counts: dict = {}
     for subcode in PCQ_DOMAINS:
-        collected, attempts = 0, 0
-        max_attempts = per_subcategory * 6
-        while collected < per_subcategory and attempts < max_attempts:
-            attempts += 1
-            item = build_one(subcode, collected + 1, seen_q, answer_counts)
-            if item and item.qc_passed:
-                seen_q.add(item.question.lower().strip())
-                ans_norm = item.correct_answer.lower().strip()
-                answer_counts[ans_norm] = answer_counts.get(ans_norm, 0) + 1
-                all_items.append(item)
-                collected += 1
-        logger.info("Subcategory %s: %d/%d in %d attempts",
-                    subcode, collected, per_subcategory, attempts)
+        facts = split_facts(subcode)
+        random.shuffle(facts)
+        collected, idx, total_attempts = 0, 0, 0
+        for fact in facts:
+            if collected >= per_subcategory:
+                break
+            prev_question = None
+            for _slot in range(MAX_ANSWER_REUSE):
+                if collected >= per_subcategory:
+                    break
+                accepted = False
+                for _retry in range(RETRIES_PER_SLOT):
+                    idx += 1
+                    total_attempts += 1
+                    item = build_one(subcode, idx, fact, seen_q,
+                                     answer_counts, prev_question)
+                    if item and item.qc_passed:
+                        seen_q.add(item.question.lower().strip())
+                        ans_norm = item.correct_answer.lower().strip()
+                        answer_counts[ans_norm] = answer_counts.get(ans_norm, 0) + 1
+                        all_items.append(item)
+                        collected += 1
+                        prev_question = item.question
+                        accepted = True
+                        break
+                if not accepted:
+                    break   # bu gercekten 2. soruyu zorlama, sonraki gercege gec
+        logger.info("Subcategory %s: %d/%d (facts=%d, attempts=%d)",
+                    subcode, collected, per_subcategory, len(facts), total_attempts)
 
     serialised = [asdict(it) for it in all_items]
     with open(out_path, "w", encoding="utf-8") as f:
@@ -733,7 +764,6 @@ def build_dataset(per_subcategory: int = 150,
 
 if __name__ == "__main__":
     import argparse
-    import random
     random.seed(SEED)
 
     parser = argparse.ArgumentParser()

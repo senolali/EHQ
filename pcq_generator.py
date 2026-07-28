@@ -63,6 +63,31 @@ SOURCE_FACTS = {
 - Lionel Messi became first player to make 30 World Cup appearances
 - Semifinalists: Spain, Argentina, England, France
 - Spain's second World Cup title (first was 2010)
+- World Cup final: Spain did not allow Argentina a single shot on goal in the entire match
+- With Argentina's final loss, no country has won back-to-back World Cup titles since Brazil (1958, 1962)
+- Wimbledon 2026 Men's Singles champion: Jannik Sinner, defeated Alexander Zverev 6-7,7-6,6-3,6-4 (back-to-back title, 5th major)
+- Wimbledon 2026 Women's Singles champion: Linda Noskova, defeated Karolina Muchova 6-2,5-7,6-3 (July 11, 2026)
+- French Open 2026 Men's Singles champion: Alexander Zverev, defeated Flavio Cobolli (June 7, 2026), his first Grand Slam title
+- French Open 2026 Women's Singles champion: Mirra Andreeva (19), defeated Maja Chwalinska 6-3,6-3
+- 2026 NBA Finals champion: New York Knicks defeated San Antonio Spurs 4-1, first Knicks title since 1973
+- 2026 NBA Finals MVP: Jalen Brunson (scored 45 points in Game 5)
+- 2026 NBA Eastern Conference Finals: Knicks swept the Cleveland Cavaliers 4-0
+- 2026 NBA Western Conference Finals: Spurs beat the Oklahoma City Thunder 4-3
+- 2026 Stanley Cup champion: Carolina Hurricanes defeated Vegas Golden Knights (3-0 in Game 6), first Cup since 2006
+- 2026 Stanley Cup playoff MVP: Jordan Staal
+- 2026 Tour de France overall winner: Tadej Pogacar (5th title, 3rd consecutive), ~6.5 minutes ahead of Remco Evenepoel; race ended July 26, 2026
+- 2026 Tour de France final stage (Stage 21) winner: Mathieu van der Poel (sprint finish)
+- 2026 Tour de France podium: Remco Evenepoel 2nd, Isaac del Toro 3rd (Tour debut)
+- 2026 Tour de France final stage route was shortened because police/security resources were reassigned to fight wildfires
+- 24 Hours of Le Mans 2026 winner: Toyota's #7 GR010 Hybrid (Mike Conway, Kamui Kobayashi, Nyck de Vries), by 11 seconds over the #20 BMW M Hybrid V8
+- 2026 US Open (golf) winner: Wyndham Clark, won by one stroke at Shinnecock Hills (June 18-21, 2026), a wire-to-wire victory
+- 2026 Open Championship (golf) winner: Ryan Fox at Royal Birkdale, 10-under, one shot clear of Cameron Young (July 16-19, 2026), his maiden major
+- 2026 F1 Spanish GP winner: Lewis Hamilton, his first race win for Ferrari (106th career win), June 15, 2026
+- 2026 F1 Austrian GP winner: George Russell, from pole, 1.6s ahead of Max Verstappen (June 26-28, 2026)
+- 2026 F1 British GP winner: Charles Leclerc, ahead of Russell and Hamilton, his first win at Silverstone (July 5, 2026)
+- 2026 F1 Belgian GP winner: Kimi Antonelli, his 6th win of the season, ahead of Leclerc and Verstappen (July 19, 2026)
+- 2026 F1 Hungarian GP winner: Lando Norris, ahead of Verstappen and Antonelli by ~15 seconds (July 26, 2026)
+- 2026 MLB All-Star Game: American League beat National League 4-0 (July 14, 2026, Citizens Bank Park, Philadelphia); MVP Cody Bellinger (New York Yankees)
 """,
 
 "PCQ-POL": """
@@ -81,6 +106,46 @@ SOURCE_FACTS = {
 - US President Trump's NATO spending demands addressed at summit
 - Rutte's goal: "NATO 3.0 - stronger Europe in stronger NATO"
 - UK: John Healey resigned as Defence Secretary before summit over funding disputes
+- At the NATO summit, Zelenskyy and Trump held a bilateral meeting at 14:30 local time, July 8, 2026
+- At that meeting, Trump told Zelenskyy the US would license Ukraine to produce Patriot air-defense missiles domestically
+- Rutte convened a NATO Indo-Pacific-partner (IP4) side-meeting in Ankara with South Korea, Japan, Australia, New Zealand representatives
+- UK PM Keir Starmer announced his resignation on June 22, 2026, following heavy Reform UK gains and cabinet resignations
+- Labour MP Josh Simons resigned his Makerfield seat to let Andy Burnham stand for it
+- Andy Burnham won the June 18, 2026 Makerfield by-election with 54.8% vs. Reform UK's 34.5%
+- UK Labour leadership contest: nominations opened July 9, closed July 16, 2026
+- Andy Burnham was nominated by 379 Labour MPs (over 94% of the parliamentary party)
+- Andy Burnham was declared Labour leader on July 17, 2026
+- Andy Burnham became UK Prime Minister on July 20, 2026, three days after being declared Labour leader
+- New UK PM Andy Burnham named John Healey as Chancellor of the Exchequer (July 20, 2026)
+- US Supreme Court ruled 6-3 in Trump v. Slaughter (June 29, 2026), overruling the 1935 Humphrey's Executor precedent on independent-agency removal protections
+- The same day, the Court preserved limited removal protections for Federal Reserve governors in the companion case Trump v. Cook
+- US Supreme Court ruled 6-3 in NRSC v. FEC (June 30, 2026), striking down federal limits on coordinated party spending with candidates
+- Ethiopia held its general election June 1, 2026; the ruling Prosperity Party won 438 parliamentary seats
+- South Korea held nationwide local elections on June 3, 2026
+- South Korean President Lee Jae-myung marked his first anniversary in office on June 4, 2026
+- India's Uttarakhand state held municipal elections June 9, 2026, results declared June 11, 2026
+- 2026 G7 Summit was held June 15-17, 2026 in Evian-les-Bains, France
+- European Council summit held in Brussels June 18-19, 2026 (Ukraine, Middle East, defense, migration on agenda)
+- EU-Western Balkans Summit held in Tivat, Montenegro, on June 5, 2026
+- Ukraine's EU accession: the Intergovernmental Conference opened the "fundamentals" negotiating cluster on June 15, 2026
+- Moldova held a second EU accession conference, also opening its fundamentals cluster, on June 15, 2026
+- Colombia held its presidential runoff June 21, 2026: Abelardo de la Espriella won with 49.66% vs. Ivan Cepeda's 48.70% (narrowest runoff margin in Colombian history)
+- Ivan Cepeda formally conceded defeat in Colombia's election on June 24, 2026
+- Israel's Knesset passed the first reading of a bill to dissolve parliament by a 106-0 vote in early June 2026
+- The Knesset formally dissolved itself on July 17, 2026 via a 62-0 vote, setting an election for October 27, 2026
+- Taiwan President Lai Ching-te declared "Of course Taiwan is a country" at the start of a national tour, June 22, 2026
+- Taiwan held tabletop exercises June 25, 2026 simulating a response to a potential PRC maritime "quarantine"
+- German Health Minister Nina Warken replaced Thorsten Frei as Head of the Federal Chancellery, becoming the first woman to hold that office
+- Thorsten Frei took over as CDU/CSU Bundestag group leader, replacing Jens Spahn
+- CDU Secretary-General Carsten Linnemann became Germany's new Health Minister
+- German Chancellor Merz completed his cabinet reshuffle by naming a new transport minister on July 27, 2026
+- Iraqi PM Ali al-Zaidi met President Trump at the White House on July 14, 2026
+- At that meeting, Trump and al-Zaidi announced remaining US forces would fully withdraw from Iraq by September 30, 2026
+- Australia signed a A$2.5 billion agreement to export its Over-the-Horizon Radar system to Canada (June 22, 2026)
+- Poland filed a declaration of intervention in the ICJ case Lithuania v. Belarus on June 30, 2026
+- The European Union filed a Memorial in the ICJ case Lithuania v. Belarus on July 20, 2026
+- Nicolas Maduro and US DOJ prosecutors proposed a June 2027 trial start date on narco-terrorism charges (July 21, 2026)
+- The Philippines hosted ASEAN foreign ministers' meetings in Manila July 20-24, 2026, marking the 50th anniversary of the Treaty of Amity and Cooperation
 """,
 
 "PCQ-SCI": """
@@ -102,6 +167,47 @@ AI and Technology Events, June-July 2026:
 - AMD Advancing AI conference scheduled July 22-23, 2026
 - Google I/O 2026 announced AI search enhancements
 - SpaceX AI, OpenAI, Meta shipped flagship models within 24 hours (July 2026)
+- GitHub moved all Copilot plans to usage-based billing on June 1, 2026 (1,500/7,000/20,000 monthly "AI Credits" for Pro/Pro+/Max)
+- NVIDIA launched its Vera Rubin platform (Vera CPUs + Rubin GPUs) June 22, 2026 at ISC High Performance in Hamburg
+- NVIDIA unveiled the RTX Spark AI "superchip" for thin laptops/desktops June 1, 2026 at Computex
+- IBM announced June 2, 2026 it will invest more than $10 billion in quantum computing over five years, targeting a fault-tolerant quantum computer by 2029
+- Apple WWDC 2026 (June 8-12, 2026): announced iOS 27, iPadOS 27, macOS 27 "Golden Gate," and a rebuilt Siri co-built with Google's Gemini team
+- Microsoft launched "Microsoft Frontier Company" on July 2, 2026, backed by $2.5 billion, led by Rodrigo Kede Lima
+- xAI released Grok 4.5 on July 8, 2026, built on a 1.5-trillion-parameter "V9" foundation, priced $2/$6 per million input/output tokens
+- OpenAI introduced "GPT-Live," a full-duplex voice model for ChatGPT Voice, on July 8, 2026
+- OpenAI launched "ChatGPT Work," an agent for full jobs, alongside GPT-5.6 on July 9, 2026
+- Meta Superintelligence Labs released "Muse Spark 1.1" on July 9, 2026, priced $1.25/$4.25 per million input/output tokens
+- Meta introduced "Muse Image," its first image-generation model from Meta Superintelligence Labs (July 2026)
+- Meta launched "AI Mode" on Facebook on June 15, 2026, synthesizing answers from public posts
+- Google's "Dataland" AI arts museum opened June 20, 2026 at The Grand LA, created with artist Refik Anadol
+- Google DeepMind announced a research partnership with film studio A24 on June 22, 2026
+- NVIDIA released "Nemotron 3 Nano Omni," an open-weight 30B-parameter omni-modal model, in June 2026
+- Anthropic released Claude Opus 5 on July 24, 2026, priced $5/$25 per million input/output tokens, becoming the new Claude Max default
+- Moonshot AI's Kimi K3 API went live July 16, 2026 (2.8-trillion-parameter sparse MoE model, 1M-token context); open weights released July 26, 2026
+- AMD "Advancing AI" event launched EPYC "Venice" (first Zen 6 x86 server CPU, TSMC 2nm) and the Instinct MI455X GPU (CDNA5, 432GB HBM4)
+- TSMC confirmed its A16 chip manufacturing node will enter production in the second half of 2026
+- TSMC's June 2026 sales rose 67.9% year-over-year, breaking a four-year seasonal decline pattern
+- Qualcomm's June 24, 2026 Investor Day projected data-center revenue reaching $15B by FY2029, unveiling the "Dragonfly C1000" CPU with Meta as a customer
+- SpaceX's Starship Flight 13 aborted at T-0 on July 16, 2026 (Raptor engine ignition failures); a third attempt succeeded July 24, 2026, deploying operational Starlink V3 satellites
+- JWST provided the strongest evidence yet for "black hole stars" on June 10, 2026
+- JWST imaged the dawn and dusk terminators of exoplanet WASP-121b separately in June 2026, finding asymmetric temperatures
+- A Leiden/Oxford-led team used JWST to observe a complex of six closely packed galaxies with a growing supermassive black hole in the young universe
+- Intellia's HAELO phase 3 trial results published in NEJM (June 12, 2026): a single CRISPR-Cas9 IV dose cut hereditary angioedema attacks by 87% vs. placebo
+- Nature published research (reported June 25, 2026) showing next-generation genome-editing tools are more precise than earlier CRISPR forms
+- ShinyHunters breached Madison Square Garden Entertainment via voice phishing, publishing 45GB of data (~26 million records) on June 16, 2026
+- ShinyHunters claimed to have stolen more than 2.2 million Kodak customer/corporate records, with a June 18, 2026 leak deadline
+- DHS confirmed July 1, 2026 that hackers breached the Homeland Security Information Network (HSIN) coordinating 2026 FIFA World Cup security
+- Robot.com launched its first humanoid robot, "R-noid," at the Automate 2026 trade show (June 22-25, 2026)
+- Waymo operated robotaxis in six US World Cup host cities, completing more than 90,000 trips to stadiums/watch parties
+- Solar power generated a record 52 TWh of EU electricity in June 2026 (25% of the bloc's monthly generation)
+- California's grid operator (CAISO) supplied 23 GW of solar power on July 10, 2026, covering 72% of regional demand
+- The US Department of Energy released its finalized Fusion Science and Technology Roadmap on June 9, 2026
+- Together AI closed an $800 million Series C funding round at an $8.3 billion valuation
+- Quantum Systems (German drone/robotics defense-tech firm) raised $1.2 billion in a Series D round on July 2, 2026
+- AIsphere secured $439 million in a Series C round led by Alibaba Group Holding, completed July 14, 2026
+- Peregrine Technologies secured $250 million in a Series D round, valuing the company at $6.8 billion
+- Cyera raised $600 million in June 2026, reaching a $12 billion valuation
+- Fintech company Ramp secured funding in June 2026 at a $44 billion valuation
 """,
 
 "PCQ-ECO": """
@@ -120,6 +226,58 @@ Economic Events, June-July 2026:
 - AI hiring: IBM reported 8% of IT roles now "AI-focused" as of June 2026
 - Taylor Swift and Travis Kelce married July 3, 2026 at Madison Square Garden (1,000 guests)
 - US celebrated 250th anniversary (semiquincentennial) on July 4, 2026
+- The US Federal Reserve held its rate at 3.50%-3.75% on June 17, 2026, Kevin Warsh's first meeting as Fed Chair
+- The ECB raised its deposit rate to 2.25% on June 11, 2026, its first hike since 2023
+- The Bank of Japan raised its policy rate to 1.00% on June 16, 2026, the highest since 1995
+- Turkey's central bank held its policy rate at 37% on June 11, 2026 and again on July 23, 2026
+- India's RBI held its repo rate at 5.25% in its June 2026 meeting
+- US nonfarm payrolls rose just 57,000 in June 2026 (reported July 2, 2026), missing forecasts
+- US unemployment rate fell to 4.2% in June 2026
+- US June 2026 CPI fell 0.4% month-over-month, the biggest monthly decline in 6+ years; annual rate fell to 3.5%
+- China's Q2 2026 GDP grew 4.3% year-on-year, the slowest quarterly growth since end-2022
+- China's Q2 2026 exports surged 27% year-on-year
+- Eurozone flash inflation for June 2026 came in at 2.8% year-on-year
+- 25 tracked companies announced 13,532 job cuts in July 2026; Microsoft's cut of 4,664 positions was the largest single cut
+- 2026 YTD US layoffs totaled 322 events affecting 205,832 workers by July 28, 2026; Oracle's 30,000-job cut was the largest single event
+- The US IPO market raised a record $97.9 billion across 19 IPOs in June 2026
+- SpaceX IPO'd on Nasdaq (ticker SPCX) on June 12, 2026, priced at $135/share, raising $85.7 billion, the largest IPO debut ever
+- SpaceX's share price hit $225 within days of its IPO, pushing its market cap above $3 trillion
+- Quantinuum Inc. IPO'd on Nasdaq June 4, 2026, raising about $1.68 billion priced at $60/share
+- The S&P 500 closed at a record 7,537.43 on July 6, 2026
+- The Dow Jones Industrial Average hit a record close of 53,055.91 on July 6, 2026
+- Bitcoin climbed back above $63,000 on July 4, 2026
+- Trump and Iranian President Masoud Pezeshkian signed a memorandum of understanding to end the war on June 17, 2026
+- Brent crude jumped over 9% on July 12, 2026, its biggest daily gain since 2020
+- OPEC+ agreed June 7, 2026 to raise oil production by 188,000 barrels per day for July 2026
+- Netflix's Q2 2026 revenue was $12.56 billion, up 13% year-over-year
+- TSMC's Q2 2026 revenue was NT$1,270.38 billion, up 36.0% year-over-year
+- Tesla's Q2 2026 revenue was a record $28.236 billion, up 26% year-over-year, though EPS of $0.33 missed consensus
+- Tesla's Q2 2026 deliveries hit a Q2 record of 480,126 vehicles
+- Boeing's Q2 2026 (reported July 28, 2026) revenue was $24.6 billion with a net loss of $428 million
+- The FAA restored Boeing's authority to self-issue final airworthiness certificates for 737 MAX/787 jets effective July 20, 2026
+- JPMorgan Chase's Q2 2026 EPS was $6.14 (reported July 14, 2026), beating consensus
+- Goldman Sachs reported its highest-ever quarterly profit in Q2 2026, with diluted EPS of $20.98
+- Delta Air Lines' Q2 2026 adjusted EPS was $1.56 (reported July 10, 2026)
+- GM's Q2 2026 revenue was $48.0 billion with net income of $1.3 billion (reported July 21, 2026)
+- Iberdrola agreed to take control of Finnish utility Caruna for $2.3 billion (announced July 22, 2026)
+- Var Energi agreed to buy BlueNord for $1.3 billion (July 21, 2026), creating Europe's largest independent oil and gas company
+- Qualcomm agreed to acquire AI software startup Modular for $3.92 billion (announced June 24, 2026)
+- ON Semiconductor announced a $7 billion all-stock acquisition of Synaptics on June 25, 2026
+- PwC forecast on June 23, 2026 that global M&A deal value was on track to reach $4 trillion for the year
+- The OCC issued a 39-page GENIUS Act stablecoin rulemaking proposal on June 22, 2026
+- Regulators missed the GENIUS Act's original July 18, 2026 statutory deadline for finalizing stablecoin rules
+- Nvidia implemented a new "whitelist" compliance system for Asian AI-chip customers on July 14, 2026, disqualifying over half of prior eligible buyers
+- The DOJ approved the $110 billion Paramount Skydance-Warner Bros. Discovery merger around June 12, 2026, without requiring divestitures
+- A coalition of 12 state attorneys general filed a lawsuit July 13, 2026 to block the $110 billion Paramount-WBD merger
+- A California federal judge issued a temporary restraining order on July 20, 2026 delaying the Paramount-WBD merger
+- Paramount Skydance agreed to halt the Warner Bros. Discovery merger until as late as June 1, 2027, pending an antitrust ruling
+- Philippine Airlines ordered 15 Boeing 787-10 Dreamliners at the Farnborough International Airshow (July 2026)
+- Uganda Airlines placed its first-ever Boeing order at Farnborough 2026: four 737 MAX 8s and four 787-9 Dreamliners
+- Trump announced an additional 50% tariff on Canada on July 20, 2026, effective August 19, 2026
+- Trump imposed Section 301 tariffs of 10%-12.5% on more than 60 countries on July 24, 2026
+- The EU Council formally adopted regulations enacting the US-EU trade deal on June 25, 2026, effective July 1, 2026 (15% US tariff on most EU goods)
+- New UK PM Andy Burnham named John Healey as Chancellor of the Exchequer (July 20, 2026)
+- Anthropic filed confidentially for an IPO on June 1, 2026, at a $965 billion valuation after closing a $65 billion Series H round
 """,
 
 "PCQ-WOR": """
@@ -141,6 +299,46 @@ World Events, June-July 2026:
 - Moldovan PM Alexandru Munteanu resigned
 - Sri Lanka prison riots: 27 dead including 4 officers (Negombo prison, rival drug gangs)
 - 2026 NATO Summit held Ankara, Turkey July 7-8
+- English actress Dame Penelope Keith died June 29, 2026, age 86
+- Argentine singer/musician Daniel Melingo died June 30, 2026, age 69, in Buenos Aires
+- Fantasy/sci-fi illustrator John Blanche (Warhammer 40,000) died in June 2026, age 77
+- Actor Hal Williams, known for the sitcom "227," died July 15, 2026, age 91
+- Spoken-word artist Black Ice (Def Poetry Jam) died July 22, 2026, age 54
+- Montreal jazz pianist Oliver Jones died July 22, 2026, age 91
+- A magnitude 7.8 earthquake struck off Maasim, Sarangani province, Philippines on June 8, 2026, triggering a tsunami alert
+- Flash flooding in Afghanistan in June 2026 killed over 300 people
+- A burnover incident at the Snyder Fire (Mesa County, Colorado) on June 27, 2026 killed three federal wildland firefighters
+- Climate-driven wildfires had displaced more than 300,000 people in France and Spain by July 26, 2026
+- The "Thumb Fire" in Minnesota's Superior National Forest started July 7, 2026 and grew to about 14,500 acres
+- July 2026 heat domes killed at least 70 people across the US, per a Washington Post analysis
+- A PAC P-750 XSTOL skydiving aircraft crashed in Butler, Missouri on June 14, 2026, killing all 12 occupants
+- A US Air Force B-52 bomber crashed shortly after takeoff at Edwards Air Force Base, California, on June 15, 2026, killing all 8 crew
+- A Cessna 680A Citation Latitude crashed onto Loop 20 highway in Laredo, Texas on June 16, 2026, killing 1 of 6 aboard
+- A Pilatus PC-6 Porter carrying skydivers crashed at Nancy-Essey Airport in Tomblaine, France on June 28, 2026, killing all 11 aboard, the deadliest skydiving plane crash in French history
+- A shooting on Texas State Highway Loop 250 in Midland, Texas on June 12, 2026 killed 1 person and injured 10
+- A shooting at a youth welfare center in Stade, Germany on June 29, 2026 killed 6 people
+- A Philadelphia jury found Keith Gibson ("The Beast") responsible for 4 murders on June 9, 2026
+- Gilgo Beach serial killer Rex Heuermann was sentenced to life without parole on June 17, 2026, for 8 murders
+- A van attack at Berlin's Christopher Street Day (Pride) celebration on July 25, 2026 killed one woman; the perpetrator, Abdul Ballout, was fatally shot by police the next day
+- Sakurajima volcano in Japan had one of its most intense eruptions on June 7, 2026
+- Kilauea's Halema'uma'u eruption Episode 49 occurred June 14, 2026, with lava fountains reaching almost 700 feet
+- A new Mount Etna eruption began June 26, 2026, with lava flowing toward the Valle del Leone
+- The 2026 Tony Awards were held June 7, 2026 at Radio City Music Hall
+- "Schmigadoon!" won Best Musical at the 2026 Tony Awards
+- "Liberation" won Best Play at the 2026 Tony Awards
+- "Death of a Salesman" won Best Revival of a Play at the 2026 Tony Awards (6 Tonys total)
+- "Ragtime" won Best Revival of a Musical at the 2026 Tony Awards
+- John Lithgow won Best Actor in a Play at the 2026 Tony Awards, for "Giant"
+- Lesley Manville won Best Actress in a Play at the 2026 Tony Awards, for "Oedipus"
+- 2026 Emmy nominations were announced July 8, 2026; HBO Max's "The Pitt" led with 25 nominations
+- "Hacks" received 24 Emmy nominations in 2026, including Outstanding Lead Actress for Jean Smart
+- The 2026 Booker Prize longlist was announced July 28, 2026
+- A cache of 43 helmets found off the Spanish coast was confirmed in June 2026 to be medieval, not Roman as previously thought
+- Mexico's INAH announced a newly discovered 1,400-year-old archaeological site in Coatepec, Veracruz, around June 29, 2026
+- Archaeologists revealed a Greco-Roman cemetery atop older settlement remains at Tel Kom Aziza, Egypt, in June 2026
+- A prehistoric painted cave with nearly 100 human/animal figures was identified in Malatya's Tohma Canyon, Turkey, in June 2026
+- A 5-year-old girl, Daleyza Fregoso, subject of an AMBER Alert, was found safe in Mexico on June 15, 2026
+- A 93-year-old Hoke County, NC woman, Catherine Peterkin, reported missing, was found safe on June 19, 2026
 """
 }
 
@@ -289,9 +487,13 @@ def build_one(subcode: str, idx: int,
     return item
 
 
-def build_dataset(per_subcategory: int = 100,
+def build_dataset(per_subcategory: int = 35,
                   out_path: str = "PCQ_dataset.json") -> list:
-    """5 alt kategori x 100 = 500 PCQ sorusu hedefi."""
+    """EHQ-3000 nihai hedefi 5 x 150 = 750'dir, ancak SOURCE_FACTS havuzu
+    (en dar kategori PCQ-SPO icin ~41 benzersiz gercek) su an bunu
+    desteklemiyor -- seen_answers dedup'i gercek sayisindan fazla soru
+    uretilmesini zaten engeller. per_subcategory=35 mevcut havuzla
+    ulasilabilir guvenli bir hedeftir; havuz buyudukce yukselt."""
     all_items = []
     # Kategoriler arasi paylasilan setler: SOURCE_FACTS kategorileri ortak
     # olaylar icerdiginden (orn. Venezuela depremi PCQ-ECO ve PCQ-WOR'da da
@@ -320,11 +522,24 @@ def build_dataset(per_subcategory: int = 100,
 
 
 if __name__ == "__main__":
-    import random; random.seed(SEED)
-    logger.info("PCQ smoke test | Pencere: %s | Uretici: Mistral-Large(ASU)", EVENT_WINDOW)
+    import argparse
+    import random
+    random.seed(SEED)
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--full", action="store_true",
+                        help="Tam uretim: 5 alt kategori x 35 = ~175 hedef "
+                             "(PCQ_dataset.json, mevcut SOURCE_FACTS havuzuyla "
+                             "ulasilabilir azami). Verilmezse smoke test calisir.")
+    args = parser.parse_args()
+
+    logger.info("Pencere: %s | Uretici: Mistral-Large(ASU)", EVENT_WINDOW)
     logger.info("Kaynak: Gercek olaylar (FIFA WC, NATO, AI/Tech, IMF, Dunya)")
     if not os.environ.get("ASU_CREATEAI_TOKEN"):
         logger.info("ASU_CREATEAI_TOKEN yok; import OK.")
+    elif args.full:
+        logger.info("PCQ TAM URETIM | 5 alt kategori x 35 = ~175 hedef")
+        build_dataset(per_subcategory=35, out_path="PCQ_dataset.json")
     else:
-        # Her kategoriden 2 soru smoke test
+        logger.info("PCQ smoke test | Her kategoriden 2 soru")
         build_dataset(per_subcategory=2, out_path="PCQ_smoke.json")

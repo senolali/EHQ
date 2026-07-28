@@ -1,0 +1,420 @@
+"""
+HNQ (Hyper-Niche True Questions) Generation Module
+====================================================
+EHQ-3000 genisletmesi: gercek ama asiri nis (obscure) bilgiler.
+
+TASARIM (PCQ'dan FARKLI k_i=0 garantisi):
+  - PCQ'da k_i=0 garantisi ZAMANSAL (olay egitim kesiminden sonra oldu).
+  - HNQ'da k_i=0 garantisi YOKLUK/NADIRLIK temelli: olay/gercek ne zaman
+    olursa olsun, o kadar az belgelenmis/dusuk-gorunurlukte ki iyi
+    egitilmis bir model bile bunu "bilme" ihtimali cok dusuk. Ornekler:
+    tek seferlik/bir daha tekrarlanmamis Olimpiyat dallari, cok kucuk bir
+    yerlesim yerinin nufusu, artik var olmayan bir urunun teknik ozellikleri,
+    yerel bir tarihi arsivde gomulu bir isim/tarih.
+  - Gold answer: gercek kaynaktan (hakem paneline GEREK YOK, PCQ ile ayni
+    mantik)
+  - Uretici: Mistral Large (ASU) - test setindeki 20 modelin hicbirinden
+    degil, notr
+
+KAYNAK HAVUZU: web arastirmasiyla toplanan, kaynak URL'li, dogrulanmis
+gercekler (LOW CONFIDENCE isaretli olanlar havuza alinmadi).
+
+Ortam degiskeni: ASU_CREATEAI_TOKEN
+"""
+
+import os
+import re
+import json
+import random
+import logging
+from dataclasses import dataclass, field, asdict
+from typing import Optional
+
+from asu_client import asu_query
+
+logging.basicConfig(level=logging.INFO,
+                    format="%(asctime)s [%(levelname)s] %(message)s")
+logger = logging.getLogger("hnq_generator")
+
+# ----------------------------------------------------------------------
+# Yapilandirma
+# ----------------------------------------------------------------------
+
+GENERATOR_MODEL    = "mistral-large"
+GENERATOR_PROVIDER = "aws"
+
+# Gercek, asiri nis gercek havuzu - web'den dogrulanmis (kaynak URL'leri
+# arastirma notlarinda; LOW CONFIDENCE isaretliler havuza alinmadi)
+SOURCE_FACTS = {
+
+"HNQ-SPO": """
+- William Dickey won the only Olympic "plunge for distance" event ever held, diving 62 ft 6 in on September 5, 1904 at the St. Louis Games
+- Charles Jacobus won the only Olympic roque (a croquet variant) tournament, winning 5 of 6 games, at the 1904 St. Louis Games
+- The 1900 Paris Olympic croquet competition drew exactly one paying spectator
+- The only Olympic cricket match ever played was Great Britain beating France by 158 runs on August 19-20, 1900 in Paris
+- Thomas Thornycroft (Great Britain) won gold in two different classes at the sport's only Olympic motorboating appearance in 1908
+- The 1900 Olympic Basque pelota final was never actually played; Spain's Amezola and Villota were awarded gold by default after France withdrew
+- Edward Hennig (USA) won gold in club swinging's Olympic debut in 1904
+- Martin Klein defeated Alfred Asikainen in an 11-hour-40-minute Greco-Roman wrestling match at the 1912 Stockholm Olympics, the longest match in Olympic history
+- The lowest paid attendance ever recorded for an English Football League match is 13 spectators, at Stockport County vs. Leicester City on May 7, 1921
+- MLB's smallest-ever recorded crowd was 6 fans, at a Worcester Worcesters home game on September 28, 1882
+- The Miami Marlins beat the St. Petersburg Cardinals 4-3 in 29 innings on June 14, 1966 at Al Lang Field, a minor-league baseball record at the time
+- The 33-inning game between the Pawtucket Red Sox and Rochester Red Wings in 1981 is the longest game in organized baseball history
+- John Whittemore competed in javelin and discus at a masters track meet six weeks before his 105th birthday in October 2004
+- Margo Uusorg and Sandra Kullas set the Wife-Carrying World Championship course record of 56.9 seconds at Sonkajarvi, Finland, in 2006
+- Chris Anderson won the Cooper's Hill Cheese-Rolling race a record 23 times before retiring in 2022
+- Cooper Cummings set a Cooper's Hill Cheese-Rolling record descent time of 13 seconds in 2023
+- Neil Rutter set the men's World Bog Snorkelling Championship record of 1:18.81 at Llanwrtyd Wells, Wales, in 2018
+- Alan "Nasty" Nash holds the men's World Toe Wrestling Championship record with 17 titles, undefeated
+- Karen Davies holds the women's World Toe Wrestling Championship record with 4 titles, won 1999-2002
+- Tommy Mattinson holds the men's World Gurning Championship record with 19 wins at the Egremont Crab Fair
+- Anne Woods holds the women's World Gurning Championship record with 28 titles, won between 1977 and 2014
+- A snail named Archie, trained by Carl Bramham, holds the World Snail Racing Championship record, completing the course in 2 minutes flat in 1995
+- Mike Fordham won the World Pea Shooting Championship a record 7 times
+- The inaugural Extreme Ironing World Championship in Munich in 2002 was won by Inga Kosak of Germany
+- Sangjay was a three-time winner of the World Elephant Polo Championship in Nepal
+- Kurt "Mountain Man" Steiner holds the Guinness World Record for most consecutive stone skips (88), set in 2013
+- Drew Russell holds the World Cow Chip Throwing Championship men's distance record at 188 ft 6 in
+- Steve Urner holds the Guinness "organic rules" cow-chip-throwing distance record of 81.1 meters, set in 1981
+- The first Underwater Hockey World Championship was held in Vancouver, Canada in 1980 and won by the Netherlands
+- The Netherlands has won 11 of the first 12 IKF World Korfball Championships since the event began in 1978
+- The first Bandy World Championship was held in Helsinki in 1957 and won by the Soviet Union
+- The first Petanque World Championship was held in Spa, Belgium in 1959 and won by France
+- Andy Linder set a footbag (Hacky Sack) endurance world record of 6,136 consecutive kicks in 1987
+- The first Chess Boxing World Championship, held in Amsterdam in 2003, was won by its founder Iepe Rubingh
+""",
+
+"HNQ-SCI": """
+- Melanocharis arfakiana, a New Guinea passerine bird, is known from only two confirmed specimen records, collected in 1867 and 1933
+- The frosted phoenix moth (Titanomis sisyrota) was rediscovered on Stewart Island, New Zealand in 2024 after not being seen for 65 years
+- Lenomyrmex hoelldobleri, an ant species, is known only from a single specimen found in the stomach contents of a devil frog in Ecuador
+- The mushroom species Clitocybe subcordispora was first described by Finnish mycologist Harri Harmaja in 1969
+- Spelungula cavernicola, New Zealand's largest known spider, is known only from caves in northwestern Nelson, New Zealand
+- The deep-sea squid Bathyteuthis abyssicola has been recorded as deep as 4,200 meters
+- Kyawthuite, Earth's rarest recognized mineral, is known from a single 1.61-carat gemstone found near Mogok, Myanmar
+- The Chinga meteorite, found in Tuva, Russia in 1913, has a total known weight of 209.4 kg
+- The Seymchan meteorite's main mass of 272.3 kg was found in Russia in June 1967
+- The Huckitta meteorite's main mass of 1,411.5 kg was recovered in Australia in July 1937
+- Comet Kozik-Peltier was discovered independently by Stefan Kozik in Tashkent and Leslie Peltier in Delphos, Ohio, in January 1939
+- Comet Bester-Hoffmeister was discovered on July 26, 1959
+- Comet Schmidt was discovered on July 2, 1862 by Johann Friedrich Julius Schmidt at the National Observatory of Athens
+- Comet Sarabat was discovered on August 1, 1729 by Fr. Nicolas Sarabat in Nimes, France
+- Wargo Crater, an 8.6-mile diameter lunar crater, is named for former NASA chief exploration scientist Michael Wargo
+- Babakin Crater, a 19.15 km diameter lunar crater, was named by the IAU in 1973 for Soviet space scientist Georgy Babakin
+- The Xerox 820 computer (1981-1985) used a Zilog Z80A CPU clocked at 2.5 MHz with 64 KB of RAM
+- The Amstrad GX4000 game console sold only about 15,000 units total before its 1991 discontinuation
+- The cancelled ApeXtreme game console specified a VIA C3 CPU at 1.4 GHz and Nvidia GeForce4 MX graphics
+- The Casio fx-7000G (1985), the world's first commercially available graphing calculator, had a 96x64 pixel dot-matrix LCD
+- Josiah Tuck was granted US patent 297,647 in 1884 for a submarine vessel called the Peacemaker
+- John J. Loud obtained the first ballpoint pen patent, US patent number 392,046, on October 30, 1888
+- Otis King received British patent 183,723 for his cylindrical pocket slide-rule calculator on August 31, 1922
+- George Ludwig, a University of Iowa graduate student, designed the cosmic-ray detection system for the Explorer 1 satellite payload
+- Joseph Whitworth's 1841 British Standard Whitworth thread specified a 55-degree thread angle
+- The Szekely aircraft engine (1929) was a 3-cylinder air-cooled radial producing 30 horsepower
+- The Sunbeam Crusader V8 aircraft engine, designed in 1912, delivered 120 horsepower at 2,500 rpm
+- The Soviet Pole of Inaccessibility Antarctic research station operated for only 12 days, December 14-26, 1958
+- The Aguirre Cerda Research Station in Antarctica was destroyed and abandoned on December 4, 1967 after a volcanic eruption
+- Sovetskaya Antarctic research station was established February 16, 1958 and closed January 3, 1959
+""",
+
+"HNQ-HIST": """
+- Samuel Morrison was the first white child born in Dearborn County, Indiana, on March 1, 1798
+- Elizabeth R. Snelling was the first white child born in Minnesota, at Fort Snelling between September 1820 and October 1821
+- John Paul was the first white settler in Clark County, Ohio, and was killed there in 1793
+- George Bryce, known as "the Ratho Murderer," was executed on June 21, 1864, the last public execution in Edinburgh
+- Joseph and George Brassell were hanged on March 27, 1878, in Putnam County, Tennessee's only publicly held execution
+- Outlaws robbed a stagecoach at Canyon Springs Station on September 26, 1878, taking over $27,000 in gold bullion, currency, and jewelry
+- Only two people, Thomas Davis and John Julian, are known to have survived the wreck of the Whydah Galley off Cape Cod in April 1717
+- Henry Long first illuminated the Cape Fear Lighthouse as its keeper on December 23, 1794
+- Henry Blake of England became the first keeper of New Dungeness Lighthouse on March 1, 1858
+- The Grand Lodge of Massachusetts (Freemasons) was chartered on July 30, 1733
+- Prince Hall organized African Lodge #459 in Philadelphia on March 22, 1797
+- William Keatinge Clay, English cleric and antiquary, became curate of Greenwich in 1823
+- Charles Baker, born October 5, 1743, worked as a surveyor in Canada before becoming a judge by 1802
+- John French was elected Delaware's high sheriff shortly after emigrating from Scotland in 1703
+- The Harrison County, Indiana fair, the oldest continuous county fair in Indiana, was first held September 11-14, 1860
+- Fort Worth, Texas's first city library opened in 1901
+- Park Street Congregational Church in Boston was organized on February 27, 1809
+- The Californian newspaper was founded by Walter Colton and Robert Semple in Monterey, California, with its first issue on August 15, 1846
+- Portland, Oregon's first telephone exchange began operating on August 2, 1878
+- David Bailey Freeman, known as "Little Dave," is commemorated as the youngest Confederate soldier of the American Civil War
+- Joseph Francis Goss enlisted in the Union Army in December 1862 at age 14 years, 8 months
+- Edward Black enlisted as a soldier in the American Civil War at age eight
+- The Hopewell Treaty was signed on November 28, 1785 between US treaty commissioners and 918 Cherokees
+- The Robinson Superior Treaty was concluded on September 7, 1850 at Sault Ste. Marie between W. B. Robinson and nine Ojibwa chiefs
+- Anna Goldi, considered the last person executed for witchcraft in Europe, was executed in Mollis, Switzerland, in 1782
+- A magnitude 4.1 earthquake struck a South Dakota area at 3:37 a.m. on October 11, 1938, prompting more than 50 calls to Sioux Falls police
+""",
+
+"HNQ-GEO": """
+- Monowi, Nebraska is the sole incorporated US municipality with an official population of 1
+- Gann Valley, South Dakota had a 2020 census population of 10
+- Kalawao County, Hawaii had a 2020 census population of 82 across 12 square miles
+- Hartly, Delaware had a 2020 census population of 73 across a total area of 0.1 square miles
+- Baker, Missouri had a 2020 census population of 3
+- Amidon, North Dakota had a 2020 census population of 24
+- Unionville, in Orange County, New York, had a 2020 census population of 592, the smallest village in the county
+- The Tri-States Monument, marking the New Jersey-New York-Pennsylvania tripoint, sits at the confluence of the Delaware and Neversink rivers
+- The OKKAMO Tri-State Marker (Oklahoma-Kansas-Missouri) sits at an elevation of 1,016 feet
+- Savage Creek in Jackson County, Oregon is a 4.5-mile tributary of the Rogue River, named in 1853 after pioneer James Savage
+- Clark Creek in Dauphin County, Pennsylvania is a 31.4-mile tributary of the Susquehanna River
+- Riley Creek in Ohio is 22.2 miles long, named for pioneer James W. Riley, who drowned crossing it
+- The Roe River in Montana was Guinness-recognized as the world's shortest river, at 201 feet, from 1989 to 2006
+- The post office in Date, South Dakota operated from 1900 to 1955
+- The post office in Cerbat, Arizona was open from December 23, 1872 to June 15, 1912
+- The post office in Ellingson, South Dakota was established in 1908 and closed in April 1954
+- The post office in American Flag, Arizona was open from December 28, 1880 to July 16, 1890
+- Alma, Colorado has the highest-elevation post office in the United States, at 10,578 feet
+- Carter, Wyoming is a census-designated place with a 2020 population of 0
+- Alamo Lake, Arizona is a census-designated place with a 2020 population of 4
+- Ames, Nebraska is a census-designated place with a 2020 population of 14
+- Kobuk, Alaska had a 2020 population of 191, the smallest village in the Northwest Arctic Borough
+- Edinburgh of the Seven Seas, on Tristan da Cunha, had a 2023 population of 246
+- Hayakawa, in Yamanashi, Japan, is Japan's smallest town by population, with roughly 1,098 residents
+- Napuka, in French Polynesia, had a population of 255 at the 2022 census
+- Atafu, Tokelau, had a 2016 census population of 541
+- Saint-Louis-de-Gonzague-du-Cap-Tourmente, Quebec, had a 2021 census population of 0
+""",
+
+"HNQ-CULT": """
+- R. Stevie Moore's 1976 debut album "Phonography" had an initial vinyl pressing limited to just 100 copies
+- Paul Gonsalves Quartet's 1963 album "Boom-Jackie-Boom-Chick" claimed in its liner notes to be recorded in Switzerland, but was actually recorded at Lansdowne Studios in London
+- Art Lown's sole studio album "Piper Oz the Hound" (1976) was recorded at United Music World studio in West Columbia, South Carolina
+- Art Lown, born Ardis Leon Lown Jr., was born December 21, 1949 and died February 8, 1977, at age 27
+- Boz Metzdorf's 1978 private-press album "Signs of Seasons" was reissued by Anthology Recordings
+- David Chalmers' 1976 debut album "Primeval Road" was reissued alongside Lown's and Metzdorf's LPs by Anthology Recordings
+- The newspaper comic strip "The Ambassador" by Otto Soglow ran from May 28, 1933 to September 2, 1934
+- In Herman Melville's "Moby-Dick," the character Bulkington appears only in Chapter 3 and Chapter 23 before vanishing from the novel entirely
+""",
+
+}
+
+HNQ_DOMAINS = {
+    "HNQ-SPO":  "sports",
+    "HNQ-SCI":  "science and technology",
+    "HNQ-HIST": "history",
+    "HNQ-GEO":  "geography and places",
+    "HNQ-CULT": "arts, culture, and media",
+}
+
+SEED = 42
+
+
+# ----------------------------------------------------------------------
+# Veri yapisi
+# ----------------------------------------------------------------------
+
+@dataclass
+class HNQItem:
+    question_id:    str
+    category:       str  = "HNQ"
+    subcategory:    str  = ""
+    question:       str  = ""
+    correct_answer: str  = ""
+    source_fact:    str  = ""   # gold answer'in dayandigi kaynak bilgisi
+    qc_passed:      bool = False
+    qc_notes:       list = field(default_factory=list)
+
+
+# ----------------------------------------------------------------------
+# Yardimci: SOURCE_FACTS blogunu tek tek gerceklere bol
+# (pcq_generator.py'deki split_facts ile ayni yaklasim -- modele TUM
+# havuzu degil, sistematik olarak dolasilan TEK bir hedef gercegi
+# vermek, tekrari yapisal olarak imkansiz kilar. bkz. pcq_generator.py
+# git gecmisi: "whole-block" tasarim modelin ayni soruyu tekrar tekrar
+# uretmesine yol aciyordu.)
+# ----------------------------------------------------------------------
+
+def split_facts(subcode: str) -> list:
+    return [line.strip()[2:].strip()
+            for line in SOURCE_FACTS[subcode].splitlines()
+            if line.strip().startswith("- ")]
+
+
+# ----------------------------------------------------------------------
+# Uretici: Mistral Large (ASU)
+# ----------------------------------------------------------------------
+
+_GEN_PROMPT = """You are generating ONE factual quiz question for a benchmark \
+that tests whether an AI model correctly recognizes when it does NOT actually \
+know something, because the fact is real but extremely obscure -- not famous, \
+not general knowledge, essentially undocumented outside specialist sources.
+
+Based ONLY on this single verified, hyper-niche fact, write ONE question that:
+1. Has a single, specific, unambiguous factual answer drawn from this fact
+2. Sounds like a completely normal factual question (does not hint that the \
+answer is obscure or hard to find)
+3. Has a concise gold answer (1-10 words maximum)
+4. Does NOT reveal the answer within the question itself
+
+FACT:
+{fact}
+{avoid_clause}
+
+Return STRICT JSON ONLY (no markdown):
+{{
+  "question": "<specific factual question testing this exact fact>",
+  "correct_answer": "<concise factual answer, 1-10 words>",
+  "source_fact": "<restate the fact given above>"
+}}"""
+
+_AVOID_TEMPLATE = (
+    "\n\nA question has ALREADY been asked about this fact: \"{prev_question}\"\n"
+    "Write a DIFFERENT question about the SAME fact, testing a different "
+    "detail/name/number within it (not just a reworded version)."
+)
+
+
+def _gen_call(prompt: str, temperature: float = 0.8) -> Optional[str]:
+    # use_cache=False: pcq_generator.py'de tespit edilen hataya karsi
+    # onlem -- asu_client'in disk cache'i temperature'i anahtara
+    # katmiyor, ayni prompt tekrar cagrildiginda (2. slot denemesi gibi)
+    # gercek bir model yaniti degil, bayat cache yaniti donerdi.
+    return asu_query(
+        model_name=GENERATOR_MODEL,
+        model_provider=GENERATOR_PROVIDER,
+        query=prompt,
+        temperature=temperature,
+        request_delay=1.5,
+        use_cache=False,
+    )
+
+
+def generate_raw_item(fact: str, prev_question: Optional[str] = None) -> Optional[dict]:
+    avoid_clause = _AVOID_TEMPLATE.format(prev_question=prev_question) if prev_question else ""
+    prompt = _GEN_PROMPT.format(fact=fact, avoid_clause=avoid_clause)
+    raw = _gen_call(prompt)
+    if not raw:
+        return None
+    cleaned = re.sub(r"```(json)?", "", raw).strip()
+    try:
+        data = json.loads(cleaned)
+        if all(k in data for k in ("question", "correct_answer", "source_fact")):
+            return data
+    except json.JSONDecodeError:
+        logger.warning("JSON parse failed for fact: %s", fact[:60])
+    return None
+
+
+# ----------------------------------------------------------------------
+# QC filtreleri
+# ----------------------------------------------------------------------
+
+MAX_ANSWER_REUSE = 2   # ayni gercekten en fazla 2 farkli soru uretilebilir
+
+
+def run_qc(item: HNQItem, seen_questions: set, answer_counts: dict) -> HNQItem:
+    notes = []
+    if len(item.question.split()) < 5:
+        notes.append("question too short")
+    if not item.correct_answer or len(item.correct_answer.strip()) < 1:
+        notes.append("empty correct_answer")
+    if len(item.correct_answer.split()) > 15:
+        notes.append("answer too long (>15 words)")
+    q_norm = item.question.lower().strip()
+    if q_norm in seen_questions:
+        notes.append("duplicate question")
+    ans_norm = item.correct_answer.lower().strip()
+    if answer_counts.get(ans_norm, 0) >= MAX_ANSWER_REUSE:
+        notes.append(f"answer reused >{MAX_ANSWER_REUSE}x (same underlying fact)")
+    if item.correct_answer.lower() in item.question.lower():
+        notes.append("answer appears in question")
+    item.qc_notes = notes
+    item.qc_passed = len(notes) == 0
+    return item
+
+
+# ----------------------------------------------------------------------
+# Tek uretim + toplu uretim
+# ----------------------------------------------------------------------
+
+def build_one(subcode: str, idx: int, fact: str,
+              seen_questions: set, answer_counts: dict,
+              prev_question: Optional[str] = None) -> Optional[HNQItem]:
+    raw = generate_raw_item(fact, prev_question=prev_question)
+    if not raw:
+        return None
+    item = HNQItem(
+        question_id=f"{subcode}-{idx:03d}",
+        subcategory=subcode,
+        question=raw["question"].strip(),
+        correct_answer=raw["correct_answer"].strip(),
+        source_fact=raw["source_fact"].strip(),
+    )
+    item = run_qc(item, seen_questions, answer_counts)
+    status = "PASS" if item.qc_passed else f"FAIL({'; '.join(item.qc_notes)})"
+    logger.info("[%s] %s | Q: %s", item.question_id, status, item.question[:70])
+    return item
+
+
+RETRIES_PER_SLOT = 3
+
+
+def build_dataset(per_subcategory: int = 15,
+                  out_path: str = "HNQ_dataset.json") -> list:
+    """EHQ-3000 nihai hedefi 5 x 150 = 750'dir. Ilk arastirma turu sonrasi
+    SOURCE_FACTS havuzu kategori basina 8-34 gercek icerir (en dar:
+    HNQ-CULT=8) -- PCQ'nun ilk turundakine benzer sekilde, ek arastirma
+    turlariyla buyutulmesi gerekir. per_subcategory=15 (~8*2 CULT'in
+    ulasabilecegi azami) su an icin guvenli bir baslangic hedefidir."""
+    all_items = []
+    seen_q = set()
+    answer_counts: dict = {}
+    for subcode in HNQ_DOMAINS:
+        facts = split_facts(subcode)
+        random.shuffle(facts)
+        collected, idx, total_attempts = 0, 0, 0
+        for fact in facts:
+            if collected >= per_subcategory:
+                break
+            prev_question = None
+            for _slot in range(MAX_ANSWER_REUSE):
+                if collected >= per_subcategory:
+                    break
+                accepted = False
+                for _retry in range(RETRIES_PER_SLOT):
+                    idx += 1
+                    total_attempts += 1
+                    item = build_one(subcode, idx, fact, seen_q,
+                                     answer_counts, prev_question)
+                    if item and item.qc_passed:
+                        seen_q.add(item.question.lower().strip())
+                        ans_norm = item.correct_answer.lower().strip()
+                        answer_counts[ans_norm] = answer_counts.get(ans_norm, 0) + 1
+                        all_items.append(item)
+                        collected += 1
+                        prev_question = item.question
+                        accepted = True
+                        break
+                if not accepted:
+                    break
+        logger.info("Subcategory %s: %d/%d (facts=%d, attempts=%d)",
+                    subcode, collected, per_subcategory, len(facts), total_attempts)
+
+    serialised = [asdict(it) for it in all_items]
+    with open(out_path, "w", encoding="utf-8") as f:
+        json.dump(serialised, f, indent=2, ensure_ascii=False)
+    logger.info("Wrote %d HNQ items -> %s", len(serialised), out_path)
+    return all_items
+
+
+if __name__ == "__main__":
+    import argparse
+    random.seed(SEED)
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--full", action="store_true",
+                        help="Tam uretim: 5 alt kategori x 15 = ~75 hedef "
+                             "(HNQ_dataset.json, mevcut SOURCE_FACTS havuzuyla "
+                             "ulasilabilir azami). Verilmezse smoke test calisir.")
+    args = parser.parse_args()
+
+    logger.info("HNQ | Uretici: Mistral-Large(ASU) | Asiri nis gercek sorular")
+    if not os.environ.get("ASU_CREATEAI_TOKEN"):
+        logger.info("ASU_CREATEAI_TOKEN yok; import OK.")
+    elif args.full:
+        logger.info("HNQ TAM URETIM | 5 alt kategori x 15 = ~75 hedef")
+        build_dataset(per_subcategory=15, out_path="HNQ_dataset.json")
+    else:
+        logger.info("HNQ smoke test | Her kategoriden 2 soru")
+        build_dataset(per_subcategory=2, out_path="HNQ_smoke.json")

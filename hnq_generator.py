@@ -82,6 +82,34 @@ SOURCE_FACTS = {
 - The first Petanque World Championship was held in Spa, Belgium in 1959 and won by France
 - Andy Linder set a footbag (Hacky Sack) endurance world record of 6,136 consecutive kicks in 1987
 - The first Chess Boxing World Championship, held in Amsterdam in 2003, was won by its founder Iepe Rubingh
+- Frederick Lane (Australia) won the 1900 Olympics' only 200m obstacle swimming event, in 2:38.4, climbing over poles and boats in the Seine
+- Charles Devendeville (France) won the 1900 Olympics' only underwater swimming event, covering 60.0 meters underwater in 68.5 seconds
+- Leon de Lunden (Belgium) won the 1900 Olympics' live pigeon shooting event by killing 21 birds, the only Olympic event where animals were deliberately killed
+- Ray Ewry (USA) set the first-ever Olympic record in the standing long jump, 3.30 meters, on July 16, 1900
+- Nikolaos Andriakopoulos (Greece) won the 1896 Olympics' rope climbing event in 23.4 seconds on a 14-meter rope
+- The Milwaukee Athletic Club swept gold, silver, and bronze in tug of war at the 1904 Olympics, the only such sweep in Olympic tug-of-war history
+- Canada, skipped by Ernie Richardson, won the 1959 Scotch Cup, the first World Curling Championship
+- Age Hadler of Norway and Ulla Lindkvist of Sweden were the individual champions at the first World Orienteering Championships in 1966
+- Geoff Hunt of Australia won the first Men's World Open Squash Championship in 1976, beating Mohibullah Khan in the London final
+- Australia won all 10 games to become inaugural champions at the first World Netball Championships in 1963
+- India beat Iran 55-27 to win the first Kabaddi World Cup in 2004
+- Denmark won gold among 7 all-European teams at the first Underwater Rugby World Championship in 1980
+- Rene Clerge of France is considered the first world champion in any sport, holding the real tennis title from about 1740 to 1765
+- Charlie Collier won the first Isle of Man TT motorcycle race in 1907 on a Matchless single, averaging 38.21 mph
+- Rea Lentz won the first Pikes Peak International Hill Climb in 1916 in a homemade car called the Romano Demon Special
+- Cyril Neveu won the motorcycle category of the first Paris-Dakar Rally in 1978-79
+- Kincsem, a Hungarian mare foaled in 1874, won all 54 races of her career from 1876 to 1879 across five countries
+- Camarero, a Puerto Rican racehorse, set the world record for consecutive Thoroughbred wins at 56, run between April 1953 and August 1955
+- Tommy Gollick set the USBC national bowling record of 47 consecutive strikes at Red Crown Bowling Center, Harrisburg, PA, on May 11, 2010
+- Joe Scarborough bowled the first-ever 900 series in PBA competition on April 22, 2013 at the PBA50 Sun Bowl in Florida
+- Willie Borland's nine-dart finish at the 2022 PDC World Championship lasted just 40.82 seconds, the fastest televised nine-darter
+- The longest frame in professional snooker history, between Fergal O'Brien and David Gilbert on April 12, 2017, lasted 2 hours 3 minutes 41 seconds
+- Spencer Tyler set the men's world record in the 56 lb weight for distance at 51 ft 1.5 in at the 2019 Queen Mary Highland Games
+- Spencer Tyler also set the 28 lb weight-for-distance world record at 97 ft 0.5 in at the 2019 US Invitational Highland Games
+- The first Stoke Mandeville Games, the seed event of the Paralympic movement, involved 16 injured servicemen and women on July 29, 1948
+- The first Deaflympics, held in Paris in August 1924, drew 148 athletes from 9 nations
+- Griffin Lentsch of Grinnell College scored 89 points in a Division III men's basketball game on November 19, 2011, a D-III record
+- The San Marino Football Federation was founded in 1931 but did not affiliate with FIFA/UEFA until 1988, a 57-year gap
 """,
 
 "HNQ-SCI": """
@@ -115,6 +143,31 @@ SOURCE_FACTS = {
 - The Soviet Pole of Inaccessibility Antarctic research station operated for only 12 days, December 14-26, 1958
 - The Aguirre Cerda Research Station in Antarctica was destroyed and abandoned on December 4, 1967 after a volcanic eruption
 - Sovetskaya Antarctic research station was established February 16, 1958 and closed January 3, 1959
+- Musgravite was identified in 1967 in the Musgrave Ranges of South Australia; only 20 faceted gem-quality stones had been documented worldwide by 2006
+- Antarcticite, discovered in 1965 in Don Juan Pond, Wright Valley, Antarctica, is the only mineral ever named for the continent
+- The Lakangaon meteorite fell near Lakangaon, India at 6pm on November 24, 1910, with a total known weight of only about 212.5 grams
+- Asteroid 458063 Gustavomuler was discovered on December 21, 2009 by Erwin Schwab at the Tzec Maun Observatory
+- Comet 185P/Petriew was discovered visually on August 18, 2001 by amateur astronomer Vance Petriew while he was actually looking for the Crab Nebula
+- The Royal Astronomical Society elected its first female Fellows on January 14, 1916: Mary Adela Blagg, Ella K. Church, A. Grace Cook, and Fiammetta Wilson
+- Chemist Christopher Kelk Ingold received 112 Nobel Prize nominations but never won, the most-nominated non-laureate in the prize's chemistry history
+- Warner Observatory in Rochester, NY operated from 1882 to 1893 and was reportedly the first observatory ever opened to the paying public
+- Harquahala Peak Observatory in Arizona began solar-constant observations on October 3, 1920 and continued only through 1925
+- Mohon del Trigo Observatory in Spain's Sierra Nevada, built in 1902, was abandoned in the early 1970s
+- The Yale Peabody Museum holds a brass astrolabe made in 1537 by Nuremberg instrument-maker Georg Hartmann, one of only four surviving from his workshop
+- Harvard's Putnam Gallery holds a circa-1710 English Gregorian reflecting telescope once owned by Harvard President Edward Holyoke
+- The Holborn 9100 computer (1981) ran a Zilog Z80A at 4 MHz with 72 KB RAM; only about 200 units were sold before the company went bankrupt in 1983
+- The Casio Loopy game console (October 1995, Japan-only) used a Hitachi SH7021 CPU at 16 MHz and included a built-in thermal sticker printer
+- The S5/8 serial standard, published by the British Standards Institution as DD 153:1990, was a simplified UK subset of RS-232 that never gained adoption
+- IBM's PL/S programming language, originally called Basic Systems Language in the late 1960s, was used internally to replace assembly language in parts of OS/360
+- The first prosthetic heart valve was implanted on September 11, 1952 by Dr. Charles A. Hufnagel at Georgetown University Hospital
+- The first recorded human kidney transplant was performed on March 7, 1933 by Soviet surgeon Yuriy Voronoy in Kherson, Ukraine
+- The first pacemaker implant in the Americas was performed on February 3, 1960 at CASMU 1 hospital in Montevideo, Uruguay
+- Early cochlear implant work was done in 1957 in Paris by Andre Djourno and Charles Eyries, producing electrically induced sound perception
+- The mushroom Hydnum reginae, described in 2022, is known in Britain only from the ancient beech forest of White Down, Surrey
+- The orchid Aeranthes bigibbum, described in 2023 by Kew botanist Johan Hermans, is known only from a small Madagascar forest reserve
+- The beetle Lichnanthe brusti was first noticed at Ferris Dunes near Rawlins, Wyoming in June 2022 and described in 2024
+- A 2021 taxonomic revision elevated the rove-beetle group Palporus from a subgenus of Tachyporus to its own full genus
+- US Patent No. 100,001, issued in 1870 to Joseph Arrington, was for a "Walking Planter" designed for soft Southern US soils
 """,
 
 "HNQ-HIST": """

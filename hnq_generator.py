@@ -110,6 +110,25 @@ SOURCE_FACTS = {
 - The first Deaflympics, held in Paris in August 1924, drew 148 athletes from 9 nations
 - Griffin Lentsch of Grinnell College scored 89 points in a Division III men's basketball game on November 19, 2011, a D-III record
 - The San Marino Football Federation was founded in 1931 but did not affiliate with FIFA/UEFA until 1988, a 57-year gap
+- Madge Syers entered the 1902 World Figure Skating Championships by exploiting a rulebook loophole that didn't specify gender, finishing 2nd; winner Ulrich Salchow gave her his gold medal
+- Beryl Swain became the first woman to compete solo in an Isle of Man TT race on June 3, 1962, finishing 22nd; the FIM revoked her license in 1963
+- The 1951 Asian Games featured a non-medal "Mr Asia" bodybuilding exhibition won by India's Parimal Roy over Iran's Mahmoud Namdjou, never repeated as an official event
+- Roller hockey at the first-ever World Games in 1981 was contested among six nations, with Portugal winning gold
+- The 640kg tug of war class was the very first event of the inaugural 1981 World Games; Great Britain won that first gold medal
+- The first handball World Championship in 1938 was a 4-nation round-robin in Berlin, with host Germany beating Austria 5-4
+- The International Amateur Handball Federation, predecessor to today's IHF, was founded August 4, 1928 in Amsterdam
+- The provisional International Table Tennis Federation formed January 16, 1926 in Berlin; the first World Championships followed that December, with Hungary beating Austria 5-4
+- The Soviet Union won the inaugural FIVB Volleyball World Championship, held in Prague in 1949
+- The first World Lacrosse Men's Championship was a four-team invitational in Toronto in 1967
+- Fencing's FIE first ran what it called the "Championnats d'Europe" in Paris in 1921; the event wasn't renamed World Championships until 1937
+- The first-ever World Rowing Championships were held in September 1962 on the Rotsee in Lucerne, Switzerland; West Germany won 5 of 7 boat classes
+- Kenyan Peter Chumba became the first-ever IAAF World Junior champion at the inaugural 1986 championships, winning both the 10,000m and 5000m
+- Dr. George F. Grant received US Patent #638,920 on December 12, 1899 for the golf tee, the world's first patented golf tee
+- Nottingham Forest captain Sam Weller Widdowson invented football shin guards in 1874 by cutting down cricket pads
+- KDKA Pittsburgh aired the first live sports broadcast on radio on April 11, 1921, a boxing match
+- NBA owners voted to adopt the 24-second shot clock on April 22, 1954
+- The USTA announced adoption of a sudden-death tiebreak on July 25, 1970, first used that year at the US Open
+- The inaugural 1959 Naismith Memorial Basketball Hall of Fame class included the "Original Celtics" inducted as a full team, plus a referee category
 """,
 
 "HNQ-SCI": """
@@ -168,6 +187,21 @@ SOURCE_FACTS = {
 - The beetle Lichnanthe brusti was first noticed at Ferris Dunes near Rawlins, Wyoming in June 2022 and described in 2024
 - A 2021 taxonomic revision elevated the rove-beetle group Palporus from a subgenus of Tachyporus to its own full genus
 - US Patent No. 100,001, issued in 1870 to Joseph Arrington, was for a "Walking Planter" designed for soft Southern US soils
+- The Ural Society of Natural Science Lovers was founded December 29, 1870 in Yekaterinburg, Russian Empire, by Onesime Clerc
+- Swiss instrument firm Kern and Co, founded in 1819 by Jakob Kern, produced its first theodolite in 1824
+- CER-10, the first digital computer built in Yugoslavia, was publicly shown at the Belgrade Technical Fair in August 1960
+- The XYZ computer, Poland's first indigenously designed computer, became operational in 1958
+- The Historical Tarsus Hydroelectric Power Plant, the Ottoman Empire's first, went into operation on September 15, 1902
+- The Nine Arch Bridge in Demodara, Ceylon, designed by Harold Cuthbert Marwood, was built using only brick, cement, and stone, with no steel
+- A chimpanzee skull that became the bonobo type specimen was received by the Congo Museum on December 6, 1927, and recognized as a new taxon in 1929
+- German army captain Robert von Beringe shot the specimens that led to the description of the mountain gorilla on Mount Sabinyo on October 17, 1902
+- San Marco 1, Italy's first satellite, was launched December 15, 1964, making Italy the third nation to operate its own satellite
+- Ohsumi, Japan's first satellite, was launched February 11, 1970, on the fifth attempt of the Lambda-4S rocket after four consecutive failures
+- China's first sounding rocket, the T-7M, launched February 19, 1960, with its fuel tank pressurized using a bicycle pump
+- Asterix, France's first domestically-launched satellite, launched November 26, 1965 from the Hammaguir range in Algeria
+- WRESAT, Australia's first satellite, was launched November 29, 1967 from Woomera on a modified Redstone booster
+- The Journal of the Bombay Natural History Society published its first issue in January 1886
+- The Novara expedition (1857-1859) was the first large-scale scientific circumnavigation by the Austrian Imperial Navy, aboard the frigate SMS Novara
 """,
 
 "HNQ-HIST": """
@@ -219,6 +253,40 @@ SOURCE_FACTS = {
 - The Galveston Historical Society was founded in 1871 by twelve men in Galveston, Texas
 - Four and one-half acres were set aside in Grafton, Massachusetts in 1728 as the Hassanamesit Indian reservation
 - The Minisink Monument in Goshen, NY was dedicated July 22, 1862, the 83rd anniversary of the 1779 Battle of Minisink
+- The Alexander Brown House in New Concord, OH, built as a cabin in 1809, later served as an Underground Railroad conductor's home
+- New Cumberland Gristmill in New Cumberland, WV was built in 1853 by Dennison and Kisner
+- A woolen mill erected in Burdett, NY in 1801 by Samuel A. Seely was the first in Schuyler County
+- The first woolen mill in Jamestown, NY was built by Daniel Hazeltine in 1816
+- A woolen mill erected in Oriskany, NY in 1810 is believed to be the first in America to manufacture fabric from raw material
+- Riverside Cotton Mills in Danville, VA was chartered July 27, 1882 by six local businessmen
+- The Union Bridge between Waterford and Lansingburgh, NY, built in 1804 and designed by Theodore Burr, was destroyed by fire on July 10, 1909
+- Citizens were authorized to build the first toll bridge across the River Raisin in Monroe, MI on June 1, 1819
+- The First National Bank of Brooksville, FL was built in 1910; its first president was John Weeks
+- The Jamestown Journal in Jamestown, NY printed its first issue on June 21, 1826
+- The Mountain Signal, the first newspaper in Mount Vernon, KY, was first published November 3, 1887
+- The Painted Post Tavern in Corning, NY was built in 1796 by Charles Williamson
+- One of the first free public schools in America opened in Brooklyn, NY around July 4, 1661
+- St. John's Military Academy in Delafield, WI was founded in 1844 by Sidney T. Smythe
+- Clearfield County, PA's first courthouse was built around 1814 and remained in use for 46 years
+- Hood County, TX's first courthouse, built in 1867, was a one-room log cabin
+- The post office in Huntington, NY was established September 25, 1794, with Ebenezer Platt as first postmaster
+- The Cross Post Office in Cross, SC, originally named "Cross Mill," was established in 1879
+- The first US Post Office in Bartlesville, OK was established in the Turkey Creek Store on May 8, 1879
+- The first post office in Springfield, MO was a log cabin whose occupant was appointed postmaster on January 3, 1834
+- Commissioners set the final Virginia-Tennessee boundary line on White Top Mountain in December 1803
+- John Vanderhorst purchased 540 acres known as "the Point" in South Carolina in 1715 for 360 pounds
+- George Galphin received a royal grant of 1,400 acres in 1767 to establish Old Town Plantation in South Carolina/Georgia
+- Windsor Hill Plantation in South Carolina was established in 1701 by a 500-acre grant to Joseph Child
+- The first train depot in Las Vegas was built in 1905 by the San Pedro, Los Angeles and Salt Lake Railroad
+- The first train into Jamestown, NY arrived August 25, 1860 over the Atlantic and Great Western Railroad
+- Hunt County, TX's first railroad train arrived October 1, 1880 via the Missouri, Kansas and Texas Railway
+- The British barkentine Reformation wrecked off Jupiter Island, FL on September 23, 1696, with 24 survivors
+- The steamer Sevona wrecked on Lake Superior in 1905, carrying a crew of 24 with 7 lives lost
+- Old Pioneer Cemetery in Waynetown, IN was established in December 1829, predating the town itself
+- Indianola Pioneer Cemetery on Merritt Island, FL was created November 4, 1898
+- Houston Pioneer Cemetery in Melbourne, FL was established in 1883 following a settler's death
+- Richmond Pioneer Cemetery in Richmond, MO had its land deeded on August 13, 1846
+- Dr. Thomas Hinde, Northern Kentucky's first doctor, practiced in Newport, KY until his death September 28, 1828
 """,
 
 "HNQ-GEO": """
@@ -278,6 +346,25 @@ SOURCE_FACTS = {
 - Kennecott, Alaska's copper mine and company town shut down in November 1938, with the last train departing November 11, 1938
 - Sopimetsa Nature Reserve in Estonia covers 4 hectares and was established in 1968
 - Huti Nature Reserve in Estonia covers 31 hectares and was established in 2013
+- The Zumsteinspitze, the first Monte Rosa massif peak ever climbed, was first summited on August 1, 1820
+- Ursus Minor Mountain in British Columbia, Canada was first climbed in 1907
+- The Migovec System, the longest known cave in Slovenia, has been surveyed at 43,009 meters long and 972 meters deep
+- Ogof y Daren Cilau, the longest cave in Wales, is 27,000 meters long
+- The Carcross Desert near Carcross, Yukon, Canada, at 2.6 square kilometers, is widely cited as the world's smallest desert
+- Himberg is an exclave village of Sandefjord Municipality, Norway, entirely surrounded by Larvik Municipality, with about 40 residents
+- Supinkulma is a triangular exclave of Iitti municipality, Finland, with roughly 20 residents
+- Vaalimaa, the first road-traffic border crossing between Finland and the Soviet Union, opened in 1958
+- Under the Treaty of Dappes on December 8, 1862, France and Switzerland swapped territory, bisecting the village of La Cure
+- Stillwater Cove at Fort Ross, California has a maximum length of 0.13 kilometers
+- Gem Glacier, the smallest glacier in Glacier National Park, Montana, measured 5 acres as of 2005
+- Lilliput Glacier is the smallest named glacier in the Sierra Nevada, California
+- The Geodetic Center of South America, in Cuiaba, Brazil, was determined by Marshal Candido Rondon in 1909
+- Gadheim, a German village of population 80, became the geographic centre of the European Union after Brexit
+- King George VI Falls in Guyana was measured at 214 meters high by a May 2014 expedition
+- Central Western Time (UTC+8:45) is an unofficial time zone used around Eucla, Western Australia
+- The village of New York, Ukraine was renamed Novhorodske in 1951 and had its historic name restored in 2021
+- De Groote Peel National Park, the smallest national park in the Netherlands, was established in 1993
+- Meades Ranch Triangulation Station in Kansas became the origin reference point for the U.S. Standard Datum in 1901
 """,
 
 "HNQ-CULT": """
@@ -296,6 +383,28 @@ SOURCE_FACTS = {
 - The Eugene Ballet was founded in 1978 by Riley Grannon and Toni Pimble, opening in Eugene, Oregon in 1979
 - The radio show "The Adventures of Leonidas Witherall" aired on the Mutual network from June 4, 1944 to May 6, 1945, starring Walter Hampden
 - The Broadway musical "Honky Tonk Nights" opened at the Biltmore Theatre on August 7, 1986 and closed just two days later after 4 performances
+- Marco Anzoletti's 1915 concerto for violin and viola, written for a single soloist switching instruments, was not premiered until April 26, 2024 in Bari, Italy
+- Gordon Jacob's Concerto for Horn and Strings, written for Dennis Brain, premiered May 8, 1951 at Wigmore Hall, London
+- Ruperto Chapi's opera "Roger de Flor" had its incomplete premiere on January 23, 1878 at the Teatro Real, Madrid
+- Benedetto Marcello's 1727 dramatic work "Arianna" did not receive its first fully staged performance until April 27, 1913, 186 years later
+- Henri Pousseur's opera "Votre Faust" received its fully staged premiere on January 15, 1969 at the Piccola Scala in Milan
+- Vivaldi's long-lost opera "Motezuma" received its first fully staged modern performance on September 21, 2005 in Dusseldorf
+- Trapeze performer Laverie Vallee, known as "Charmion," made her sensational New York debut on December 25, 1897 at Koster and Bial's Music Hall
+- British music-hall mimic Marie Dainton made her stage debut on March 24, 1894 at the York Theatre Royal
+- Sculptor Anton Aicher founded the Salzburg Marionette Theatre, debuting on February 27, 1913 with Mozart's "Bastien und Bastienne"
+- The Bob Baker Marionette Theater opened in Los Angeles in 1963
+- Folklorist Helen Creighton recorded a Nova Scotia version of the ballad "All Around My Hat" from Mrs. R.W. Duncan in 1943
+- Folklorist Helen Hartness Flanders recorded a New England version of "All Around My Hat" from Jessie Anthony in 1946
+- Alan Lomax recorded gospel singer Ruby Vass performing "The Old Gospel Ship" during his 1959-1960 "Southern Journey" expedition
+- The Ferus Gallery in Los Angeles opened with its inaugural group exhibition on March 15, 1957
+- The Brooklyn Arts Gallery, founded by Sylvia Dwyer to showcase lesser-known Brooklyn artists, opened January 22, 1958
+- Gallery House in London, founded in 1972 by Sigi Krauss, closed after only about sixteen months
+- The Memorial Art Gallery in Rochester, NY was founded in 1913 with an inaugural exhibition curated by George Herdle
+- The Westory Building, Washington DC's first steel-frame skyscraper, was designed by architect Henry L. A. Jekel and built 1907-1908
+- The W. B. Hibbs and Company Building in Washington DC was designed by architect Jules Henri de Sibour and completed in 1906
+- The Astoria Elks Building in Astoria, Oregon was built in 1923 and designed by architect Charles T. Diamond
+- The City and County Building in Cheyenne, Wyoming was built 1917-1919 and designed by local architect William Dubois
+- An unaired television pilot called "Let's Join Joanie," starring Joan Davis, was produced in 1950 at CBS Columbia Square but never broadcast
 """,
 
 }
@@ -461,14 +570,12 @@ def build_one(subcode: str, idx: int, fact: str,
 RETRIES_PER_SLOT = 3
 
 
-def build_dataset(per_subcategory: int = 25,
+def build_dataset(per_subcategory: int = 60,
                   out_path: str = "HNQ_dataset.json") -> list:
-    """EHQ-3000 nihai hedefi 5 x 150 = 750'dir. Iki arastirma turu sonrasi
-    SOURCE_FACTS havuzu kategori basina 15-56 gercek icerir (en dar:
-    HNQ-CULT=15, HNQ-SPO/SCI hala tur-1 seviyesinde -- 2. turlari oturum
-    limitine takilip basarisiz oldu, tekrar denenmeli). per_subcategory=25
-    (~15*2 CULT'in ulasabilecegi azamiin altinda guvenli marj) su an icin
-    hedeftir; havuz buyudukce yukselt."""
+    """EHQ-3000 nihai hedefi 5 x 150 = 750'dir. Uc arastirma turu sonrasi
+    SOURCE_FACTS havuzu kategori basina 37-82 gercek icerir (en dar:
+    HNQ-CULT=37). per_subcategory=60 (~37*2 CULT'in ulasabilecegi azamiin
+    altinda guvenli marj) su an icin hedeftir; havuz buyudukce yukselt."""
     all_items = []
     seen_q = set()
     answer_counts: dict = {}
@@ -516,7 +623,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--full", action="store_true",
-                        help="Tam uretim: 5 alt kategori x 25 = ~125 hedef "
+                        help="Tam uretim: 5 alt kategori x 60 = ~300 hedef "
                              "(HNQ_dataset.json, mevcut SOURCE_FACTS havuzuyla "
                              "ulasilabilir azami). Verilmezse smoke test calisir.")
     args = parser.parse_args()
@@ -525,8 +632,8 @@ if __name__ == "__main__":
     if not os.environ.get("ASU_CREATEAI_TOKEN"):
         logger.info("ASU_CREATEAI_TOKEN yok; import OK.")
     elif args.full:
-        logger.info("HNQ TAM URETIM | 5 alt kategori x 25 = ~125 hedef")
-        build_dataset(per_subcategory=25, out_path="HNQ_dataset.json")
+        logger.info("HNQ TAM URETIM | 5 alt kategori x 60 = ~300 hedef")
+        build_dataset(per_subcategory=60, out_path="HNQ_dataset.json")
     else:
         logger.info("HNQ smoke test | Her kategoriden 2 soru")
         build_dataset(per_subcategory=2, out_path="HNQ_smoke.json")

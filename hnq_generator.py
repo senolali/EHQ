@@ -144,6 +144,28 @@ SOURCE_FACTS = {
 - The Robinson Superior Treaty was concluded on September 7, 1850 at Sault Ste. Marie between W. B. Robinson and nine Ojibwa chiefs
 - Anna Goldi, considered the last person executed for witchcraft in Europe, was executed in Mollis, Switzerland, in 1782
 - A magnitude 4.1 earthquake struck a South Dakota area at 3:37 a.m. on October 11, 1938, prompting more than 50 calls to Sioux Falls police
+- The International Association of Bridge, Structural, Ornamental and Reinforcing Iron Workers union was formed on February 4, 1896, when sixteen delegates met at Moorhead's Hall in Pittsburgh
+- American Federation of Musicians Local 274 was chartered in 1935 by African-American musicians in Philadelphia after being denied admission to the white Local 77
+- American Federation of Musicians Local 471 was organized in 1908 as one of the first African-American musicians' unions in Pennsylvania
+- An 11-man Union naval scouting party was repelled near St. Andrew, Florida on March 20, 1863, with 6 sailors killed and 3 wounded
+- Fort Seybert in present-day West Virginia surrendered after a three-day siege in 1758; twenty of the prisoners taken were later massacred
+- Lindley's Fort in South Carolina was attacked at dawn by a combined force of 88 Native Americans and 102 Loyalists disguised as Native Americans
+- By April 1863, 7,922 Federal troops, including 2,728 cavalry, were stationed at Fort Granger in Franklin, Tennessee
+- The 1746 Skirmish of Keith in Scotland left 9 men dead on one side
+- The 1864 Skirmish in Doubtful Canyon left 10 Apache dead and 20 wounded
+- The Bashi Skirmish of the Creek War left 4 Americans dead
+- Explorer James Harding was killed by Aboriginal Australians in the Kimberley on November 13, 1864; a monument to him was unveiled in Fremantle in February 1913
+- The full 5-man crew of the Bjorling-Kallstenius Expedition died after their ship Ripple wrecked on the Carey Islands in August 1892; the wreck was only reported in November 1893
+- Snake River Trading Post was established in fall 1804 by North West Company partner John Sayer near present-day Pine City, Minnesota
+- Reaume's Trading Post was established in 1792 by Joseph Reaume on the Leaf River in what is now Minnesota
+- The ship Northern Friends arrived in Sydney Harbour, Cape Breton, Nova Scotia on August 3, 1802 with 415 settlers from Scotland
+- About 665 Saxon Lutherans sailed from Bremen in 1838, with roughly 700 settling in Perry County, Missouri by 1839, founding Altenburg
+- The 1920 Louth flood struck Louth, Lincolnshire, England on May 29, 1920, killing 23 people within about 20 minutes
+- The Gillingham Fair fire disaster on July 11, 1929 in Gillingham, Kent killed 15 men and boys during a fire brigade demonstration
+- The Kiah Museum, the first African American-founded museum in Savannah, Georgia, opened November 28, 1959 and closed in 2001
+- The Galveston Historical Society was founded in 1871 by twelve men in Galveston, Texas
+- Four and one-half acres were set aside in Grafton, Massachusetts in 1728 as the Hassanamesit Indian reservation
+- The Minisink Monument in Goshen, NY was dedicated July 22, 1862, the 83rd anniversary of the 1779 Battle of Minisink
 """,
 
 "HNQ-GEO": """
@@ -174,6 +196,35 @@ SOURCE_FACTS = {
 - Napuka, in French Polynesia, had a population of 255 at the 2022 census
 - Atafu, Tokelau, had a 2016 census population of 541
 - Saint-Louis-de-Gonzague-du-Cap-Tourmente, Quebec, had a 2021 census population of 0
+- Rochefourchat, Drome, France had a population of 1 at the 2019 census, the least-populated commune in France
+- Illan de Vacas, Toledo, Spain had a population of 2 as of January 2024, the least-populated municipality in Spain
+- St Michael's Mount civil parish, Cornwall, England has a population of 29, the least populous civil parish in Cornwall
+- Staverden, Gelderland, Netherlands has a population of 30 and has held official Dutch city rights since 1298
+- Ruckschlag, Germany is a 1.6-hectare German exclave containing a single house, cut off by the former Vennbahn railway trackbed ceded to Belgium
+- Muetzenich, part of Monschau, Germany is a separate German exclave also isolated by the Vennbahn trackbed strip
+- The Botswana-Namibia-Zambia-Zimbabwe quadripoint was determined to actually be two separate trijunctions roughly 100-150 meters apart
+- Arlington County, Virginia has a land area of 25.87 square miles, commonly cited as the smallest self-governing county in the US
+- Mahe district, Puducherry, India has a land area of 8.69 square kilometers, the smallest district in India by land area
+- Cape Alava, Washington, at 48 degrees 9 minutes 51 seconds N, is the westernmost point of the contiguous United States
+- Cape Flissingsky on Novaya Zemlya, Russia is a 28-meter ice-covered cliff marking the easternmost point of Europe
+- Ras Hafun promontory in Somalia is the easternmost point of the African mainland
+- Alert, Nunavut, Canada has a permanent staffed population of about 62 and is the world's northernmost permanently inhabited place, 817 km from the North Pole
+- Puerto Toro, on Navarino Island, Chile had a population of 36 at the 2002 census, the southernmost permanently inhabited settlement on Earth outside Antarctic research stations
+- Holm of Grimbister, Orkney, Scotland had a population of 2 as of 2022
+- Utashinai, Hokkaido, Japan had a population of 2,668 in 2024, the smallest city by population in Japan
+- Aogashima, part of Tokyo, Japan has a population of about 156, Japan's least populous village
+- Gore Bay, New Zealand has 10 permanent residents, cited as New Zealand's smallest village by population
+- Little Akaloa, New Zealand had a population of 9 at the 2018 census
+- Okarito, New Zealand has 30 permanent residents and no shops or petrol station
+- Ngerulmud, Palau has an estimated population of about 390, the world's least populous national capital city
+- The Tamborasi River in Sulawesi, Indonesia is 20 meters long
+- The Kovasselva river in Norway is about 65.6 feet (20 meters) long
+- The Jezernica river in Slovenia is approximately 55 meters long, originating from the Divje Jezero karst spring
+- The Los Patos River in the Dominican Republic is 61 meters long
+- Deep Lake in Thurston County, Washington has a maximum depth of only 17 feet despite its name
+- Kennecott, Alaska's copper mine and company town shut down in November 1938, with the last train departing November 11, 1938
+- Sopimetsa Nature Reserve in Estonia covers 4 hectares and was established in 1968
+- Huti Nature Reserve in Estonia covers 31 hectares and was established in 2013
 """,
 
 "HNQ-CULT": """
@@ -185,6 +236,13 @@ SOURCE_FACTS = {
 - David Chalmers' 1976 debut album "Primeval Road" was reissued alongside Lown's and Metzdorf's LPs by Anthology Recordings
 - The newspaper comic strip "The Ambassador" by Otto Soglow ran from May 28, 1933 to September 2, 1934
 - In Herman Melville's "Moby-Dick," the character Bulkington appears only in Chapter 3 and Chapter 23 before vanishing from the novel entirely
+- Ted Eshbaugh's 1933 Technicolor animated short "The Wizard of Oz" was released June 19, 1933, predating MGM's 1939 film
+- Carolina Uccelli's 1835 opera "Anna di Resburgo," unperformed since its original Naples run, received its modern-era premiere on July 20, 2024 in Montclair, NJ, conducted by Will Crutchfield
+- Zdenek Fibich's opera "Nevesta messinska" had its world premiere on March 28, 1884 at the Provisional Theatre in Prague, conducted by Adolf Cech
+- The Israel Ballet was founded in 1967 by Berta Yampolsky and Hillel Markman; its first performance was January 25, 1967 in Holon, with just four dancers
+- The Eugene Ballet was founded in 1978 by Riley Grannon and Toni Pimble, opening in Eugene, Oregon in 1979
+- The radio show "The Adventures of Leonidas Witherall" aired on the Mutual network from June 4, 1944 to May 6, 1945, starring Walter Hampden
+- The Broadway musical "Honky Tonk Nights" opened at the Biltmore Theatre on August 7, 1986 and closed just two days later after 4 performances
 """,
 
 }
@@ -350,13 +408,14 @@ def build_one(subcode: str, idx: int, fact: str,
 RETRIES_PER_SLOT = 3
 
 
-def build_dataset(per_subcategory: int = 15,
+def build_dataset(per_subcategory: int = 25,
                   out_path: str = "HNQ_dataset.json") -> list:
-    """EHQ-3000 nihai hedefi 5 x 150 = 750'dir. Ilk arastirma turu sonrasi
-    SOURCE_FACTS havuzu kategori basina 8-34 gercek icerir (en dar:
-    HNQ-CULT=8) -- PCQ'nun ilk turundakine benzer sekilde, ek arastirma
-    turlariyla buyutulmesi gerekir. per_subcategory=15 (~8*2 CULT'in
-    ulasabilecegi azami) su an icin guvenli bir baslangic hedefidir."""
+    """EHQ-3000 nihai hedefi 5 x 150 = 750'dir. Iki arastirma turu sonrasi
+    SOURCE_FACTS havuzu kategori basina 15-56 gercek icerir (en dar:
+    HNQ-CULT=15, HNQ-SPO/SCI hala tur-1 seviyesinde -- 2. turlari oturum
+    limitine takilip basarisiz oldu, tekrar denenmeli). per_subcategory=25
+    (~15*2 CULT'in ulasabilecegi azamiin altinda guvenli marj) su an icin
+    hedeftir; havuz buyudukce yukselt."""
     all_items = []
     seen_q = set()
     answer_counts: dict = {}
@@ -404,7 +463,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--full", action="store_true",
-                        help="Tam uretim: 5 alt kategori x 15 = ~75 hedef "
+                        help="Tam uretim: 5 alt kategori x 25 = ~125 hedef "
                              "(HNQ_dataset.json, mevcut SOURCE_FACTS havuzuyla "
                              "ulasilabilir azami). Verilmezse smoke test calisir.")
     args = parser.parse_args()
@@ -413,8 +472,8 @@ if __name__ == "__main__":
     if not os.environ.get("ASU_CREATEAI_TOKEN"):
         logger.info("ASU_CREATEAI_TOKEN yok; import OK.")
     elif args.full:
-        logger.info("HNQ TAM URETIM | 5 alt kategori x 15 = ~75 hedef")
-        build_dataset(per_subcategory=15, out_path="HNQ_dataset.json")
+        logger.info("HNQ TAM URETIM | 5 alt kategori x 25 = ~125 hedef")
+        build_dataset(per_subcategory=25, out_path="HNQ_dataset.json")
     else:
         logger.info("HNQ smoke test | Her kategoriden 2 soru")
         build_dataset(per_subcategory=2, out_path="HNQ_smoke.json")

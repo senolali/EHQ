@@ -129,6 +129,32 @@ SOURCE_FACTS = {
 - NBA owners voted to adopt the 24-second shot clock on April 22, 1954
 - The USTA announced adoption of a sudden-death tiebreak on July 25, 1970, first used that year at the US Open
 - The inaugural 1959 Naismith Memorial Basketball Hall of Fame class included the "Original Celtics" inducted as a full team, plus a referee category
+- The North Somerset Cricket League in England was founded in 1969 with six original member clubs
+- Wayne Killian scored 408 for Offchurch against Ashby Road Hinckley in 1994, a Guinness World Record for highest individual innings in a limited-overs minor cricket match
+- Wales beat New Zealand 9-8 at Aberdare on January 1, 1908, the first international match played under rugby league rules
+- The Tonawanda Kardex lost their only-ever NFL game 45-0 to the Rochester Jeffersons in 1921, then folded
+- The Eastern Amateur Hockey League was formed by Tom Lockhart on December 17, 1933 with seven teams
+- Bill Weir kicked the first-ever VFL goal, for Carlton, in Round 1 of the league's inaugural 1897 season
+- The first All-Ireland Senior Football Championship final in 1887 was a 21-a-side match won by Commercials over Young Irelands
+- The Observer Single-handed Trans-Atlantic Race (OSTAR) started June 11, 1960 with 4 starters; Francis Chichester won after 40 days
+- Frank Samuelsen and George Harbo rowed from Manhattan to Le Havre, France in 1896, the first crossing of the Atlantic by rowboat
+- The first ICF Canoe Sprint World Championships were held in Vaxholm, Sweden on August 6-7, 1938
+- Harry Drake set the footbow distance record of 2,028 yards on October 24, 1971
+- Oscar Swahn of Sweden won gold at the 1912 Stockholm Olympics at age 64, making him the oldest Olympic gold medalist in history
+- The 1903 International Gymnastics Tournament in Antwerp, Belgium was later recognized as the first Artistic Gymnastics World Championships
+- The first World Weightlifting Championships were held in London on March 28, 1891, with Edward Lawrence Levy of England winning the only gold medal
+- George Young of Canada, age 17, was the sole finisher among 102 starters in the 1927 Wrigley Ocean Marathon Catalina Channel swim
+- The first modern swim-bike-run triathlon was held at Mission Bay, San Diego on September 25, 1974
+- The first Modern Pentathlon World Championships were held in Stockholm in 1949, with Tage Bjurfeldt of Sweden becoming the first champion
+- Rebecca Heineman won Atari's national Space Invaders Championship on October 10, 1980, regarded as the first formally recognized esports champion
+- The Sporting Magazine, launched in London in 1792, is regarded as the first English-language periodical devoted entirely to sport
+- Henry Chadwick created the first modern baseball box score in 1859
+- John Moores launched the first Littlewoods football pools coupon in Liverpool in February 1923
+- The first official international water polo match saw Scotland beat England 4-0 in London on July 28, 1890
+- The first sanctioned badminton World Championships were held in Malmo, Sweden in May 1977
+- The first squash World Doubles Championship was held in 1981
+- The first Rhythmic Gymnastics World Championships were held in Budapest in December 1963, with Lyudmila Savinkova becoming the first all-around champion
+- The first Biathlon World Championships were held in Saalfelden, Austria in March 1958, with Adolf Wiklund of Sweden winning individual gold
 """,
 
 "HNQ-SCI": """
@@ -202,6 +228,23 @@ SOURCE_FACTS = {
 - WRESAT, Australia's first satellite, was launched November 29, 1967 from Woomera on a modified Redstone booster
 - The Journal of the Bombay Natural History Society published its first issue in January 1886
 - The Novara expedition (1857-1859) was the first large-scale scientific circumnavigation by the Austrian Imperial Navy, aboard the frigate SMS Novara
+- The world-record rainfall in one minute, 31.2 mm, was recorded at Unionville, Maryland on July 4, 1956
+- The Smethport, Pennsylvania storm of July 17-18, 1942 set the accepted world records for 3-hour and 4.5-hour rainfall totals
+- David Hiram Williams was appointed the first Geological Surveyor of the Geological Survey of India on February 4, 1848
+- Japan's first national agricultural experiment station was established at Nishigahara, Tokyo, in 1893
+- Canada's first continuously recording seismograph station was installed in Toronto in September 1897
+- The Norwegian research steamer Michael Sars carried out the North Atlantic Deep-Sea Expedition of 1910, led by Johan Hjort
+- Herbert Henry Dow's first US patent, for an electrolytic method of extracting bromine from brine, was filed October 23, 1889
+- Physostigmine was first isolated and crystallized from the Calabar bean by German chemists Julius von Jobst and Oswald Hesse in 1864
+- Romanian engineer Aurel Vlaicu's self-built monoplane made its first flight on June 17, 1910 near Bucharest
+- A telephone exchange with 49 subscribers opened above a drugstore in Fulton, Missouri in December 1882
+- The submarine telegraph cable linking Horta, Azores to Carcavelos near Lisbon was put into operation on August 23, 1893
+- Boston clockmaker William Cranch Bond built the first seagoing marine chronometer made in America in 1812
+- The first clinical X-ray in America was taken February 3, 1896 at Dartmouth College, imaging a boy's broken wrist
+- Dorset farmer Benjamin Jesty inoculated his wife and two sons with cowpox matter in spring 1774, 22 years before Edward Jenner's famous trial
+- The Worcester Electricity Works at Powick Mills opened October 11, 1894
+- Viennese anatomist Josef Hyrtl published his corrosion-cast anatomical technique in a book in 1873
+- German taxidermist Philipp Leopold Martin introduced the "dermoplastic" mounting method in his 1870 book
 """,
 
 "HNQ-HIST": """
@@ -287,6 +330,38 @@ SOURCE_FACTS = {
 - Houston Pioneer Cemetery in Melbourne, FL was established in 1883 following a settler's death
 - Richmond Pioneer Cemetery in Richmond, MO had its land deeded on August 13, 1846
 - Dr. Thomas Hinde, Northern Kentucky's first doctor, practiced in Newport, KY until his death September 28, 1828
+- A colonial fort at Hunting Creek in present-day Fairfax County, VA was authorized by the Virginia House of Burgesses on September 21, 1674
+- Fort Argyle in Bryan County, GA was built in 1733 on the west bank of the Ogeechee River
+- Construction of the New Haven and Northampton Canal began July 4, 1825
+- Star City, Nevada, founded in 1861 after silver discoveries, peaked at about 1,200 residents in 1864-1865
+- Miner's Delight, Wyoming was established in 1867 as "Hamilton City," renamed the following year
+- The Ward, Nevada mining district boomed from 1876 to 1882, reaching a peak population of 1,500
+- Camp Manufacturing Company was founded in 1887 by three brothers in Isle of Wight County, VA
+- Logtown, Mississippi was founded in 1848; its Weston Lumber Company, founded 1889, became one of the largest US lumber operations by the 1920s
+- Joseph LaFramboise established a fur-trading post on the Grand River near present-day Lowell, Michigan in 1796
+- Prairie du Rocher, Illinois was founded in 1722 as part of French colonial Illinois Country
+- The Dutch West India Company established the jurisdiction of Fort Orange and the village of Beverwijck, now Albany, NY, on April 10, 1652
+- Construction of Split Rock Lighthouse on Lake Superior began in 1909; it was first lit July 31, 1910
+- Absecon Lighthouse in Atlantic City, NJ was constructed 1855-1857 and first lit January 15, 1857
+- Darlington County Courthouse in South Carolina was destroyed by fire on March 19, 1806
+- Botetourt County Courthouse in Fincastle, VA was gutted by fire on December 15, 1970
+- Georgetown, Delaware was established as the new Sussex County seat on January 29, 1791
+- Ballston Spa, NY was designated the Saratoga County seat on March 14, 1817
+- Avery, Ohio was the first county seat of Huron County before the seat moved to Norwalk in 1818
+- Fredonia Grange No. 1 in Fredonia, NY, the first local Grange chapter in the nation, was organized April 16, 1868
+- Pilot Hill Grange No. 1, California's first Grange hall, was organized August 10, 1870
+- South Greenville Grange No. 225 in Wisconsin was organized October 27, 1873
+- Eureka Lodge in Norfolk, VA, the first African-American Elks organization in the world, was established June 5, 1897
+- Elks Lodge No. 308 in Grafton, WV was formed June 29, 1895
+- Adams County Almshouse near Gettysburg, PA opened in 1819 on 91 acres
+- Cook County Poorhouse in Dunning, Chicago opened in 1854
+- Cherry Hospital in Goldsboro, NC enrolled its first patient on August 1, 1880
+- Royal Oak Volunteer Fire Department in Michigan was formally organized February 13, 1913
+- Morgan Hill Volunteer Fire Department in California was established January 17, 1907
+- Seaford Volunteer Fire Department in Delaware was founded in 1901 by 50 citizens
+- Schaefferstown Water Company in Pennsylvania was chartered April 16, 1845
+- Annapolis Water Company in Maryland was chartered in 1865 following a State House fire
+- Sayre, Pennsylvania was incorporated on January 27, 1891
 """,
 
 "HNQ-GEO": """
@@ -365,6 +440,23 @@ SOURCE_FACTS = {
 - The village of New York, Ukraine was renamed Novhorodske in 1951 and had its historic name restored in 2021
 - De Groote Peel National Park, the smallest national park in the Netherlands, was established in 1993
 - Meades Ranch Triangulation Station in Kansas became the origin reference point for the U.S. Standard Datum in 1901
+- Palau's national capital officially moved from Koror to the purpose-built city of Ngerulmud on October 7, 2006
+- Cape Three Points, Ghana is the nearest point of land on Earth to "Null Island," where the Prime Meridian meets the Equator
+- The Euripus Strait at Chalkis, Greece narrows to about 40 meters wide, where the tidal current reverses direction 7 or more times a day
+- Volcan Barcena on San Benedicto Island, Mexico had its only historic eruption from August 1, 1952 to about February 1953
+- The submarine volcano Metis Shoal in Tonga erupted beginning about December 10, 1967, briefly forming a new island
+- Masfjorden in Norway is 24 kilometers long with a maximum depth of 494 meters
+- The Andreaea Plateau on Signy Island, Antarctica has an average elevation of 180 meters
+- Lumparland is the smallest municipality on mainland Aland, Finland, at 87.04 square kilometers
+- Rockall, a granite islet in the North Atlantic, has an area of just 784.3 square meters and a permanent population of 0
+- The Denison Canal in Tasmania, 0.895 kilometers long, opened in 1905
+- The first complete topographical map of Marion Island was produced in 1968 by Otto Langenegger and Wilhelm Verwoerd
+- The South Georgia Survey, led by Duncan Carse, mapped the island across four seasons between 1951 and 1957
+- Horsted Keynes, England has been twinned with Cahagnes, France since a Twinning Oath signed May 15, 1971
+- Tanggula railway station on the Qinghai-Tibet Railway, the highest in the world at 5,068 meters, opened July 1, 2006
+- The lighthouse on Enderbury Island, Kiribati was built in 1938
+- Construction of the Bagatao Island Lighthouse in the Philippines began in January 1904
+- Vulcan Point in the Philippines is an islet inside a crater lake, itself inside an island, inside a lake, inside another island
 """,
 
 "HNQ-CULT": """
@@ -405,6 +497,29 @@ SOURCE_FACTS = {
 - The Astoria Elks Building in Astoria, Oregon was built in 1923 and designed by architect Charles T. Diamond
 - The City and County Building in Cheyenne, Wyoming was built 1917-1919 and designed by local architect William Dubois
 - An unaired television pilot called "Let's Join Joanie," starring Joan Davis, was produced in 1950 at CBS Columbia Square but never broadcast
+- The Solax Company Western short "Greater Love Hath No Man," credited to director Alice Guy-Blache, was released June 30, 1911
+- "The First Film of Palestine," the earliest surviving Zionist/Palestine film, was released April 1, 1911, directed by Murray Rosenberg
+- The Markneukirchen Violin Makers' Guild, Germany's oldest continuous violin-making trade guild, was confirmed by Duke Moritz von Sachsen on March 6, 1677
+- Thompson's Opera House in Pioche, Nevada opened in September 1873 with a performance of "Pygmalion and Galatea"
+- Martha Graham's solo "Scherza" premiered December 10, 1927 at a special performance for the Cornell Dramatic Club
+- Martha Graham's solo "Danza" premiered March 3, 1929 at the Booth Theatre, New York City
+- Martha Graham's solo "Salutation" premiered April 7, 1936 at the Philharmonic Auditorium, Los Angeles
+- Martha Graham's solo "Opening Dance" premiered July 30, 1937 at the Bennington School of the Dance, Vermont
+- Pablo Fanque, regarded as the first Black circus proprietor in Britain, first presented his own circus company in January 1842
+- Illusionist Henri Robin began a residency at the Egyptian Hall, London in November 1861 that ran for 309 consecutive performances
+- "Mahatma," a monthly magic-trade periodical founded by George Little, ran from March 1895 to February 1906, ending at issue 104
+- The Senj printing press in Croatia, operated by Blaz Baromic, completed its first printed Glagolitic work on August 7, 1494
+- Scotland's first printing press, granted a royal patent September 15, 1507, printed the country's first known book on April 4, 1508
+- The Turkish literary magazine "Papirus," founded by poet Cemal Sureya, published its first issue in August 1960 and ran 53 issues until 1981
+- "The London Aphrodite," founded by Jack Lindsay and P.R. Stephensen, ran for exactly 6 issues between 1928 and 1929
+- Thomas Shelton's English translation of "Don Quixote" Part One, the first translation into any language, was published in London in 1612
+- The Artcraft typeface was engraved in 1912 by Robert Wiebking for the Advance Type Foundry
+- The Stempel Schneidler typeface was designed in 1936 by calligrapher F. H. Ernst Schneidler
+- The Copenhagen photography studio Hansen, Schou and Weller was founded December 1, 1867
+- The Italian photography partnership Sommer and Behles operated from 1867 to 1874
+- Timely Comics' "All Select Comics," written by Stan Lee, ran exactly 11 issues from Fall 1943 to Fall 1945
+- Station XWA in Montreal broadcast Canada's first scheduled radio program on the evening of May 20, 1920
+- Wayne Valliere, a traditional Ojibwe birchbark canoe builder, was named a 2020 NEA National Heritage Fellow
 """,
 
 }
@@ -570,11 +685,11 @@ def build_one(subcode: str, idx: int, fact: str,
 RETRIES_PER_SLOT = 3
 
 
-def build_dataset(per_subcategory: int = 60,
+def build_dataset(per_subcategory: int = 100,
                   out_path: str = "HNQ_dataset.json") -> list:
-    """EHQ-3000 nihai hedefi 5 x 150 = 750'dir. Uc arastirma turu sonrasi
-    SOURCE_FACTS havuzu kategori basina 37-82 gercek icerir (en dar:
-    HNQ-CULT=37). per_subcategory=60 (~37*2 CULT'in ulasabilecegi azamiin
+    """EHQ-3000 nihai hedefi 5 x 150 = 750'dir. Dort arastirma turu sonrasi
+    SOURCE_FACTS havuzu kategori basina 60-114 gercek icerir (en dar:
+    HNQ-CULT=60). per_subcategory=100 (~60*2 CULT'in ulasabilecegi azamiin
     altinda guvenli marj) su an icin hedeftir; havuz buyudukce yukselt."""
     all_items = []
     seen_q = set()
@@ -623,7 +738,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--full", action="store_true",
-                        help="Tam uretim: 5 alt kategori x 60 = ~300 hedef "
+                        help="Tam uretim: 5 alt kategori x 100 = ~500 hedef "
                              "(HNQ_dataset.json, mevcut SOURCE_FACTS havuzuyla "
                              "ulasilabilir azami). Verilmezse smoke test calisir.")
     args = parser.parse_args()
@@ -632,8 +747,8 @@ if __name__ == "__main__":
     if not os.environ.get("ASU_CREATEAI_TOKEN"):
         logger.info("ASU_CREATEAI_TOKEN yok; import OK.")
     elif args.full:
-        logger.info("HNQ TAM URETIM | 5 alt kategori x 60 = ~300 hedef")
-        build_dataset(per_subcategory=60, out_path="HNQ_dataset.json")
+        logger.info("HNQ TAM URETIM | 5 alt kategori x 100 = ~500 hedef")
+        build_dataset(per_subcategory=100, out_path="HNQ_dataset.json")
     else:
         logger.info("HNQ smoke test | Her kategoriden 2 soru")
         build_dataset(per_subcategory=2, out_path="HNQ_smoke.json")

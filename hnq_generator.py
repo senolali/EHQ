@@ -155,6 +155,33 @@ SOURCE_FACTS = {
 - The first squash World Doubles Championship was held in 1981
 - The first Rhythmic Gymnastics World Championships were held in Budapest in December 1963, with Lyudmila Savinkova becoming the first all-around champion
 - The first Biathlon World Championships were held in Saalfelden, Austria in March 1958, with Adolf Wiklund of Sweden winning individual gold
+- The apene, a two-mule chariot race, was added to the ancient Olympics in 500 BC and abolished in 444 BC
+- A contest for heralds and trumpeters was formally added to the ancient Olympic program in 396 BC
+- Herodorus of Megara won the ancient Olympic trumpet contest ten consecutive times, from 328 to 292 BC
+- Bobby Pearce of Australia won the men's single sculls at the 1930 British Empire Games, the first Commonwealth Games rowing champion
+- The world's oldest documented ice hockey rivalry began March 10, 1886, when Queen's University beat Royal Military College of Canada 1-0
+- Sandygate Road hosted the first inter-club football match in history on December 26, 1860, between Hallam FC and Sheffield FC
+- The Brotherhood of Professional Base Ball Players, America's first professional sports trade union, formed October 22, 1885
+- The Association Footballers' Union, the first UK players' union attempt, formed in England in 1898
+- Eintracht Braunschweig became the first Bundesliga club to wear shirt sponsorship, debuting a Jagermeister kit on March 24, 1973
+- Kettering Town became the first British club to play with a sponsor's name on its shirts, on January 24, 1976
+- The Sheriff of London Charity Shield was first played March 19, 1898 at Crystal Palace
+- The first true instant replay was shown December 7, 1963 during CBS's Army-Navy football broadcast
+- The first slow-motion videotape replay in sports television was broadcast November 23, 1961 during an ABC college football game
+- The oldest surviving football match footage was filmed September 24, 1898 by Arthur Cheetham
+- Tommy John surgery was first performed on September 25, 1974 by Dr. Frank Jobe
+- The RICE protocol for injuries was coined in 1978 by sports physician Dr. Gabe Mirkin
+- The first mouthguard for boxers was created in 1890 by London dentist Woolf Krause
+- Pop Warner football was founded in 1929 by Joseph J. Tomlin as a four-team conference in Philadelphia
+- Little League Baseball's first-ever game was played June 6, 1939 in Williamsport, PA
+- The American Youth Soccer Organization was founded September 15, 1964 in Torrance, California
+- Biddy Basketball was founded in 1951 by Jay Archer in Scranton, Pennsylvania
+- Joe Wilhoit hit safely in 69 consecutive games for the Wichita Witches in 1919, the longest hitting streak in professional baseball history
+- The Cotswold Olimpick Games were founded around 1612 by lawyer Robert Dover near Chipping Campden, England
+- The first Track Cycling World Championships were held August 11-12, 1893 in Chicago; Arthur Zimmerman became the first champion
+- The first official ISU World Allround Speed Skating Championship was held January 13-14, 1893 in Amsterdam; Jaap Eden became the first champion
+- The first Bobsleigh World Championships were held in 1931, with Germany winning both the two-man and four-man golds
+- The first World Mixed Doubles Curling Championship was held in 2008 in Vierumaki, Finland
 """,
 
 "HNQ-SCI": """
@@ -245,6 +272,19 @@ SOURCE_FACTS = {
 - The Worcester Electricity Works at Powick Mills opened October 11, 1894
 - Viennese anatomist Josef Hyrtl published his corrosion-cast anatomical technique in a book in 1873
 - German taxidermist Philipp Leopold Martin introduced the "dermoplastic" mounting method in his 1870 book
+- Antoine Sautier, a student gardener on Nicolas Baudin's scientific expedition, died and was buried at sea on November 15, 1801
+- Self-taught mycologist Charles Christopher Frost described 22 new species of bolete fungi in a single paper
+- Dr. David Hosack donated roughly 1,000 mineral specimens to the College of New Jersey (now Princeton) in 1821
+- Belgica expedition meteorologist Antoni Boleslaw Dobrowolski studied cloud and snow crystallography during the Antarctic winter of 1898, publishing findings in 1903
+- Actuary Joshua Milne corresponded with physician John Heysham from 1812 to 1814 to build the "Carlisle Table" of mortality
+- The trackball, predating the computer mouse by 11 years, was invented in 1952 by Canadian engineers for the Royal Canadian Navy's DATAR system
+- Nichrome, the first commercial resistance-heating alloy, was invented and patented by Albert L. Marsh in 1906
+- Monel metal, a nickel-copper alloy, was developed in 1905 by metallurgist Robert Crooks Stanley
+- Instrument maker Rudolph Koenig invented the manometric flame apparatus to visualize sound waves, first exhibited in 1862
+- Sir Francis Ronalds built the world's first electric clock in 1814
+- Scottish engineer James Blyth erected a wind turbine at his cottage in July 1887, the first house lit by wind-generated electricity
+- Bow Street Runner Henry Goddard solved a murder in 1835 using the first recorded bullet-mould comparison
+- Alvan Clark & Sons, a telescope-lens making firm founded in 1846, ground lenses for several of the largest 19th-century refracting telescopes
 """,
 
 "HNQ-HIST": """
@@ -362,6 +402,32 @@ SOURCE_FACTS = {
 - Schaefferstown Water Company in Pennsylvania was chartered April 16, 1845
 - Annapolis Water Company in Maryland was chartered in 1865 following a State House fire
 - Sayre, Pennsylvania was incorporated on January 27, 1891
+- George Starrh started a ferry across the Snake River near present-day Burley, Idaho in 1880
+- Murray's Ferry on the Santee River, South Carolina was chartered by the colonial assembly beginning March 8, 1741
+- William Herbert established Jackson's Ferry across the New River in Virginia, documented by 1770
+- Israel Crane obtained a charter on February 24, 1806 to build the Newark-Pompton Turnpike in New Jersey
+- The Nyack Turnpike section through the Greenbush Swamp in New York was opened by 1825
+- The Fort Worth-Yuma Mail stage route opened August 15, 1878, the longest daily stage line then in existence
+- Regular stagecoach service on the Marshall-Shreveport road in Texas was established by 1850
+- Willow Springs Pony Express Station in Utah was established April 3, 1860
+- Cold Springs Pony Express Station in Nevada was built in March 1860
+- The Sixth Corps Field Hospital at Gettysburg was established July 2, 1863, caring for 315 wounded
+- The Second Corps Field Hospital at Gettysburg cared for 2,200 Union and 952 Confederate wounded before closing August 7, 1863
+- Colson's Supply Depot in North Carolina, engineered by Gen. Thaddeus Kosciuszko, was constructed in 1781
+- Saint Joseph Indian Mission in Idaho was established November 4, 1842 by Father Nicolas Point
+- Land on which Clifton Forge, Virginia now stands was granted to Robert Gallaspy by George III in 1770 and 1772
+- The Marlin Opera House in Brookville, Pennsylvania was built by lumber baron Silas J. Marlin from 1883 to 1886
+- Construction of the 1905 Opera House in Wessington Springs, South Dakota began August 3, 1905
+- Shiloh Orphanage in Augusta, Georgia was founded in 1896 for African-American children
+- The Central Orphanage of North Carolina, a pioneering institution for Black children, was founded in 1883
+- Neighborhood House in Louisville, Kentucky, the first settlement house in the state, began in 1896
+- Civic Service House in Boston, Massachusetts was founded in 1901
+- The 1909 McKees Rocks Strike in Pennsylvania began July 14, 1909; a riot that August killed eleven men
+- The Little Steel Strike in Massillon, Ohio on July 11, 1937 saw police and security fire on strikers, killing three
+- The Charleston, Arkansas school board voted unanimously on July 27, 1954 to integrate all grades, the first school district in the South to do so after Brown v. Board
+- Atchison, Kansas became the first Kansas community to comply with Brown v. Board of Education, with classes starting September 1955
+- An 8-foot bronze Atlantic City Workers Monument was unveiled before over 2,000 workers on April 28, 2004
+- A statue of Dr. Kwame Nkrumah, damaged in a 1966 coup, was recovered and re-unveiled on March 3, 1977
 """,
 
 "HNQ-GEO": """
@@ -457,6 +523,26 @@ SOURCE_FACTS = {
 - The lighthouse on Enderbury Island, Kiribati was built in 1938
 - Construction of the Bagatao Island Lighthouse in the Philippines began in January 1904
 - Vulcan Point in the Philippines is an islet inside a crater lake, itself inside an island, inside a lake, inside another island
+- Neutral Moresnet, a 3.5 square kilometer strip between Belgium and Prussia, was jointly administered from 1816 until German annexation in 1920
+- Pheasant Island, an uninhabited islet in the Bidasoa River, alternates sovereignty between Spain and France every six months under an 1659 treaty
+- Perejil Island, a disputed islet off Morocco administered by Spain, was the site of a bloodless 2002 standoff
+- Aland's official island count, per its statistics bureau, is 6,757 islands of at least 0.25 hectares
+- Norway's official island count is approximately 239,057, following a 2011 satellite recount
+- Suwarrow, the Cook Islands' first National Park (designated 1978), has a total land area of only about 0.4 square kilometers
+- Tenararo, the smallest atoll in French Polynesia's Acteon Group, has a lagoon area of just 2 square kilometers
+- Kiribati moved its portion of the International Date Line eastward in 1995, making Kiritimati the world's earliest time zone
+- Kahuitara Point on Pitt Island, Chatham Islands is cited as the first inhabited land on Earth to see the sunrise each day
+- The Pitcairn Islands' population reached its all-time recorded peak of 233 people in the 1937 census
+- Vatican City is the only country in the world served by a single postal code, 00120
+- Clare, Nova Scotia is the only municipality in the province formally designated to deliver services in both English and French
+- Mawsynram, India holds the Guinness World Records title of wettest inhabited place on Earth, with 11,872 mm average annual rainfall
+- Arica, Chile went 172 consecutive months without recorded rainfall, from October 1903 to January 1918
+- Cape Denison, Antarctica has an average annual wind speed of about 80 km/h, the windiest place at sea level on Earth
+- The name "Idaho" was invented in 1860 by mining lobbyist George M. Willing, who falsely claimed it was a Shoshone word
+- The International Boundary Commission resurveyed the entire US-Mexico boundary west of the Rio Grande beginning in February 1892
+- Le Mans, France and Paderborn, Germany are frequently cited as having the world's oldest city partnership, tracing to a relic transfer in 836 AD
+- San Marino's modern paved highway link to Italy began construction August 10, 1959 and formally opened November 25, 1965
+- The Moor House-Upper Teesdale nature reserve in England was designated a UNESCO Biosphere Reserve in 1976
 """,
 
 "HNQ-CULT": """
@@ -520,6 +606,28 @@ SOURCE_FACTS = {
 - Timely Comics' "All Select Comics," written by Stan Lee, ran exactly 11 issues from Fall 1943 to Fall 1945
 - Station XWA in Montreal broadcast Canada's first scheduled radio program on the evening of May 20, 1920
 - Wayne Valliere, a traditional Ojibwe birchbark canoe builder, was named a 2020 NEA National Heritage Fellow
+- Zonophone, an early record label, was founded in 1899 by Frank Seaman
+- The Busy Bee Record label's parent company, O'Neill-James Company, filed for incorporation April 14, 1904
+- The Indestructible Record Company, founded 1906, ceased cylinder production after a 1922 factory fire and closed in 1925
+- The Longy School of Music was founded in Boston in 1915 by French oboist Georges Longy
+- The Diller-Quaile School of Music was founded in New York in 1920 by pianists Angela Diller and Elizabeth Quaile
+- "The Geneva Window" was commissioned in 1926 as an Irish Free State gift to the League of Nations, created by Harry Clarke, but rejected and never delivered
+- The Hartwell Memorial Window, a 48-panel Tiffany Studios stained-glass work, was commissioned in 1917 and later relocated to the Art Institute of Chicago
+- The "Welcome" stained-glass window was commissioned in 1908 by Mrs. George T. Bliss from artist John La Farge
+- The "Dangers of the Mail" mural was completed and unveiled in September 1937 in the Post Office Department Building, Washington DC
+- Alexander Anderson, the "father of American wood engraving," made his first wood engravings in 1794
+- The Footlight Club in Boston, founded in 1877, is recognized as the oldest continuously producing community theater company in the US
+- Set designer Anton Grot's first film work was at the Lubin studio in Philadelphia in 1913
+- Vinnie Ream won the commission to sculpt the Lincoln statue for the US Capitol Rotunda in 1866 at age 18
+- The McNaught newspaper comic syndicate was founded in 1922 by Virgil Venice McNitt and Charles V. McAdam
+- The National Newspaper Syndicate was founded in early 1917 by John Flint Dille
+- Norman Studios in Jacksonville, Florida was purchased by Richard E. Norman in 1920 to produce race films with all-Black casts
+- Star Film Ranch in San Antonio, Texas's first film studio, operated 1910-1911, producing over 70 silent films
+- The Canadian silhouette-puppet cartoon series "Shadowlaughs" was produced in July-August 1927 but never theatrically released
+- The Fleischer Studios cartoon "Mysterious Mose" was released December 27, 1930
+- The first on-screen movie costume-design credits appeared in "Cleopatra" (1912), credited to Helen Gardner and a "Madame Stippange"
+- The Corn Hill Arts Festival in Rochester, NY was first held August 23, 1969 as a small street art show
+- The Anacortes Arts and Crafts Festival in Washington state was founded in 1962 by Dr. Jack Papritz
 """,
 
 }
@@ -685,12 +793,13 @@ def build_one(subcode: str, idx: int, fact: str,
 RETRIES_PER_SLOT = 3
 
 
-def build_dataset(per_subcategory: int = 100,
+def build_dataset(per_subcategory: int = 150,
                   out_path: str = "HNQ_dataset.json") -> list:
-    """EHQ-3000 nihai hedefi 5 x 150 = 750'dir. Dort arastirma turu sonrasi
-    SOURCE_FACTS havuzu kategori basina 60-114 gercek icerir (en dar:
-    HNQ-CULT=60). per_subcategory=100 (~60*2 CULT'in ulasabilecegi azamiin
-    altinda guvenli marj) su an icin hedeftir; havuz buyudukce yukselt."""
+    """EHQ-3000 nihai hedefi 5 x 150 = 750'dir. Bes arastirma turu sonrasi
+    SOURCE_FACTS havuzu kategori basina 82-140 gercek icerir (en dar:
+    HNQ-CULT=82); MAX_ANSWER_REUSE=2 ile CULT bile 164 soruya kadar
+    destekleyebilir. per_subcategory=150 artik ulasilabilir sinirin
+    icinde -- EHQ-3000 nihai hedefi (750) burada tamamlanabilir."""
     all_items = []
     seen_q = set()
     answer_counts: dict = {}
@@ -738,17 +847,17 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--full", action="store_true",
-                        help="Tam uretim: 5 alt kategori x 100 = ~500 hedef "
-                             "(HNQ_dataset.json, mevcut SOURCE_FACTS havuzuyla "
-                             "ulasilabilir azami). Verilmezse smoke test calisir.")
+                        help="Tam uretim: 5 alt kategori x 150 = 750 hedef "
+                             "(EHQ-3000 nihai hedefi; HNQ_dataset.json'a yazilir). "
+                             "Verilmezse smoke test calisir.")
     args = parser.parse_args()
 
     logger.info("HNQ | Uretici: Mistral-Large(ASU) | Asiri nis gercek sorular")
     if not os.environ.get("ASU_CREATEAI_TOKEN"):
         logger.info("ASU_CREATEAI_TOKEN yok; import OK.")
     elif args.full:
-        logger.info("HNQ TAM URETIM | 5 alt kategori x 100 = ~500 hedef")
-        build_dataset(per_subcategory=100, out_path="HNQ_dataset.json")
+        logger.info("HNQ TAM URETIM | 5 alt kategori x 150 = 750 hedef")
+        build_dataset(per_subcategory=150, out_path="HNQ_dataset.json")
     else:
         logger.info("HNQ smoke test | Her kategoriden 2 soru")
         build_dataset(per_subcategory=2, out_path="HNQ_smoke.json")

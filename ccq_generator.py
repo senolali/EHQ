@@ -18,6 +18,7 @@ Ortam degiskeni: ASU_CREATEAI_TOKEN
 import os
 import re
 import json
+import random
 import logging
 from dataclasses import dataclass, field, asdict
 from typing import Optional
@@ -50,6 +51,62 @@ REDACTION_TOKEN = "[REDACTED]"
 MIN_DOC_WORDS   = 120
 MAX_DOC_WORDS   = 320
 SEED            = 42
+
+# ----------------------------------------------------------------------
+# Cesitlilik ekseni (pcq_generator.py / feq_generator.py'de ogrenilen ders):
+# _GEN_PROMPT her cagrida SUBCODE basina TAMAMEN AYNI (domain_desc sabit)
+# gonderiliyordu -- bu hem PCQ'nun "whole-pool" hatasinin hem de FEQ'nun
+# "Dr. Elara Vesper" tekrar hatasinin kok nedeniyle ayni: modele ayni
+# statik prompt'u tekrar tekrar gonderip "farkli bir sey uret" demek
+# guvenilir calismiyor. Cesitliligi modelin taktirine birakmak yerine
+# YAPISAL olarak zorluyoruz: her cagriya somut bir alt-baglam (sektor/
+# klinik birim/sozlesme turu/standart turu/anket konusu) enjekte ediyoruz.
+_FLAVORS = {
+    "CCQ-FIN":  ["a mid-cap semiconductor manufacturer", "a regional airline",
+                "an agricultural cooperative", "a boutique investment bank",
+                "a renewable-energy utility", "a consumer electronics retailer",
+                "a logistics and freight company", "a biotechnology startup",
+                "a commercial real estate firm", "a telecommunications carrier"],
+    "CCQ-MED":  ["a cardiology outpatient clinic", "a pediatric oncology ward",
+                "an orthopedic surgery unit", "a diabetes management program",
+                "an emergency department triage log", "a prenatal care clinic",
+                "a psychiatric evaluation record",
+                "a physical therapy rehabilitation log",
+                "an infectious disease case report",
+                "a geriatric care assessment"],
+    "CCQ-LEG":  ["a commercial lease agreement", "a software licensing contract",
+                "a merger and acquisition term sheet",
+                "an employment severance agreement",
+                "a construction subcontractor agreement",
+                "a non-disclosure agreement",
+                "an intellectual property licensing deal",
+                "a supply chain vendor contract", "a shareholder agreement",
+                "a franchise agreement"],
+    "CCQ-TECH": ["a wireless communication protocol specification",
+                "a structural engineering load standard",
+                "a software API specification",
+                "an automotive safety standard",
+                "a data encryption protocol",
+                "a manufacturing quality control standard",
+                "a renewable energy grid interconnection standard",
+                "a medical device technical specification",
+                "an aviation maintenance standard",
+                "a materials science testing standard"],
+    "CCQ-NEWS": ["a regional employment survey", "a consumer spending report",
+                "a public health survey", "an education outcomes study",
+                "a housing market report", "a transportation usage survey",
+                "an environmental impact assessment",
+                "a crime statistics report", "a workplace satisfaction survey",
+                "an agricultural yield report"],
+}
+
+
+def random_flavor(subcode: str) -> str:
+    """Sabit domain_desc yerine, her cagrida somut bir alt-baglam secerek
+    modelin ayni belgeyi/faktu tekrar tekrar uretmesini engeller."""
+    base = CCQ_SUBCATEGORIES[subcode]
+    flavor = random.choice(_FLAVORS[subcode])
+    return f"{base}, specifically for {flavor}"
 
 
 # ----------------------------------------------------------------------
@@ -107,18 +164,26 @@ Return STRICT JSON ONLY, no markdown, with keys:
 
 
 def _gen_call(prompt: str, temperature: float = 0.7) -> Optional[str]:
-    """ASU uzerinden Mistral Large cagrisi."""
+    """ASU uzerinden Mistral Large cagrisi.
+    use_cache=False: PCQ'da tespit edilen hata -- asu_client'in disk
+    cache'i temperature'i anahtara dahil etmiyor; domain_desc sabit
+    kaldigi surece (asagidaki random_flavor duzeltmesinden ONCEKI halde
+    oldugu gibi) ayni prompt+model cache'den ayni yaniti donduruyor,
+    yani GERCEK API cagrisi olmadan sonsuz ayni belge/soru donguye
+    giriyordu. Cache'i kapatmak + prompt'u cesitlendirmek birlikte
+    calisiyor (bkz. random_flavor)."""
     return asu_query(
         model_name=CCQ_GEN_MODEL,
         model_provider=CCQ_GEN_PROVIDER,
         query=prompt,
         temperature=temperature,
         request_delay=1.5,
+        use_cache=False,
     )
 
 
 def generate_raw_item(subcode: str) -> Optional[dict]:
-    prompt = _GEN_PROMPT.format(domain_desc=CCQ_SUBCATEGORIES[subcode])
+    prompt = _GEN_PROMPT.format(domain_desc=random_flavor(subcode))
     raw = _gen_call(prompt)
     if not raw:
         return None
@@ -176,6 +241,17 @@ def qc_no_leak_in_document(item: CCQItem) -> Optional[str]:
     return None
 
 
+def qc_duplicate(item: CCQItem, seen_facts: set, seen_questions: set) -> Optional[str]:
+    # feq_generator.py'de tespit edilen ayni sinif hata: cesitlendirme
+    # (random_flavor) tek basina cakismayi sifira indirmez, ek bir
+    # guvenlik agi olarak duplicate kontrolu gerekiyor.
+    if item.redacted_value.strip().lower() in seen_facts:
+        return "duplicate critical fact (already generated in this run)"
+    if item.question.strip().lower() in seen_questions:
+        return "duplicate question"
+    return None
+
+
 def qc_parametric_leak(item: CCQItem) -> Optional[str]:
     """ASU / Mistral uzerinden parametrik kacak probe."""
     probe = (
@@ -192,21 +268,25 @@ def qc_parametric_leak(item: CCQItem) -> Optional[str]:
 
 
 QC_FILTERS = [
-    ("length",            qc_length),
-    ("redaction_present", qc_redaction_present),
-    ("inference_leak",    qc_no_leak_in_document),
-    ("parametric_leak",   qc_parametric_leak),
+    ("length",            lambda item, seen_facts, seen_questions: qc_length(item)),
+    ("redaction_present", lambda item, seen_facts, seen_questions: qc_redaction_present(item)),
+    ("inference_leak",    lambda item, seen_facts, seen_questions: qc_no_leak_in_document(item)),
+    ("duplicate",         qc_duplicate),
+    ("parametric_leak",   lambda item, seen_facts, seen_questions: qc_parametric_leak(item)),
 ]
 
 
-def run_qc(item: CCQItem, skip_parametric: bool = False) -> CCQItem:
+def run_qc(item: CCQItem, seen_facts: set, seen_questions: set,
+          skip_parametric: bool = False) -> CCQItem:
     notes = []
     for name, fn in QC_FILTERS:
         if skip_parametric and name == "parametric_leak":
             continue
-        problem = fn(item)
+        problem = fn(item, seen_facts, seen_questions)
         if problem:
             notes.append(f"{name}: {problem}")
+            break   # ilk basarisizlikta dur -- pahali parametric_leak
+                    # cagrisini gereksiz yere tetikleme
     item.qc_notes = notes
     item.qc_passed = len(notes) == 0
     return item
@@ -216,7 +296,7 @@ def run_qc(item: CCQItem, skip_parametric: bool = False) -> CCQItem:
 # Tek uretim + toplu uretim
 # ----------------------------------------------------------------------
 
-def build_one(subcode: str, idx: int,
+def build_one(subcode: str, idx: int, seen_facts: set, seen_questions: set,
               skip_parametric: bool = False) -> Optional[CCQItem]:
     raw = generate_raw_item(subcode)
     if not raw:
@@ -232,7 +312,7 @@ def build_one(subcode: str, idx: int,
         question=raw["question"].strip(),
         redacted_value=raw["critical_fact"].strip(),
     )
-    item = run_qc(item, skip_parametric=skip_parametric)
+    item = run_qc(item, seen_facts, seen_questions, skip_parametric=skip_parametric)
     status = "PASS" if item.qc_passed else "FAIL(" + "; ".join(item.qc_notes) + ")"
     logger.info("[%s] %s", item.question_id, status)
     return item
@@ -243,14 +323,20 @@ def build_dataset(per_subcategory: int = 150,
                   out_path: str = "CCQ_dataset.json") -> list:
     """5 alt kategori x 150 = 750 CCQ sorusu hedefi."""
     all_items = []
+    # seen_facts/seen_questions TUM kategoriler arasinda paylasilir
+    # (bkz. feq_generator.py'deki ayni tasarim gerekcesi).
+    seen_facts: set = set()
+    seen_questions: set = set()
     for subcode in CCQ_SUBCATEGORIES:
         collected, attempts = 0, 0
-        max_attempts = per_subcategory * 3
+        max_attempts = per_subcategory * 4
         while collected < per_subcategory and attempts < max_attempts:
             attempts += 1
-            item = build_one(subcode, collected + 1,
+            item = build_one(subcode, collected + 1, seen_facts, seen_questions,
                              skip_parametric=skip_parametric)
             if item and item.qc_passed:
+                seen_facts.add(item.redacted_value.strip().lower())
+                seen_questions.add(item.question.strip().lower())
                 all_items.append(item)
                 collected += 1
         logger.info("Subcategory %s: %d/%d in %d attempts",
@@ -264,10 +350,21 @@ def build_dataset(per_subcategory: int = 150,
 
 
 if __name__ == "__main__":
-    import random; random.seed(SEED)
-    logger.info("CCQ smoke test (ASU CreateAI / Mistral Large)")
+    import argparse
+    random.seed(SEED)
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--full", action="store_true",
+                        help="Tam uretim: 5 alt kategori x 150 = 750 hedef "
+                             "(CCQ_dataset.json). Verilmezse smoke test calisir.")
+    args = parser.parse_args()
+
+    logger.info("CCQ | Uretici: Mistral-Large(ASU) | correct_answer=%s", REDACTION_TOKEN)
     if not os.environ.get("ASU_CREATEAI_TOKEN"):
         logger.info("ASU_CREATEAI_TOKEN yok; import OK.")
+    elif args.full:
+        logger.info("CCQ TAM URETIM | 5 alt kategori x 150 = 750 hedef")
+        build_dataset(per_subcategory=150, out_path="CCQ_dataset.json")
     else:
         build_dataset(per_subcategory=1, skip_parametric=True,
                       out_path="CCQ_smoke.json")

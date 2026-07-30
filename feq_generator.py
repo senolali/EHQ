@@ -119,23 +119,81 @@ _REGIONS = ["Norway", "Brazil", "Japan", "Egypt", "Canada", "India",
            "Turkey", "Mexico", "Finland", "New Zealand", "Kenya", "Chile",
            "South Korea", "Portugal", "Thailand"]
 
+# EK DUZELTME: role+era+origin tek basina yetersiz kaldi -- ozellikle
+# FEQ-WORK'de model role/era degistigi halde hep ayni siirsel baslik
+# kalibina ("Echoes of X", "Whispers of X") donuyordu, cunku hicbir eksen
+# somut bir KONU dayatmiyordu. Konu ekseni ekleyerek modelin isim/baslik
+# uretimini somut, spesifik bir anlamsal alana zorluyoruz (soyut "yankı/
+# fısıltı" temalarina kacisi engelliyor).
+_TOPICS = {
+    "FEQ-PER": ["marine biology", "structural engineering", "medieval history",
+               "particle physics", "constitutional law", "orchestral composition",
+               "agricultural economics", "urban planning", "epidemiology",
+               "cryptography", "volcanology", "textile manufacturing",
+               "aviation safety", "renewable energy policy",
+               "forensic anthropology", "maritime navigation"],
+    "FEQ-ORG": ["semiconductor manufacturing", "wildlife conservation",
+               "public health policy", "space exploration", "microfinance",
+               "renewable energy", "veterinary medicine", "maritime logistics",
+               "disaster relief", "agricultural technology", "cybersecurity",
+               "urban transit systems"],
+    "FEQ-WORK": ["the construction of a transcontinental railway",
+                "the collapse of a regional fishing industry",
+                "a family-run vineyard across three generations",
+                "the development of an early telegraph network",
+                "urban migration during an industrial boom",
+                "a border dispute between two provinces",
+                "the restoration of a historic cathedral",
+                "competitive long-distance rowing",
+                "a mining town's economic decline",
+                "the founding of a rural university",
+                "traditional shipbuilding techniques",
+                "a regional folk music revival",
+                "the design of a suspension bridge",
+                "labor strikes in a textile industry",
+                "an expedition to chart a remote coastline",
+                "the history of a municipal transit system"],
+    "FEQ-SCI": ["catalytic reactions in industrial chemistry",
+               "deep-sea ecosystem adaptation",
+               "load-bearing capacity in civil structures",
+               "signal propagation in wireless networks",
+               "genetic markers in agricultural crops",
+               "thermal regulation in mammals",
+               "seismic activity at tectonic boundaries",
+               "orbital mechanics of small celestial bodies",
+               "corrosion resistance in metal alloys",
+               "computational complexity in sorting algorithms"],
+    "FEQ-PLACE": ["a 19th-century silver mining boom", "a coastal fishing economy",
+                 "a regional university town", "a hydroelectric power project",
+                 "a historic trade route junction", "a botanical research reserve",
+                 "a former military garrison", "a river delta agricultural region",
+                 "a mountain pass trading post", "a lakeside resort community"],
+}
+
 
 def random_flavor(subcode: str) -> str:
-    """Rastgele rol+donem+koken kombinasyonuyla YAPISAL olarak farkli bir
-    uretim hedefi olusturur (bkz. yukaridaki yorum)."""
+    """Rastgele rol+donem+koken+KONU kombinasyonuyla YAPISAL olarak farkli
+    bir uretim hedefi olusturur (bkz. yukaridaki yorumlar). Konu ekseni,
+    modelin soyut/siirsel klise basliklara ("Echoes of...") kacmasini
+    engellemek icin somut bir konu dayatir."""
     role = random.choice(_ROLES[subcode])
-    if subcode in ("FEQ-PER", "FEQ-ORG"):
+    topic = random.choice(_TOPICS[subcode])
+    if subcode == "FEQ-PER":
         era = random.choice(_ERAS)
         origin = random.choice(_ORIGINS)
-        return f"a fictional {origin} {role} from {era}"
+        return f"a fictional {origin} {role} from {era}, known for work in {topic}"
+    if subcode == "FEQ-ORG":
+        era = random.choice(_ERAS)
+        origin = random.choice(_ORIGINS)
+        return f"a fictional {origin} {role} founded in {era}, focused on {topic}"
     if subcode == "FEQ-WORK":
         era = random.choice(_ERAS)
-        return f"a fictional {role} from {era}"
+        return f"a fictional {role} from {era} about {topic}"
     if subcode == "FEQ-PLACE":
         region = random.choice(_REGIONS)
-        return f"a fictional {role} in {region}"
-    # FEQ-SCI: donem/koken cogunlukla anlamsiz, sadece rol yeterli
-    return f"a fictional {role}"
+        return f"a fictional {role} in {region}, known for {topic}"
+    # FEQ-SCI: donem/koken cogunlukla anlamsiz, rol+konu yeterli
+    return f"a fictional {role} related to {topic}"
 
 # Sorunun kendisinin "uydurma/hayali" oldugunu ele veren kelimeler --
 # bunlar soruda GECMEMELI (o zaman model dogal olarak abstain eder,
@@ -214,8 +272,24 @@ def _gen_call(prompt: str, temperature: float = 0.9) -> Optional[str]:
     )
 
 
-def generate_raw_item(subcode: str) -> Optional[dict]:
+_MAX_AVOID_NAMES = 12   # prompt'u sismirmeden yeterli caydiricilik icin
+
+
+def generate_raw_item(subcode: str, seen_names: Optional[set] = None) -> Optional[dict]:
     prompt = _GEN_PROMPT.format(domain_desc=random_flavor(subcode))
+    if seen_names:
+        # EK DUZELTME: sadece "farkli bir sey uret" demek yetersizdi --
+        # modele son kullanilan isimlerin bir ornegini GOSTEREREK aktif
+        # olarak kacinmasini istiyoruz (havuz buyudukce cakisma orani
+        # artiyordu, bkz. dosya basi yorumlari).
+        sample = random.sample(sorted(seen_names),
+                               min(_MAX_AVOID_NAMES, len(seen_names)))
+        avoid_clause = (
+            "\n\nIMPORTANT: Do NOT reuse, and do NOT invent a name/title that "
+            "closely resembles, any of the following already-used names:\n- "
+            + "\n- ".join(sample)
+        )
+        prompt += avoid_clause
     raw = _gen_call(prompt)
     if not raw:
         return None
@@ -339,7 +413,7 @@ def run_qc(item: FEQItem, seen_names: set, seen_questions: set,
 
 def build_one(subcode: str, idx: int, seen_names: set, seen_questions: set,
               skip_expensive: bool = False) -> Optional[FEQItem]:
-    raw = generate_raw_item(subcode)
+    raw = generate_raw_item(subcode, seen_names=seen_names)
     if not raw:
         return None
     item = FEQItem(

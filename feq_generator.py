@@ -186,6 +186,19 @@ def qc_name_in_question(item: FEQItem) -> Optional[str]:
     return None
 
 
+def qc_duplicate(item: FEQItem, seen_names: set, seen_questions: set) -> Optional[str]:
+    # Ayni prompt (temperature disinda hep ayni) tekrar tekrar cagrildigi
+    # icin -- pcq_generator.py'de tespit edilen "model klise/en belirgin
+    # cevaba geri doner" davranisinin bir varyanti -- model bazen ayni
+    # veya cok benzer uydurma ismi tekrar uretebilir. Bu kontrol olmadan
+    # aynı varlik dataset'te birden fazla kez gorunebilirdi.
+    if item.entity_name.strip().lower() in seen_names:
+        return "duplicate entity_name (already generated in this run)"
+    if item.question.strip().lower() in seen_questions:
+        return "duplicate question"
+    return None
+
+
 def qc_coincidence_check(item: FEQItem) -> Optional[str]:
     """Uretilen varlik GERCEKTEN var olan bir seyle cakisiyor mu?
     Ayni uretici modele (Mistral Large) bagimsiz bir soruyla sorulur."""
@@ -219,22 +232,24 @@ def qc_parametric_leak(item: FEQItem) -> Optional[str]:
 
 
 QC_FILTERS = [
-    ("basic",             qc_basic),
-    ("no_giveaway",       qc_no_giveaway),
-    ("name_in_question",  qc_name_in_question),
-    ("coincidence_check", qc_coincidence_check),
-    ("parametric_leak",   qc_parametric_leak),
+    ("basic",             lambda item, seen_names, seen_questions: qc_basic(item)),
+    ("no_giveaway",       lambda item, seen_names, seen_questions: qc_no_giveaway(item)),
+    ("name_in_question",  lambda item, seen_names, seen_questions: qc_name_in_question(item)),
+    ("duplicate",         qc_duplicate),
+    ("coincidence_check", lambda item, seen_names, seen_questions: qc_coincidence_check(item)),
+    ("parametric_leak",   lambda item, seen_names, seen_questions: qc_parametric_leak(item)),
 ]
 
 
-def run_qc(item: FEQItem, skip_expensive: bool = False) -> FEQItem:
+def run_qc(item: FEQItem, seen_names: set, seen_questions: set,
+          skip_expensive: bool = False) -> FEQItem:
     """skip_expensive=True: coincidence_check + parametric_leak (2 ekstra
     ASU cagrisi) atlanir -- smoke test / hizli deneme icin."""
     notes = []
     for name, fn in QC_FILTERS:
         if skip_expensive and name in ("coincidence_check", "parametric_leak"):
             continue
-        problem = fn(item)
+        problem = fn(item, seen_names, seen_questions)
         if problem:
             notes.append(f"{name}: {problem}")
             break   # ilk basarisizlikta dur -- sonraki filtreler (ozellikle
@@ -248,7 +263,7 @@ def run_qc(item: FEQItem, skip_expensive: bool = False) -> FEQItem:
 # Tek uretim + toplu uretim
 # ----------------------------------------------------------------------
 
-def build_one(subcode: str, idx: int,
+def build_one(subcode: str, idx: int, seen_names: set, seen_questions: set,
               skip_expensive: bool = False) -> Optional[FEQItem]:
     raw = generate_raw_item(subcode)
     if not raw:
@@ -261,7 +276,7 @@ def build_one(subcode: str, idx: int,
         background=raw["background"].strip(),
         question=raw["question"].strip(),
     )
-    item = run_qc(item, skip_expensive=skip_expensive)
+    item = run_qc(item, seen_names, seen_questions, skip_expensive=skip_expensive)
     status = "PASS" if item.qc_passed else "FAIL(" + "; ".join(item.qc_notes) + ")"
     logger.info("[%s] %s | Q: %s", item.question_id, status, item.question[:70])
     return item
@@ -272,13 +287,21 @@ def build_dataset(per_subcategory: int = 150,
                   out_path: str = "FEQ_dataset.json") -> list:
     """5 alt kategori x 150 = 750 FEQ sorusu hedefi (EHQ-3000)."""
     all_items = []
+    # seen_names/seen_questions TUM kategoriler arasinda paylasilir --
+    # ayni uydurma varlik iki farkli alt kategoride de tekrar uretilebilir
+    # (orn. bir "FEQ-PER" ismi yanlislikla "FEQ-ORG" turunde de cikabilir).
+    seen_names: set = set()
+    seen_questions: set = set()
     for subcode in FEQ_SUBCATEGORIES:
         collected, attempts = 0, 0
         max_attempts = per_subcategory * 4
         while collected < per_subcategory and attempts < max_attempts:
             attempts += 1
-            item = build_one(subcode, collected + 1, skip_expensive=skip_expensive)
+            item = build_one(subcode, collected + 1, seen_names, seen_questions,
+                             skip_expensive=skip_expensive)
             if item and item.qc_passed:
+                seen_names.add(item.entity_name.strip().lower())
+                seen_questions.add(item.question.strip().lower())
                 all_items.append(item)
                 collected += 1
         logger.info("Subcategory %s: %d/%d in %d attempts",

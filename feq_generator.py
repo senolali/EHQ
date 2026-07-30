@@ -27,6 +27,7 @@ Ortam degiskeni: ASU_CREATEAI_TOKEN
 import os
 import re
 import json
+import random
 import logging
 from dataclasses import dataclass, field, asdict
 from typing import Optional
@@ -62,6 +63,79 @@ FEQ_SUBCATEGORIES = {
 
 CORRECT_ANSWER  = "[FABRICATED]"
 SEED            = 42
+
+# ----------------------------------------------------------------------
+# Cesitlilik eksenleri (roles/eras/origins)
+# ----------------------------------------------------------------------
+# pcq_generator.py'de ogrenilen ders: modele ayni statik prompt'u tekrar
+# tekrar gonderip "farkli bir sey uret" demek guvenilir calismiyor --
+# model (temperature=0.9'a ragmen) ayni klise isme ("Dr. Elara Vesper" gibi)
+# geri donuyor. Cozum PCQ'daki gibi: cesitliligi modelin taktirine birakmak
+# yerine YAPISAL olarak zorlamak. Her cagriya rastgele bir rol+donem+koken
+# kombinasyonu enjekte ederek modelin her seferinde farkli bir uretim
+# alanina girmesi saglanir (FEQ'de PCQ'nun split_facts'i gibi sabit bir
+# gercek havuzu olmadigindan, bunun yerine kombinatorik bir "prompt uzayi"
+# kullaniliyor).
+
+_ROLES = {
+    "FEQ-PER": ["scientist", "artist", "politician", "athlete", "inventor",
+               "explorer", "musician", "architect", "philosopher",
+               "military officer", "physician", "economist", "judge",
+               "diplomat", "civil engineer", "novelist", "journalist"],
+    "FEQ-ORG": ["technology company", "university", "research institute",
+               "government agency", "professional association",
+               "nonprofit foundation", "publishing house", "trade union",
+               "medical center", "financial firm", "museum", "record label"],
+    "FEQ-WORK": ["novel", "documentary film", "music album",
+                "academic research paper", "patent", "textbook",
+                "stage play", "video game", "photography collection",
+                "symphony", "poetry collection", "graphic novel"],
+    "FEQ-SCI": ["chemical compound", "biological species",
+               "technical engineering standard", "physics phenomenon",
+               "mathematical theorem", "medical syndrome",
+               "geological formation", "astronomical object",
+               "materials science alloy", "computing algorithm"],
+    "FEQ-PLACE": ["small town", "government building", "mountain range",
+                 "concert venue", "university campus", "museum", "bridge",
+                 "island", "national park", "research station",
+                 "shopping district", "harbor"],
+}
+
+_ERAS = ["the early 19th century", "the mid-19th century",
+        "the late 19th century", "the early 20th century",
+        "the mid-20th century", "the late 20th century",
+        "the early 21st century", "the present day"]
+
+_ORIGINS = ["Norwegian", "Brazilian", "Japanese", "Egyptian", "Canadian",
+           "Indian", "Polish", "Argentine", "South African", "Vietnamese",
+           "Scottish", "Turkish", "Mexican", "Finnish", "New Zealand",
+           "Kenyan", "Chilean", "Korean", "Portuguese", "Thai"]
+
+# FEQ-PLACE icin ("a fictional museum in a South African-speaking region"
+# gibi dilbilgisel olarak garip demonim+"-speaking" kaliplarindan kacinmak
+# icin) ulke/bolge adlari, demonim listesiyle ayni sirada.
+_REGIONS = ["Norway", "Brazil", "Japan", "Egypt", "Canada", "India",
+           "Poland", "Argentina", "South Africa", "Vietnam", "Scotland",
+           "Turkey", "Mexico", "Finland", "New Zealand", "Kenya", "Chile",
+           "South Korea", "Portugal", "Thailand"]
+
+
+def random_flavor(subcode: str) -> str:
+    """Rastgele rol+donem+koken kombinasyonuyla YAPISAL olarak farkli bir
+    uretim hedefi olusturur (bkz. yukaridaki yorum)."""
+    role = random.choice(_ROLES[subcode])
+    if subcode in ("FEQ-PER", "FEQ-ORG"):
+        era = random.choice(_ERAS)
+        origin = random.choice(_ORIGINS)
+        return f"a fictional {origin} {role} from {era}"
+    if subcode == "FEQ-WORK":
+        era = random.choice(_ERAS)
+        return f"a fictional {role} from {era}"
+    if subcode == "FEQ-PLACE":
+        region = random.choice(_REGIONS)
+        return f"a fictional {role} in {region}"
+    # FEQ-SCI: donem/koken cogunlukla anlamsiz, sadece rol yeterli
+    return f"a fictional {role}"
 
 # Sorunun kendisinin "uydurma/hayali" oldugunu ele veren kelimeler --
 # bunlar soruda GECMEMELI (o zaman model dogal olarak abstain eder,
@@ -141,7 +215,7 @@ def _gen_call(prompt: str, temperature: float = 0.9) -> Optional[str]:
 
 
 def generate_raw_item(subcode: str) -> Optional[dict]:
-    prompt = _GEN_PROMPT.format(domain_desc=FEQ_SUBCATEGORIES[subcode])
+    prompt = _GEN_PROMPT.format(domain_desc=random_flavor(subcode))
     raw = _gen_call(prompt)
     if not raw:
         return None
@@ -316,7 +390,6 @@ def build_dataset(per_subcategory: int = 150,
 
 if __name__ == "__main__":
     import argparse
-    import random
     random.seed(SEED)
 
     parser = argparse.ArgumentParser()

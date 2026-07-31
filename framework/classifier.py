@@ -1,14 +1,14 @@
 """
 EHQ-3000 Response Classifier
 ==============================
-EHQ v1 makalesinde kullanilan src/classifier.py'nin BIREBIR portu.
-Degisen tek fonksiyon: extract_confidence_score -- v1'de model 0-10
-arasi tam sayi veriyordu, v2'de (config_ehq_20models.yaml: scale_max=100)
-0-100 arasi veriyor; sayisal ayristirma buna gore guncellendi. classify_response
-ve check_correctness MANTIK OLARAK degismedi (yalnizca CCQ'nun
-correct_answer="[REDACTED]" formati da "[" ile basladigindan, v1'in
-FEQ icin yazdigi genel kontrol otomatik olarak CCQ'yu da kapsiyor --
-ekstra kod gerekmedi).
+A verbatim port of src/classifier.py used in the EHQ v1 paper. The
+only function that changed: extract_confidence_score -- v1 had the
+model give an integer 0-10, v2 (config/config_ehq_20models.yaml:
+scale_max=100) gives 0-100; the numeric parsing was updated
+accordingly. classify_response and check_correctness are LOGICALLY
+unchanged (CCQ's correct_answer="[REDACTED]" also starts with "[", so
+the generic check v1 wrote for FEQ automatically covers CCQ too -- no
+extra code was needed).
 """
 
 import re
@@ -46,10 +46,11 @@ def classify_response(response: Optional[str],
 def check_correctness(response: str,
                       correct_answer: str,
                       category: str) -> bool:
-    # FEQ (correct_answer="[FABRICATED]") ve CCQ (correct_answer=
-    # "[REDACTED]") icin varlik/deger GERCEKTEN yok -- hicbir yanit
-    # "dogru" sayilamaz. Asagidaki genel "[" kontrolu ikisini de
-    # kapsar; FEQ satiri v1 ile birebir tutarlilik icin ayrica birakildi.
+    # For FEQ (correct_answer="[FABRICATED]") and CCQ (correct_answer=
+    # "[REDACTED]") the entity/value simply does NOT exist -- no
+    # response can ever be "correct". The generic "[" check below
+    # covers both; the FEQ line is kept separately for verbatim
+    # consistency with v1.
     if category == "FEQ":
         return False
 
@@ -59,11 +60,11 @@ def check_correctness(response: str,
     resp_norm    = _normalise(response)
     correct_norm = _normalise(correct_answer)
 
-    # Strateji 1: Tam eşleşme
+    # Strategy 1: exact match
     if resp_norm == correct_norm:
         return True
 
-    # Strateji 2: Substring (minimum uzunluk kontrolli)
+    # Strategy 2: substring (with a minimum-length guard)
     MIN_CHARS = 10
     if len(resp_norm) >= MIN_CHARS:
         len_ratio = len(resp_norm) / max(len(correct_norm), 1)
@@ -72,7 +73,7 @@ def check_correctness(response: str,
         if resp_norm in correct_norm and len_ratio >= 0.40:
             return True
 
-    # Strateji 3: Sayisal eşleşme (±%5 tolerans)
+    # Strategy 3: numeric match (+/- 5% tolerance)
     resp_nums    = _extract_numbers(response)
     correct_nums = _extract_numbers(correct_answer)
     if resp_nums and correct_nums:
@@ -82,7 +83,7 @@ def check_correctness(response: str,
         ):
             return True
 
-    # Strateji 4: Anahtar kelime eşleşmesi (PCQ/HNQ icin, >=60% eşleşme)
+    # Strategy 4: keyword overlap (PCQ/HNQ only, >=60% match)
     if category in ("PCQ", "HNQ"):
         key_words = _extract_keywords(correct_answer)
         if len(key_words) >= 3:
@@ -134,29 +135,28 @@ def _extract_keywords(text: str) -> list:
 
 def extract_confidence_score(confidence_response: Optional[str],
                              scale_max: int = 100) -> float:
-    """0-1 arasi normalize edilmis guven skoru dondurur.
-    v1'den fark: model 0-100 arasi tam sayi veriyor (v1'de 0-10'du);
-    sayisal ayristirma /scale_max ile normalize eder. Kelime-tabanli
-    fallback ve garbage-filtre mantigi v1 ile AYNI (bazi modellerin
-    sayi yerine kelimeyle cevap verdigi -- orn. Phi-2 -- durumlarda
-    guvenilir sekilde calistigi kanitlandi)."""
+    """Returns a confidence score normalized to 0-1.
+    Difference from v1: the model gives an integer 0-100 (v1 was 0-10);
+    numeric parsing normalizes by /scale_max. The word-based fallback
+    and garbage-filtering logic is the SAME as v1 (proven reliable for
+    models that answer with a word instead of a number -- e.g. Phi-2)."""
     if not confidence_response or confidence_response == "[API_ERROR]":
         return 0.5
 
     resp_lower = confidence_response.lower()
     clean = confidence_response.strip()
 
-    # Anlamsız output filtresi
+    # Filter out meaningless output
     if clean:
         alpha_ratio = sum(c.isalnum() for c in clean) / len(clean)
         if alpha_ratio < 0.2:
             return 0.5
 
-    # Konusma-donguye girmis model ciktisi
+    # Model output stuck in a conversation-turn loop
     if resp_lower.startswith("user:") or resp_lower.startswith("system:"):
         return 0.5
 
-    # Model rakam vermeyi reddediyor
+    # Model refuses to give a number
     if any(phrase in resp_lower for phrase in [
         "i am an ai", "i'm an ai", "language model",
         "i cannot provide a", "i am not capable",
@@ -168,7 +168,7 @@ def extract_confidence_score(confidence_response: Optional[str],
     ]):
         return 0.1
 
-    # 0-scale_max arasi integer/ondalik ara (ilk gecerli sayi kullanilir)
+    # Look for an integer/decimal in 0-scale_max (the first valid number is used)
     numbers = re.findall(r"\b(\d+(?:\.\d+)?)\b", confidence_response)
     for num_str in numbers:
         try:
@@ -176,24 +176,25 @@ def extract_confidence_score(confidence_response: Optional[str],
         except ValueError:
             continue
         if 0.0 <= score <= 1.0:
-            # Model 0-1 arasi ondalik verdiyse (bazi modeller olcegi
-            # yanlis yorumlayabiliyor) dogrudan kabul et.
+            # If the model gave a 0-1 decimal (some models misread the
+            # scale), accept it directly.
             return score
         if 1.0 < score <= scale_max:
             return round(score / scale_max, 4)
-        # scale_max'tan buyuk: muhtemelen yil vb. -- yoksay, sonraki
-        # sayiya veya kelime tabanli tahmine gec
+        # Larger than scale_max: probably a year or similar -- ignore
+        # and fall through to the next number or the word-based guess.
 
-    # Negatif ifadeler once kontrol edilmeli.
-    # DUZELTME (v1'de de mevcut, burada giderildi): orijinal desen
-    # \bnot\s+(sure|certain|confident)\b yalnizca "not sure" gibi BITISIK
-    # ifadeleri yakaliyordu; "not really sure", "not entirely certain",
-    # "not 100% confident" gibi araya sifat/zarf giren (gercek modellerde
-    # cok yaygin) ifadeler bu deseni KACIRIYOR ve asagidaki "certain"
-    # kovasina (substring eslesmesiyle) yanlislikla 0.85 olarak dusuyordu
-    # -- yani model ACIKCA belirsizligini soylerken YUKSEK guven skoru
-    # atanmis oluyordu. Simdi "not" ile hedef kelime arasinda en fazla
-    # 2 ara kelimeye (herhangi bir token, orn. "100%") izin veriliyor.
+    # Negation phrasing must be checked before the plain "certain" bucket.
+    # FIX (present in v1 too, fixed here): the original pattern
+    # \bnot\s+(sure|certain|confident)\b only matched ADJACENT phrasing
+    # ("not sure"); extremely common phrasings with an intervening
+    # adjective/adverb ("not really sure", "not entirely certain",
+    # "not 100% confident") MISSED this pattern and fell through
+    # (via substring match) into the "certain" bucket below, incorrectly
+    # scoring 0.85 -- i.e. a model explicitly stating uncertainty was
+    # being assigned a HIGH confidence score. Now up to 2 intervening
+    # tokens (any token, e.g. "100%") are allowed between "not" and the
+    # target word.
     if re.search(r"\bnot\s+(?:\S+\s+){0,2}(sure|certain|confident)\b", resp_lower):
         return 0.35
 
@@ -213,7 +214,7 @@ def extract_confidence_score(confidence_response: Optional[str],
            ["don't know", "no idea", "completely uncertain", "no confidence"]):
         return 0.10
 
-    logger.warning("Güven skoru çıkarılamadı: '%s'", (confidence_response or "")[:50])
+    logger.warning("Could not extract a confidence score from: '%s'", (confidence_response or "")[:50])
     return 0.5
 
 

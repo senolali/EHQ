@@ -1,10 +1,10 @@
 """
 EHQ-3000 Excel Exporter
 ==========================
-EHQ v1'de kullanilan src/exporter.py'nin portu (5 sekme, ayni renk/
-bicim semasi). TEK GENISLEME: v1'de FEQ/PCQ/HNQ olarak sabit kodlanmis
-her yer, EHQ-3000'in 4. kategorisi CCQ'yu da kapsayacak sekilde
-genellestirildi (CATEGORIES listesi disaridan verilir).
+A port of src/exporter.py used in EHQ v1 (5 sheets, same color/format
+scheme). ONLY EXTENSION: every place that was hardcoded to FEQ/PCQ/HNQ
+in v1 was generalized to also cover EHQ-3000's 4th category, CCQ (the
+CATEGORIES list is passed in from outside).
 """
 
 import logging
@@ -53,7 +53,7 @@ def _ranked_models(all_results, key="EHQ"):
 
 
 # ─────────────────────────────────────────────────────────────
-# SEKME 1: Genel Özet
+# SHEET 1: Overall Summary
 # ─────────────────────────────────────────────────────────────
 
 def _sheet_summary(wb, all_results, categories):
@@ -121,7 +121,7 @@ def _sheet_summary(wb, all_results, categories):
 
 
 # ─────────────────────────────────────────────────────────────
-# SEKME 2: Kategori Detayı
+# SHEET 2: Category Detail
 # ─────────────────────────────────────────────────────────────
 
 def _sheet_categories(wb, all_results, categories):
@@ -177,7 +177,7 @@ def _sheet_categories(wb, all_results, categories):
 
 
 # ─────────────────────────────────────────────────────────────
-# SEKME 3: Response Distribution
+# SHEET 3: Response Distribution
 # ─────────────────────────────────────────────────────────────
 
 def _sheet_distribution(wb, all_results):
@@ -237,7 +237,7 @@ def _sheet_distribution(wb, all_results):
 
 
 # ─────────────────────────────────────────────────────────────
-# SEKME 4: Kalibrasyon Analizi
+# SHEET 4: Calibration Analysis
 # ─────────────────────────────────────────────────────────────
 
 def _sheet_calibration(wb, all_results):
@@ -302,15 +302,15 @@ def _sheet_calibration(wb, all_results):
 
 
 # ─────────────────────────────────────────────────────────────
-# SEKME 5: Model karsilastirma / siralama
+# SHEET 5: Model comparison / ranking
 # ─────────────────────────────────────────────────────────────
-# NOT: v1'deki "EHQ vs CQ" sekmesi, eski 7-modelin CQ (correctness
-# quotient) taban degerlerine hardcoded bagliydi (Senol et al. 2026
-# baseline). v2'nin 20 modeli buyuk cogunlukla FARKLI isimlere sahip
-# (orn. "Claude-4.5-Haiku" != v1'in "Claude-Haiku-4.5"), yani o sabit
-# sozluk yeni modellerin cogunu eslestiremez. Bu sekme onun yerine
-# NOTR bir "Model Ranking" ozet tablosu -- CQ karsilastirmasi ayri
-# bir adimda (elde mevcut CQ verisi olunca) yapilmali.
+# NOTE: v1's "EHQ vs CQ" sheet was hardcoded against the old 7-model's
+# CQ (correctness quotient) baseline values (Senol et al. 2026). Most
+# of v2's 20 models have DIFFERENT names (e.g. "Claude-4.5-Haiku" !=
+# v1's "Claude-Haiku-4.5"), so that fixed dictionary would fail to
+# match most of the new models. This sheet is replaced with a NEUTRAL
+# "Model Ranking" summary table instead -- a real CQ comparison should
+# be a separate step once updated CQ data exists.
 
 def _sheet_ranking(wb, all_results):
     ws = wb.create_sheet("Model Ranking")
@@ -353,7 +353,7 @@ def _sheet_ranking(wb, all_results):
 
 
 # ─────────────────────────────────────────────────────────────
-# ANA FONKSIYON
+# MAIN FUNCTION
 # ─────────────────────────────────────────────────────────────
 
 def export_to_excel(all_results: dict, output_path: str, categories: list) -> str:
@@ -368,5 +368,5 @@ def export_to_excel(all_results: dict, output_path: str, categories: list) -> st
 
     Path(output_path).parent.mkdir(parents=True, exist_ok=True)
     wb.save(output_path)
-    logger.info("Excel kaydedildi: %s", output_path)
+    logger.info("Excel saved: %s", output_path)
     return output_path

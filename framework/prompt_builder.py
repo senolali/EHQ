@@ -1,18 +1,18 @@
 """
 EHQ-3000 Prompt Builder
 =========================
-Test edilen 20 modele GONDERILECEK asil metni kategoriye gore kurar.
+Builds the actual text SENT to the 20 test models, per category.
 
-FEQ / PCQ / HNQ: dataset item'inin "question" alani DOGRUDAN gonderilir.
+FEQ / PCQ / HNQ: the dataset item's "question" field is sent DIRECTLY.
 
-CCQ: item'in "document" (redakte edilmis sentetik belge) + "question"
-alanlari birlikte gonderilmeli -- aksi halde modelin [REDACTED] bilgiyi
-"belgede yok" diye tanimasi icin hicbir baglam olmaz ve tum CCQ
-kategorisi anlamsiz hale gelir. Sablon ccq_generator.py'deki
-CCQItem.prompt_text() ile BIREBIR AYNI (uretim sirasinda QC'nin
-(qc_no_leak_in_document, qc_parametric_leak) test ettigi format budur;
-degerlendirmede farkli bir format kullanmak QC garantilerini gecersiz
-kilar).
+CCQ: the item's "document" (redacted synthetic document) and "question"
+fields must be sent together -- otherwise the model has no context to
+recognize that the [REDACTED] information is "not in the document",
+and the whole CCQ category becomes meaningless. The template is
+IDENTICAL to CCQItem.prompt_text() in ccq_generator.py (this is the
+exact format the generation-time QC filters -- qc_no_leak_in_document,
+qc_parametric_leak -- were validated against; using a different format
+at evaluation time would invalidate those QC guarantees).
 """
 
 

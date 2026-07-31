@@ -11,9 +11,9 @@ Run: python main.py --models all --categories all
 Run specific config: python main.py --config config/config_ehq_20models.yaml
 Dry run (no API calls, deterministic MockModel): python main.py --dry-run --limit 10
 
-Ortam degiskenleri (bkz. .env.example):
-  ASU_CREATEAI_TOKEN   -> type: "asu" modeller icin (18 model)
-  DEEPSEEK_API_KEY     -> type: "deepseek" modeller icin (2 model)
+Environment variables (see .env.example):
+  ASU_CREATEAI_TOKEN   -> for type: "asu" models (18 models)
+  DEEPSEEK_API_KEY     -> for type: "deepseek" models (2 models)
 """
 
 import argparse
@@ -214,7 +214,7 @@ def select_models(built_models: list, wanted: str) -> list:
     names = {n.strip() for n in wanted.split(",")}
     missing = names - {m.name for m in built_models}
     if missing:
-        raise ValueError(f"config'te bulunamayan/yuklenemeyen model adi/adlari: {sorted(missing)}")
+        raise ValueError(f"model name(s) not found/loaded in config: {sorted(missing)}")
     return [m for m in built_models if m.name in names]
 
 
@@ -236,17 +236,17 @@ def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", default=os.path.join(_base_dir, "config", "config_ehq_20models.yaml"))
     parser.add_argument("--dataset", default=None,
-                        help="Varsayilan: config'teki datasets[0].params.path")
+                        help="Default: config's datasets[0].params.path")
     parser.add_argument("--models", default="all",
-                        help="Virgulle ayrilmis model adi listesi veya 'all'")
+                        help="Comma-separated list of model names, or 'all'")
     parser.add_argument("--categories", default="all",
-                        help="Virgulle ayrilmis kategori listesi (FEQ,PCQ,HNQ,CCQ) veya 'all'")
+                        help="Comma-separated list of categories (FEQ,PCQ,HNQ,CCQ), or 'all'")
     parser.add_argument("--limit", type=int, default=None,
-                        help="Toplam soru sayisini sinirlar (hizli test icin)")
+                        help="Caps the total number of questions (for quick tests)")
     parser.add_argument("--output-dir", default=None,
-                        help="Varsayilan: config'teki experiment.output_dir")
+                        help="Default: config's experiment.output_dir")
     parser.add_argument("--dry-run", action="store_true",
-                        help="Gercek API cagrisi yapmadan (MockModel ile) tum boru hattini test et")
+                        help="Test the whole pipeline without real API calls (using MockModel)")
     return parser.parse_args()
 
 
@@ -268,15 +268,15 @@ def main():
         else [c.strip() for c in args.categories.split(",")]
     unknown = set(categories) - set(config_scoring.CATEGORIES)
     if unknown:
-        raise ValueError(f"Bilinmeyen kategori(ler): {sorted(unknown)} "
-                         f"(gecerli: {config_scoring.CATEGORIES})")
+        raise ValueError(f"Unknown categor(y/ies): {sorted(unknown)} "
+                         f"(valid: {config_scoring.CATEGORIES})")
 
     dataset_path = args.dataset or config["datasets"][0]["params"]["path"]
     if not os.path.isabs(dataset_path):
         dataset_path = os.path.join(_base_dir, dataset_path)
     dataset = load_dataset(dataset_path, categories, limit=args.limit, seed=exp.get("seed", 42))
     if not dataset:
-        raise ValueError(f"Dataset bos: {dataset_path} (kategoriler: {categories})")
+        raise ValueError(f"Dataset is empty: {dataset_path} (categories: {categories})")
 
     logger.info("Registering models...")
     models = build_models(config, dry_run=args.dry_run)

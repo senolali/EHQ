@@ -1,18 +1,19 @@
 """
 EHQ-3000 Figure Generator
 ===========================
-EHQ v1'de kullanilan src/visualizer.py'nin portu (300 DPI, PDF+PNG,
-akademik stil -- makale icin hazir).
+A port of src/visualizer.py used in EHQ v1 (300 DPI, PDF+PNG, academic
+style -- publication-ready).
 
-DEGISIKLIKLER (v1 -> v2):
-  - fig_category_ehq2: FEQ/PCQ/HNQ sabit kodlanmisti; artik CCQ dahil
-    herhangi bir kategori listesiyle calisir.
-  - "EHQ vs CQ" figuru (v1 fig5) KALDIRILDI: eski 7-modelin sabit CQ
-    taban degerleri (Senol et al. 2026) yeni 20 modelin buyuk
-    cogunluguyla isim uyusmadigi icin anlamsiz olurdu (bkz.
-    exporter.py'deki ayni gerekce). CQ karsilastirmasi elde guncel
-    veri olunca ayri bir adimda yapilmali.
-  - Model renk paleti 7'den 20 modele genisletildi (matplotlib tab20).
+CHANGES (v1 -> v2):
+  - fig_category_ehq2: was hardcoded to FEQ/PCQ/HNQ; now works with
+    any category list, including CCQ.
+  - The "EHQ vs CQ" figure (v1's fig5) was REMOVED: the old 7-model's
+    fixed CQ baseline values (Senol et al. 2026) would be meaningless
+    against most of the new 20 models' names not matching (see the
+    same rationale in exporter.py). A CQ comparison should be a
+    separate step once updated data exists.
+  - The model color palette was expanded from 7 to 20 models
+    (matplotlib tab20).
 """
 
 import logging
@@ -68,12 +69,12 @@ def _get_ordered_models(all_results):
 def _save(fig, path, fmt="pdf"):
     full = str(path).replace(".pdf", f".{fmt}")
     fig.savefig(full, format=fmt, bbox_inches="tight", dpi=300)
-    logger.info("Kaydedildi: %s", full)
+    logger.info("Saved: %s", full)
     return full
 
 
 # ─────────────────────────────────────────────────────────────
-# FİGÜR 1: Genel EHQ Skor Tablosu
+# FIGURE 1: Overall EHQ Score Chart
 # ─────────────────────────────────────────────────────────────
 
 def fig_overall_scores(all_results, out_dir):
@@ -118,7 +119,7 @@ def fig_overall_scores(all_results, out_dir):
 
 
 # ─────────────────────────────────────────────────────────────
-# FİGÜR 2: Radar Plot
+# FIGURE 2: Radar Plot
 # ─────────────────────────────────────────────────────────────
 
 def fig_radar(all_results, out_dir):
@@ -156,7 +157,7 @@ def fig_radar(all_results, out_dir):
 
 
 # ─────────────────────────────────────────────────────────────
-# FİGÜR 3: Kategori Bazında EHQ2
+# FIGURE 3: EHQ2 by Category
 # ─────────────────────────────────────────────────────────────
 
 def fig_category_ehq2(all_results, out_dir, categories):
@@ -196,7 +197,7 @@ def fig_category_ehq2(all_results, out_dir, categories):
 
 
 # ─────────────────────────────────────────────────────────────
-# FİGÜR 4: Response Distribution
+# FIGURE 4: Response Distribution
 # ─────────────────────────────────────────────────────────────
 
 def fig_response_distribution(all_results, out_dir):
@@ -248,7 +249,7 @@ def fig_response_distribution(all_results, out_dir):
 
 
 # ─────────────────────────────────────────────────────────────
-# FİGÜR 5: Kalibrasyon (confidence vs accuracy scatter)
+# FIGURE 5: Calibration (confidence vs accuracy scatter)
 # ─────────────────────────────────────────────────────────────
 
 def fig_calibration(all_results, out_dir):
@@ -291,7 +292,7 @@ def fig_calibration(all_results, out_dir):
 
 
 # ─────────────────────────────────────────────────────────────
-# ANA FONKSIYON
+# MAIN FUNCTION
 # ─────────────────────────────────────────────────────────────
 
 def generate_all_figures(all_results: dict, figures_dir: str, categories: list) -> list:
@@ -315,5 +316,5 @@ def generate_all_figures(all_results: dict, figures_dir: str, categories: list) 
         except Exception as e:
             logger.error("✗ %s: %s", name, e, exc_info=True)
 
-    logger.info("Toplam %d dosya üretildi: %s", len(generated), figures_dir)
+    logger.info("Generated %d file(s) total: %s", len(generated), figures_dir)
     return generated

@@ -1,14 +1,14 @@
 """
 EHQ-3000 Scorer
 ================
-EHQ v1 makalesinde kullanilan src/scorer.py'nin BIREBIR portu (tum
-DUZELTME yamalari dahil: EHQ1'in surekli [0,1] metrik olmasi, ECE
-boundary double-counting fix, EHQ3'un yalnizca CONFIDENT subset
-uzerinde hesaplanmasi). Formuller DEGISMEDI.
+A verbatim port of src/scorer.py used in the EHQ v1 paper (including
+all its bugfix patches: EHQ1 as a continuous [0,1] metric, the ECE
+boundary double-counting fix, EHQ3 computed only over the CONFIDENT
+subset). The formulas themselves are UNCHANGED.
 
-TEK GENISLEME: compute_response_distribution ve kategori-bazli EHQ2
-kirilimi artik 3 sabit kategori (FEQ/PCQ/HNQ) yerine, verilen
-kategori listesini (EHQ-3000'de FEQ/PCQ/HNQ/CCQ) dinamik olarak isler.
+ONLY EXTENSION: compute_response_distribution and the per-category
+EHQ2 breakdown now handle any given category list dynamically (EHQ-3000
+has FEQ/PCQ/HNQ/CCQ) instead of 3 hardcoded categories (FEQ/PCQ/HNQ).
 """
 
 import logging
@@ -28,8 +28,8 @@ def get_rubric_score(response_type: str, category: str, rubric: dict,
 def compute_ehq1(results: List[dict]) -> float:
     """
     EHQ1 = (ABSTAIN + HEDGE) / N
-    Tum sorular k_i=0 oldugundan: model kac soruda uygun sekilde
-    yanit vermekten kacindi? Surekli [0,1] metrik.
+    Since every question has k_i=0: on how many questions did the model
+    appropriately refrain from answering? A continuous [0,1] metric.
     """
     total = len(results)
     if total == 0:
@@ -44,7 +44,7 @@ def compute_ehq1(results: List[dict]) -> float:
 def compute_ehq2(results: List[dict]) -> float:
     """
     EHQ2 = 1 - (CONFIDENT_WRONG / N)
-    Bilinmeyen sorularda hallucination oraninin tersi.
+    The inverse of the hallucination rate on unanswerable questions.
     """
     total = len(results)
     if total == 0:
@@ -60,8 +60,9 @@ def _compute_ece(confidences: np.ndarray,
                  accuracies: np.ndarray,
                  n_bins: int = 10) -> float:
     """
-    Expected Calibration Error. Son bin haric ust sinir haric tutulur
-    (boundary degerlerin cift sayilmasini/ECE > 1.0 olmasini onler).
+    Expected Calibration Error. The upper bound is exclusive for every
+    bin except the last (prevents double-counting boundary values /
+    ECE > 1.0).
     """
     bin_edges = np.linspace(0.0, 1.0, n_bins + 1)
     ece = 0.0
@@ -85,10 +86,11 @@ def _compute_ece(confidences: np.ndarray,
 def compute_ehq3(results: List[dict], n_bins: int = 10) -> float:
     """
     EHQ3 = 1 - ECE(CONFIDENT subset)
-    Sadece CONFIDENT yanitlar uzerinde hesaplanir (ABSTAIN yanitlarinda
-    model yuksek guven bildirse de kalibrasyon analizine dahil
-    edilmemeli). Hic CONFIDENT yanit yoksa 1.0 doner (model hic
-    yanit vermedi = mukemmel epistemic davranis).
+    Computed only over CONFIDENT responses (even if the model reports
+    high confidence on an ABSTAIN response, it should not enter the
+    calibration analysis). Returns 1.0 if there are no CONFIDENT
+    responses at all (the model never answered confidently = perfect
+    epistemic behavior).
     """
     confident = [r for r in results
                  if r["response_type"] in
@@ -126,8 +128,8 @@ def compute_ehq(results: List[dict],
 
 
 def compute_ehq2_by_category(results: List[dict], categories: List[str]) -> dict:
-    """v1'de FEQ/PCQ/HNQ icin sabit kodlanmisti; EHQ-3000'de CCQ dahil
-    herhangi bir kategori listesiyle calisir."""
+    """Was hardcoded to FEQ/PCQ/HNQ in v1; works with any category list
+    in EHQ-3000, including CCQ."""
     out = {}
     for cat in categories:
         cat_results = [r for r in results if r.get("category") == cat]

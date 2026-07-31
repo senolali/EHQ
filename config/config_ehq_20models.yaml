@@ -35,7 +35,15 @@ experiment:
   deterministic: false
   output_dir: "outputs_ehq"
   verbose: true
+  # Item-level checkpoint/resume (utils/checkpoint.py). A crash partway
+  # through a model resumes from the last completed item instead of
+  # re-paying for every call. Set false to force a fully fresh run.
+  checkpoint: true
 
+# Parallel evaluation workers for ALL models (top-level -- this is what
+# evaluation/evaluator.py actually reads; per-model params.max_workers
+# below is documentation-only / historical and is NOT read by the
+# evaluator, matching senolali/RQEval's convention).
 max_workers: 4
 
 models:

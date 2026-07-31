@@ -5,7 +5,7 @@
 # Sources:
 #   type: "asu"      → ASU CreateAI /query endpoint (FREE, courtesy affiliate)
 #                      Token: env ASU_CREATEAI_TOKEN (Bearer)
-#                      Base URL: https://api-main-poc.aiml.asu.edu  (verified)
+#                      Base URL: https://api-main.aiml.asu.edu  (verified)
 #   type: "deepseek" → DeepSeek direct API (env DEEPSEEK_API_KEY)
 #
 # NO LOCAL MODELS (all via API — ASU serves small models too).
@@ -49,7 +49,7 @@ models:
       model_name: "claude3_haiku"
       model_provider: "aws"
       api_key_env: "ASU_CREATEAI_TOKEN"
-      base_url: "https://api-main-poc.aiml.asu.edu"
+      base_url: "https://api-main.aiml.asu.edu"
       endpoint: "query"
       request_source: "override_params"
       enable_search: false
@@ -67,7 +67,7 @@ models:
       model_name: "claude4_5_haiku"
       model_provider: "aws"
       api_key_env: "ASU_CREATEAI_TOKEN"
-      base_url: "https://api-main-poc.aiml.asu.edu"
+      base_url: "https://api-main.aiml.asu.edu"
       endpoint: "query"
       request_source: "override_params"
       enable_search: false
@@ -88,7 +88,7 @@ models:
       model_name: "claude4_sonnet"
       model_provider: "aws"
       api_key_env: "ASU_CREATEAI_TOKEN"
-      base_url: "https://api-main-poc.aiml.asu.edu"
+      base_url: "https://api-main.aiml.asu.edu"
       endpoint: "query"
       request_source: "override_params"
       enable_search: false
@@ -106,7 +106,7 @@ models:
       model_name: "claude4_8_opus"
       model_provider: "aws"
       api_key_env: "ASU_CREATEAI_TOKEN"
-      base_url: "https://api-main-poc.aiml.asu.edu"
+      base_url: "https://api-main.aiml.asu.edu"
       endpoint: "query"
       request_source: "override_params"
       enable_search: false
@@ -127,7 +127,7 @@ models:
       model_name: "gpt4o_mini"
       model_provider: "openai"
       api_key_env: "ASU_CREATEAI_TOKEN"
-      base_url: "https://api-main-poc.aiml.asu.edu"
+      base_url: "https://api-main.aiml.asu.edu"
       endpoint: "query"
       request_source: "override_params"
       enable_search: false
@@ -145,7 +145,7 @@ models:
       model_name: "gpt5_mini"
       model_provider: "openai"
       api_key_env: "ASU_CREATEAI_TOKEN"
-      base_url: "https://api-main-poc.aiml.asu.edu"
+      base_url: "https://api-main.aiml.asu.edu"
       endpoint: "query"
       request_source: "override_params"
       enable_search: false
@@ -166,7 +166,7 @@ models:
       model_name: "gpt4o"
       model_provider: "openai"
       api_key_env: "ASU_CREATEAI_TOKEN"
-      base_url: "https://api-main-poc.aiml.asu.edu"
+      base_url: "https://api-main.aiml.asu.edu"
       endpoint: "query"
       request_source: "override_params"
       enable_search: false
@@ -184,7 +184,7 @@ models:
       model_name: "gpt5_5"
       model_provider: "openai"
       api_key_env: "ASU_CREATEAI_TOKEN"
-      base_url: "https://api-main-poc.aiml.asu.edu"
+      base_url: "https://api-main.aiml.asu.edu"
       endpoint: "query"
       request_source: "override_params"
       enable_search: false
@@ -205,7 +205,7 @@ models:
       model_name: "geminiflash2_5"
       model_provider: "gcp-deepmind"
       api_key_env: "ASU_CREATEAI_TOKEN"
-      base_url: "https://api-main-poc.aiml.asu.edu"
+      base_url: "https://api-main.aiml.asu.edu"
       endpoint: "query"
       request_source: "override_params"
       enable_search: false
@@ -223,7 +223,7 @@ models:
       model_name: "geminiflash3_5"
       model_provider: "gcp-deepmind"
       api_key_env: "ASU_CREATEAI_TOKEN"
-      base_url: "https://api-main-poc.aiml.asu.edu"
+      base_url: "https://api-main.aiml.asu.edu"
       endpoint: "query"
       request_source: "override_params"
       enable_search: false
@@ -244,7 +244,7 @@ models:
       model_name: "geminipro2_5"
       model_provider: "gcp-deepmind"
       api_key_env: "ASU_CREATEAI_TOKEN"
-      base_url: "https://api-main-poc.aiml.asu.edu"
+      base_url: "https://api-main.aiml.asu.edu"
       endpoint: "query"
       request_source: "override_params"
       enable_search: false
@@ -262,7 +262,7 @@ models:
       model_name: "geminipro3_1"
       model_provider: "gcp-deepmind"
       api_key_env: "ASU_CREATEAI_TOKEN"
-      base_url: "https://api-main-poc.aiml.asu.edu"
+      base_url: "https://api-main.aiml.asu.edu"
       endpoint: "query"
       request_source: "override_params"
       enable_search: false
@@ -283,7 +283,7 @@ models:
       model_name: "llama3-70b"      # resolves to Llama 3.1-70B
       model_provider: "aws"
       api_key_env: "ASU_CREATEAI_TOKEN"
-      base_url: "https://api-main-poc.aiml.asu.edu"
+      base_url: "https://api-main.aiml.asu.edu"
       endpoint: "query"
       request_source: "override_params"
       enable_search: false
@@ -301,7 +301,7 @@ models:
       model_name: "llama4_maverick-17b"
       model_provider: "aws"
       api_key_env: "ASU_CREATEAI_TOKEN"
-      base_url: "https://api-main-poc.aiml.asu.edu"
+      base_url: "https://api-main.aiml.asu.edu"
       endpoint: "query"
       request_source: "override_params"
       enable_search: false
@@ -351,7 +351,7 @@ models:
       model_name: "gpt-oss-20b"
       model_provider: "aws"
       api_key_env: "ASU_CREATEAI_TOKEN"
-      base_url: "https://api-main-poc.aiml.asu.edu"
+      base_url: "https://api-main.aiml.asu.edu"
       endpoint: "query"
       request_source: "override_params"
       enable_search: false
@@ -369,7 +369,7 @@ models:
       model_name: "gemma4_31b_it"
       model_provider: "asu-air"
       api_key_env: "ASU_CREATEAI_TOKEN"
-      base_url: "https://api-main-poc.aiml.asu.edu"
+      base_url: "https://api-main.aiml.asu.edu"
       endpoint: "query"
       request_source: "override_params"
       enable_search: false
@@ -387,7 +387,7 @@ models:
       model_name: "nova-micro"
       model_provider: "aws"
       api_key_env: "ASU_CREATEAI_TOKEN"
-      base_url: "https://api-main-poc.aiml.asu.edu"
+      base_url: "https://api-main.aiml.asu.edu"
       endpoint: "query"
       request_source: "override_params"
       enable_search: false
@@ -405,7 +405,7 @@ models:
       model_name: "nova-pro"
       model_provider: "aws"
       api_key_env: "ASU_CREATEAI_TOKEN"
-      base_url: "https://api-main-poc.aiml.asu.edu"
+      base_url: "https://api-main.aiml.asu.edu"
       endpoint: "query"
       request_source: "override_params"
       enable_search: false
@@ -424,7 +424,7 @@ datasets:
   - name: "ehq_3000"
     type: "json"
     params:
-      path: "data/EHQ_3000_dataset.json"
+      path: "EHQ-3000_dataset.json"
       seed: 42
       # num_samples: unset → use all
 

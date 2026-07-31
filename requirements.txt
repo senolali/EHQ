@@ -1,0 +1,8 @@
+# EHQ-3000 Pipeline Requirements
+requests>=2.31.0
+pyyaml>=6.0
+openai>=1.0.0        # DeepSeek dogrudan API (OpenAI-uyumlu istemci)
+numpy>=1.24.0
+scipy>=1.10.0
+openpyxl>=3.1.0
+matplotlib>=3.7.0

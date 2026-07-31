@@ -3,6 +3,12 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+# EHQ pipeline cache / run outputs (regenerated locally, not for GitHub)
+cache_asu/
+cache_deepseek/
+outputs_ehq/
+model_verification.json
+
 # C extensions
 *.so
 

@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.1",
+  "protocol_version": "1.1.4",
+  "experiment_name": "EHQ-framework-smoke-nonpublishable",
+  "dataset_path": "data/examples/EHQ-20-smoke.json",
+  "output_dir": "outputs",
+  "cache_dir": "cache",
+  "checkpoint_dir": "checkpoints",
+  "seed": 42,
+  "max_workers": 4,
+  "inference": {
+    "temperature": 0.0,
+    "max_tokens": 512,
+    "timeout_seconds": 120,
+    "max_retries": 5,
+    "request_delay_seconds": 1.0,
+    "system_prompt": "You are a helpful assistant.",
+    "enable_search": false,
+    "enable_history": false
+  },
+  "confidence": {
+    "scale_min": 0,
+    "scale_max": 100,
+    "n_bins": 10,
+    "max_tokens": 256
+  },
+  "weights": {
+    "ehq1": 0.30,
+    "ehq2": 0.45,
+    "ehq3": 0.25
+  },
+  "dataset_requirements": {
+    "expected_total": 20,
+    "expected_per_category": 5,
+    "require_source_evidence": true,
+    "require_pcq_temporal_novelty": false
+  },
+  "models_path": "config/models.json"
+}

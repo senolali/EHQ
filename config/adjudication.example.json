@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0",
+  "protocol_version": "1.1.4",
+  "adjudications": [
+    {
+      "model": "openai-example",
+      "question_id": "EXAMPLE-ONLY",
+      "label": "HEDGE"
+    }
+  ]
+}

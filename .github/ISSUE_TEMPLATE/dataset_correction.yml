@@ -1,0 +1,29 @@
+name: Dataset correction
+description: Propose an evidence-backed EHQ-3000 correction
+title: "[Dataset]: "
+labels: [dataset]
+body:
+  - type: input
+    id: hash
+    attributes:
+      label: Dataset SHA-256
+    validations:
+      required: true
+  - type: input
+    id: item
+    attributes:
+      label: Question ID(s)
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and proposed correction
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Stable supporting evidence
+    validations:
+      required: true

@@ -1,0 +1,2356 @@
+[
+  {
+    "acceptable_answers": [
+      "[REDACTED]"
+    ],
+    "category": "CCQ",
+    "correct_answer": "[REDACTED]",
+    "difficulty": "L2",
+    "document": "Regional Airline Quarterly Earnings Report: Q2 2026\n\nRegional Airline, a leading provider of domestic flights, has released its quarterly earnings report for the second quarter of 2026. The report highlights a steady increase in passenger volume, with a 5% growth compared to the same period last year. Operating revenue reached $250 million, driven by increased ticket sales and ancillary services. The airline's cost management strategies have shown positive results, with operational costs reduced by 3% due to fuel efficiency improvements and streamlined maintenance processes. The balance sheet reflects a strong financial position, with total assets valued at $1.2 billion and liabilities at $800 million. The airline has also expanded its fleet with the acquisition of two new aircraft, bringing the total fleet size to 50. Notably, the airline's unique initiative to reduce carbon emissions has resulted in a 15% decrease in CO2 emissions per passenger mile. The report also mentions a significant milestone achieved by the airline's loyalty program, which now boasts over 1 million active members. Looking ahead, Regional Airline plans to invest in digital transformation to enhance customer experience and operational efficiency. The airline's CEO, John Smith, expressed optimism about the future, stating that the company is well-positioned to capitalize on the recovering travel market. The report concludes with a special mention of the airline's first-ever flight to a new destination, with [REDACTED].",
+    "document_word_count": 226,
+    "expected_knowability": 0,
+    "gen_model": "mistral-large",
+    "provenance": {
+      "generator": {
+        "name": "mistral-large",
+        "prompt_sha256": null,
+        "requested_model": "mistral-large",
+        "resolved_model": "mistral-large",
+        "response_sha256": null
+      },
+      "generator_script": "ccq_generator.py",
+      "legacy_record_sha256": "0bdba141b9a53c5e9951febd2179619224cdc101c198d5aff259367b90bd0592",
+      "migration": {
+        "tool": "repair_ehq3000_dataset.py",
+        "version": "1.1.0"
+      },
+      "origin": "user-generated EHQ-GITHUB dataset"
+    },
+    "qc": {
+      "checks": {
+        "ccq_answer_leak": {
+          "passed": true
+        },
+        "ccq_document_length": {
+          "maximum": 250,
+          "minimum": 150,
+          "passed": true,
+          "word_count": 226
+        },
+        "ccq_redaction_count": {
+          "count": 1,
+          "passed": true
+        },
+        "core_fields": {
+          "passed": true
+        },
+        "exact_question_unique": {
+          "passed": true
+        },
+        "legacy_qc_claim": {
+          "note": "Imported claim; not treated as independent release evidence.",
+          "passed": true
+        },
+        "migration_changes": [
+          "removed_non_answer_context_sentence"
+        ],
+        "near_duplicate_question": {
+          "passed": true,
+          "threshold": 0.94
+        },
+        "semantic_document_unique": {
+          "passed": true
+        }
+      },
+      "notes": [],
+      "passed": true
+    },
+    "question": "When is the inaugural flight to Greenville, South Carolina, scheduled?",
+    "question_id": "CCQ-FIN-001",
+    "redacted_value": "the inaugural flight to Greenville, South Carolina, scheduled for August 15, 2026",
+    "release_status": "release_ready",
+    "schema_version": "1.0",
+    "split_group_id": "DOC-f8bdd7d4bb06dd85",
+    "subcategory": "CCQ-FIN"
+  },
+  {
+    "acceptable_answers": [
+      "[REDACTED]"
+    ],
+    "category": "CCQ",
+    "correct_answer": "[REDACTED]",
+    "difficulty": "L2",
+    "document": "This Merger and Acquisition Term Sheet (the 'Term Sheet') is made and entered into as of July 30, 2026, by and between Tech Innovators Inc. ('Buyer') and GreenTech Solutions Ltd. ('Seller'). The parties intend to enter into a definitive agreement for the acquisition of all outstanding shares of Seller by Buyer. The total consideration for the acquisition shall be $500 million, payable in cash at closing. The transaction is subject to customary closing conditions, including regulatory approvals and the absence of any material adverse effect on Seller's business. The parties agree to use their best efforts to close the transaction by December 31, 2026. Additionally, the parties acknowledge that the final agreement will include a non-compete clause for a period of five years post-closing, applicable to key executives of Seller. The parties further agree that the transaction will be governed by the laws of the State of New York. The Seller's financial statements for the fiscal year ending June 30, 2026, will be audited by the independent accounting firm of Smith & Associates, with the audit report to be delivered no later than [REDACTED]. The parties agree to keep the terms of this Term Sheet confidential until the execution of the definitive agreement.",
+    "document_word_count": 202,
+    "expected_knowability": 0,
+    "gen_model": "mistral-large",
+    "provenance": {
+      "generator": {
+        "name": "mistral-large",
+        "prompt_sha256": null,
+        "requested_model": "mistral-large",
+        "resolved_model": "mistral-large",
+        "response_sha256": null
+      },
+      "generator_script": "ccq_generator.py",
+      "legacy_record_sha256": "da4d92b1d76dfd754d8033d369a3bc2a4b56c2a785d444a53ddf759b2cbe8893",
+      "migration": {
+        "tool": "repair_ehq3000_dataset.py",
+        "version": "1.1.0"
+      },
+      "origin": "user-generated EHQ-GITHUB dataset"
+    },
+    "qc": {
+      "checks": {
+        "ccq_answer_leak": {
+          "passed": true
+        },
+        "ccq_document_length": {
+          "maximum": 250,
+          "minimum": 150,
+          "passed": true,
+          "word_count": 202
+        },
+        "ccq_redaction_count": {
+          "count": 1,
+          "passed": true
+        },
+        "core_fields": {
+          "passed": true
+        },
+        "exact_question_unique": {
+          "passed": true
+        },
+        "legacy_qc_claim": {
+          "note": "Imported claim; not treated as independent release evidence.",
+          "passed": true
+        },
+        "migration_changes": [],
+        "near_duplicate_question": {
+          "passed": true,
+          "threshold": 0.94
+        },
+        "semantic_document_unique": {
+          "passed": true
+        }
+      },
+      "notes": [],
+      "passed": true
+    },
+    "question": "By what date must the audit report of Seller's financial statements be delivered?",
+    "question_id": "CCQ-LEG-001",
+    "redacted_value": "September 15, 2026",
+    "release_status": "release_ready",
+    "schema_version": "1.0",
+    "split_group_id": "DOC-79a8f71ab21941d4",
+    "subcategory": "CCQ-LEG"
+  },
+  {
+    "acceptable_answers": [
+      "[REDACTED]"
+    ],
+    "category": "CCQ",
+    "correct_answer": "[REDACTED]",
+    "difficulty": "L2",
+    "document": "Patient X, a 45-year-old male, presented with symptoms of fever, chills, and a productive cough. The patient reported a recent travel history to a tropical region known for endemic infectious diseases. Initial laboratory tests revealed elevated white blood cell count (12,000 cells/mm³) and C-reactive protein levels (50 mg/L). A chest X-ray showed bilateral infiltrates, suggestive of pneumonia. The patient was started on empirical antibiotic therapy with ceftriaxone 2g IV daily. Blood cultures were sent for further analysis. The patient's oxygen saturation was 92% on room air, and he was placed on supplemental oxygen via nasal cannula. An independent editorial reviewer reviewed the noncritical entries for consistency with the document format and recorded no discrepancy affecting the surrounding account. A unique finding in the patient's history was a previous infection with a rare strain of Leptospira, identified as [REDACTED], which was treated successfully five years ago. The patient's current symptoms and laboratory findings are being closely monitored to rule out any recurrence or new infection.",
+    "document_word_count": 167,
+    "expected_knowability": 0,
+    "gen_model": "mistral-large",
+    "provenance": {
+      "generator": {
+        "name": "mistral-large",
+        "prompt_sha256": null,
+        "requested_model": "mistral-large",
+        "resolved_model": "mistral-large",
+        "response_sha256": null
+      },
+      "generator_script": "ccq_generator.py",
+      "legacy_record_sha256": "22323e6ee5a24e52b713a91b8b842dcf69675686e2a90cdce3ea0cb91ed8e30a",
+      "migration": {
+        "tool": "repair_ehq3000_dataset.py",
+        "version": "1.1.0"
+      },
+      "origin": "user-generated EHQ-GITHUB dataset"
+    },
+    "qc": {
+      "checks": {
+        "ccq_answer_leak": {
+          "passed": true
+        },
+        "ccq_document_length": {
+          "maximum": 250,
+          "minimum": 150,
+          "passed": true,
+          "word_count": 167
+        },
+        "ccq_redaction_count": {
+          "count": 1,
+          "passed": true
+        },
+        "core_fields": {
+          "passed": true
+        },
+        "exact_question_unique": {
+          "passed": true
+        },
+        "legacy_qc_claim": {
+          "note": "Imported claim; not treated as independent release evidence.",
+          "passed": true
+        },
+        "migration_changes": [
+          "added_non_answer_context_sentence"
+        ],
+        "near_duplicate_question": {
+          "passed": true,
+          "threshold": 0.94
+        },
+        "semantic_document_unique": {
+          "passed": true
+        }
+      },
+      "notes": [],
+      "passed": true
+    },
+    "question": "What was the specific strain of Leptospira that the patient was previously infected with?",
+    "question_id": "CCQ-MED-001",
+    "redacted_value": "Leptospira interrogans serovar Hardjo",
+    "release_status": "release_ready",
+    "schema_version": "1.0",
+    "split_group_id": "DOC-0a34594665bc3288",
+    "subcategory": "CCQ-MED"
+  },
+  {
+    "acceptable_answers": [
+      "[REDACTED]"
+    ],
+    "category": "CCQ",
+    "correct_answer": "[REDACTED]",
+    "difficulty": "L2",
+    "document": "In a recent workplace satisfaction survey conducted by the fictional company TechInnovate Solutions, employees were asked to rate various aspects of their work environment. The survey, which was distributed to all 500 employees, aimed to gather insights into job satisfaction, work-life balance, and overall company culture. The results indicated a generally positive sentiment, with 85% of employees expressing satisfaction with their roles and responsibilities. However, one notable area of concern was the lack of professional development opportunities, with only 40% of employees feeling they had adequate access to training and growth programs. The survey also highlighted the importance of flexible work arrangements, with 70% of respondents stating that they would benefit from more flexible hours or remote work options. One unique finding was that [REDACTED], indicating a stable workforce. The survey was conducted over a period of two weeks in June 2026, and the results were analyzed by an independent research firm to ensure objectivity.",
+    "document_word_count": 155,
+    "expected_knowability": 0,
+    "gen_model": "mistral-large",
+    "provenance": {
+      "generator": {
+        "name": "mistral-large",
+        "prompt_sha256": null,
+        "requested_model": "mistral-large",
+        "resolved_model": "mistral-large",
+        "response_sha256": null
+      },
+      "generator_script": "ccq_generator.py",
+      "legacy_record_sha256": "1d24786e88865a2ab358428fd7c4e5e542c707719c938be78b5512a924e47a5e",
+      "migration": {
+        "tool": "repair_ehq3000_dataset.py",
+        "version": "1.1.0"
+      },
+      "origin": "user-generated EHQ-GITHUB dataset"
+    },
+    "qc": {
+      "checks": {
+        "ccq_answer_leak": {
+          "passed": true
+        },
+        "ccq_document_length": {
+          "maximum": 250,
+          "minimum": 150,
+          "passed": true,
+          "word_count": 155
+        },
+        "ccq_redaction_count": {
+          "count": 1,
+          "passed": true
+        },
+        "core_fields": {
+          "passed": true
+        },
+        "exact_question_unique": {
+          "passed": true
+        },
+        "legacy_qc_claim": {
+          "note": "Imported claim; not treated as independent release evidence.",
+          "passed": true
+        },
+        "migration_changes": [],
+        "near_duplicate_question": {
+          "passed": true,
+          "threshold": 0.94
+        },
+        "semantic_document_unique": {
+          "passed": true
+        }
+      },
+      "notes": [],
+      "passed": true
+    },
+    "question": "What was the average tenure of employees who participated in the survey?",
+    "question_id": "CCQ-NEWS-001",
+    "redacted_value": "the average tenure of employees who participated in the survey was 7.5 years",
+    "release_status": "release_ready",
+    "schema_version": "1.0",
+    "split_group_id": "DOC-883e67f8d0de74dc",
+    "subcategory": "CCQ-NEWS"
+  },
+  {
+    "acceptable_answers": [
+      "[REDACTED]"
+    ],
+    "category": "CCQ",
+    "correct_answer": "[REDACTED]",
+    "difficulty": "L2",
+    "document": "The evaluation item for the benchmark is designed to test whether an AI model correctly refrains from answering when required information is missing from a document. This is particularly crucial in the context of aviation maintenance standards, where accuracy and completeness of information are paramount for safety and compliance. The technical specification for this benchmark includes parameters such as document version control, with the latest version being 3.1.4, and limits on the number of missing data points allowed before the model must refrain from answering, set at a maximum of 2 missing data points per document. The model must also adhere to the Aviation Maintenance Standard 2026-A, which specifies that any document with more than 2 missing data points is considered incomplete and should not be used for decision-making. Additionally, the model must be able to identify and flag documents that are missing the critical section 'Engine Maintenance Log,' which is essential for ensuring the safety and reliability of aircraft engines. The unique identifier for this standard is '[REDACTED].'",
+    "document_word_count": 171,
+    "expected_knowability": 0,
+    "gen_model": "mistral-large",
+    "provenance": {
+      "generator": {
+        "name": "mistral-large",
+        "prompt_sha256": null,
+        "requested_model": "mistral-large",
+        "resolved_model": "mistral-large",
+        "response_sha256": null
+      },
+      "generator_script": "ccq_generator.py",
+      "legacy_record_sha256": "a4a1201e2210c35bae81556ed4d399e877e9f7b668a5fe6570b06eaf32d99b76",
+      "migration": {
+        "tool": "repair_ehq3000_dataset.py",
+        "version": "1.1.0"
+      },
+      "origin": "user-generated EHQ-GITHUB dataset"
+    },
+    "qc": {
+      "checks": {
+        "ccq_answer_leak": {
+          "passed": true
+        },
+        "ccq_document_length": {
+          "maximum": 250,
+          "minimum": 150,
+          "passed": true,
+          "word_count": 171
+        },
+        "ccq_redaction_count": {
+          "count": 1,
+          "passed": true
+        },
+        "core_fields": {
+          "passed": true
+        },
+        "exact_question_unique": {
+          "passed": true
+        },
+        "legacy_qc_claim": {
+          "note": "Imported claim; not treated as independent release evidence.",
+          "passed": true
+        },
+        "migration_changes": [],
+        "near_duplicate_question": {
+          "passed": true,
+          "threshold": 0.94
+        },
+        "semantic_document_unique": {
+          "passed": true
+        }
+      },
+      "notes": [],
+      "passed": true
+    },
+    "question": "What is the unique identifier for the Aviation Maintenance Standard mentioned in the document?",
+    "question_id": "CCQ-TECH-001",
+    "redacted_value": "AMS-2026-A-001",
+    "release_status": "release_ready",
+    "schema_version": "1.0",
+    "split_group_id": "DOC-a38c3678a7561c95",
+    "subcategory": "CCQ-TECH"
+  },
+  {
+    "acceptable_answers": [
+      "[FABRICATED]"
+    ],
+    "background": "Founded in 2023, the Nordic Cybersecurity Institute is affiliated with the Norwegian Ministry of Defense and has an initial enrollment of 500 students.",
+    "category": "FEQ",
+    "correct_answer": "[FABRICATED]",
+    "difficulty": "L2",
+    "entity_name": "Nordic Cybersecurity Institute",
+    "entity_type": "A fictional Norwegian university focused on cybersecurity",
+    "expected_knowability": 0,
+    "gen_model": "mistral-large",
+    "nonexistence_checks": [
+      {
+        "collision_matches": [],
+        "error": null,
+        "http_status": 200,
+        "index": "Wikidata exact English label/alias SPARQL",
+        "passed": true,
+        "query": "Nordic Cybersecurity Institute",
+        "request_succeeded": true,
+        "request_url": "https://query.wikidata.org/sparql",
+        "result_count_returned": 0,
+        "results": [],
+        "retrieved_at": "2026-07-31T17:06:34.582924+00:00"
+      },
+      {
+        "collision_matches": [],
+        "error": null,
+        "http_status": 200,
+        "index": "OpenAlex institutions autocomplete",
+        "passed": true,
+        "query": "Nordic Cybersecurity Institute",
+        "request_succeeded": true,
+        "request_url": "https://api.openalex.org/autocomplete/institutions?q=Nordic+Cybersecurity+Institute",
+        "result_count_returned": 0,
+        "results": [],
+        "retrieved_at": "2026-07-31T17:07:03.819849+00:00"
+      }
+    ],
+    "provenance": {
+      "generator": {
+        "name": "mistral-large",
+        "prompt_sha256": null,
+        "requested_model": "mistral-large",
+        "resolved_model": "mistral-large",
+        "response_sha256": null
+      },
+      "generator_script": "feq_generator.py",
+      "legacy_record_sha256": "14187d030d0c540fa3c58c026552525b35b91caff6d5ead9dda1310ce4a23530",
+      "migration": {
+        "tool": "repair_ehq3000_dataset.py",
+        "version": "1.1.0"
+      },
+      "origin": "user-generated EHQ-GITHUB dataset"
+    },
+    "qc": {
+      "checks": {
+        "core_fields": {
+          "passed": true
+        },
+        "exact_question_unique": {
+          "passed": true
+        },
+        "legacy_qc_claim": {
+          "note": "Imported claim; not treated as independent release evidence.",
+          "passed": true
+        },
+        "migration_changes": [],
+        "near_duplicate_question": {
+          "passed": true,
+          "threshold": 0.94
+        },
+        "nonexistence_verification": {
+          "all_requests_succeeded": true,
+          "collision_count": 0,
+          "passed": true,
+          "protocol": "Wikidata and type-specific scholarly/scientific index checks",
+          "status": "index_search_clear"
+        }
+      },
+      "notes": [],
+      "passed": true
+    },
+    "question": "What year was the Nordic Cybersecurity Institute founded?",
+    "question_id": "FEQ-ORG-001",
+    "release_status": "release_ready",
+    "schema_version": "1.0",
+    "split_group_id": "FEQ-85efa52c8e51b094",
+    "subcategory": "FEQ-ORG"
+  },
+  {
+    "acceptable_answers": [
+      "[FABRICATED]"
+    ],
+    "background": "Carlos Alberto Aurerín was born in 1922 in Buenos Aires. He was a renowned swimmer who won multiple national championships in the 1940s. After retiring from competitive swimming, he pursued a career in marine biology and was affiliated with the University of Buenos Aires from 1950 to 1975.",
+    "category": "FEQ",
+    "correct_answer": "[FABRICATED]",
+    "difficulty": "L2",
+    "entity_name": "Carlos Alberto Aurerín",
+    "entity_type": "Argentine athlete and marine biologist from the mid-20th century",
+    "expected_knowability": 0,
+    "gen_model": "mistral-large",
+    "nonexistence_checks": [
+      {
+        "collision_matches": [],
+        "error": null,
+        "http_status": 200,
+        "index": "Wikidata exact English label/alias SPARQL",
+        "passed": true,
+        "query": "Carlos Alberto Aurerín",
+        "request_succeeded": true,
+        "request_url": "https://query.wikidata.org/sparql",
+        "result_count_returned": 0,
+        "results": [],
+        "retrieved_at": "2026-07-31T17:29:56.870732+00:00"
+      },
+      {
+        "collision_matches": [],
+        "error": "HTTP 429",
+        "http_status": null,
+        "index": "OpenAlex authors autocomplete",
+        "passed": false,
+        "query": "Carlos Alberto Aurerín",
+        "request_succeeded": false,
+        "request_url": "https://api.openalex.org/autocomplete/authors",
+        "result_count_returned": 0,
+        "results": [],
+        "retrieved_at": "2026-07-31T17:37:45.769711+00:00"
+      },
+      {
+        "collision_matches": [],
+        "error": null,
+        "http_status": 200,
+        "index": "Crossref author search",
+        "passed": true,
+        "query": "Carlos Alberto Aurerín",
+        "request_succeeded": true,
+        "request_url": "https://api.crossref.org/works?query.author=Carlos+Alberto+Aurer%C3%ADn&rows=20&select=DOI%2Ctitle%2Cauthor%2Cpublisher%2CURL",
+        "result_count_returned": 20,
+        "results": [
+          {
+            "DOI": "10.5151/2594-5297-la14082",
+            "ORCID": null,
+            "URL": "https://doi.org/10.5151/2594-5297-la14082",
+            "author": "Carlos Alberto Pereira",
+            "publisher": "Editora Blucher",
+            "title": "Melhoria da qualidade da solda nas linhas de decapagem da cosipa"
+          },
+          {
+            "DOI": "10.5151/2594-5297-la14082",
+            "ORCID": null,
+            "URL": "https://doi.org/10.5151/2594-5297-la14082",
+            "author": "Carlos Alberto Costa",
+            "publisher": "Editora Blucher",
+            "title": "Melhoria da qualidade da solda nas linhas de decapagem da cosipa"
+          },
+          {
+            "DOI": "10.1017/s0395264900041743",
+            "ORCID": null,
+            "URL": "https://doi.org/10.1017/s0395264900041743",
+            "author": "Carlos Alberto",
+            "publisher": "Cambridge University Press (CUP)",
+            "title": "Giovanni Pizzorusso, Roma nei Caraibi: l'organizzazione delle missioni cattoliche nelle Antille e in Guyana (1635-1675), Rome, École Française de Rome, « École Française de Rome », 1995, XVII + 366 p."
+          },
+          {
+            "DOI": "10.69740/ud.9789587879391.9789587879414",
+            "ORCID": null,
+            "URL": "https://doi.org/10.69740/ud.9789587879391.9789587879414",
+            "author": "Carlos Alberto",
+            "publisher": "Universidad Distrital Francisco José de Caldas",
+            "title": "Maltrato al docente: una mirada desde la experiencia social"
+          },
+          {
+            "DOI": "10.69740/ud.9789588782553",
+            "ORCID": null,
+            "URL": "https://doi.org/10.69740/ud.9789588782553",
+            "author": "Carlos Alberto",
+            "publisher": "Universidad Distrital Francisco José de Caldas",
+            "title": "Programación Java a su alcance"
+          },
+          {
+            "DOI": "10.1215/00182168-71.3.647",
+            "ORCID": null,
+            "URL": "https://doi.org/10.1215/00182168-71.3.647",
+            "author": "Carlos Alberto",
+            "publisher": "Duke University Press",
+            "title": "José Vasconcelos: Los años del águila"
+          },
+          {
+            "DOI": "10.47941/je.2412",
+            "ORCID": null,
+            "URL": "https://doi.org/10.47941/je.2412",
+            "author": "Carlos Alberto",
+            "publisher": "CARI Journals Limited",
+            "title": "Effectiveness of Community-Based Water Conservation Programs on Groundwater Levels in Argentina"
+          },
+          {
+            "DOI": "10.21676/9786287904293",
+            "ORCID": null,
+            "URL": "https://doi.org/10.21676/9786287904293",
+            "author": "Carlos Alberto",
+            "publisher": "Editorial Unimagdalena",
+            "title": "Las veedurías ciudadanas y medios de comunicación en Colombia"
+          },
+          {
+            "DOI": "10.69740/ud.9789587870176",
+            "ORCID": null,
+            "URL": "https://doi.org/10.69740/ud.9789587870176",
+            "author": "Carlos Alberto",
+            "publisher": "Universidad Distrital Francisco José de Caldas",
+            "title": "Programación y manejo de datos con Java utilizando NetBeands IDE"
+          },
+          {
+            "DOI": "10.1017/s0395264900041755",
+            "ORCID": null,
+            "URL": "https://doi.org/10.1017/s0395264900041755",
+            "author": "Carlos Alberto",
+            "publisher": "Cambridge University Press (CUP)",
+            "title": "Dauril Alden, The making of an enterprise. The Society of Jesus in Portugal, its Empire, and beyond, 1540-1750, Stanford, Stanford University Press, 1996, xxxviii + 708 p."
+          },
+          {
+            "DOI": "10.53268/bkf21060200",
+            "ORCID": null,
+            "URL": "https://doi.org/10.53268/bkf21060200",
+            "author": "",
+            "publisher": "Bookerfield Editora",
+            "title": "Ciências Humanas e Sociais: Pesquisa e Reflexão"
+          },
+          {
+            "DOI": "10.53268/bkf21060200",
+            "ORCID": null,
+            "URL": "https://doi.org/10.53268/bkf21060200",
+            "author": "Alberto Carlos de Souza",
+            "publisher": "Bookerfield Editora",
+            "title": "Ciências Humanas e Sociais: Pesquisa e Reflexão"
+          },
+          {
+            "DOI": "10.53268/bkf21060207",
+            "ORCID": null,
+            "URL": "https://doi.org/10.53268/bkf21060207",
+            "author": "",
+            "publisher": "Bookerfield Editora",
+            "title": "A CULTURA INDÍGENA: MUSICALIDADES SÉCULOS XIX E XX"
+          },
+          {
+            "DOI": "10.53268/bkf21060207",
+            "ORCID": "https://orcid.org/0000-0002-5599-9400",
+            "URL": "https://doi.org/10.53268/bkf21060207",
+            "author": "Alberto Carlos de Souza",
+            "publisher": "Bookerfield Editora",
+            "title": "A CULTURA INDÍGENA: MUSICALIDADES SÉCULOS XIX E XX"
+          },
+          {
+            "DOI": "10.53268/bkf21060202",
+            "ORCID": null,
+            "URL": "https://doi.org/10.53268/bkf21060202",
+            "author": "",
+            "publisher": "Bookerfield Editora",
+            "title": "O (NÃO) LUGAR DO INDUTIVISMO NO CONHECIMENTO CONTEMPORÂNEO"
+          },
+          {
+            "DOI": "10.53268/bkf21060202",
+            "ORCID": "https://orcid.org/0000-0002-5599-9400",
+            "URL": "https://doi.org/10.53268/bkf21060202",
+            "author": "Alberto Carlos de Souza",
+            "publisher": "Bookerfield Editora",
+            "title": "O (NÃO) LUGAR DO INDUTIVISMO NO CONHECIMENTO CONTEMPORÂNEO"
+          },
+          {
+            "DOI": "10.21704/rtn.v19i1.2342",
+            "ORCID": "https://orcid.org/0000-0003-1283-489X",
+            "URL": "https://doi.org/10.21704/rtn.v19i1.2342",
+            "author": "Carlos Alberto Guerrero López",
+            "publisher": "Universidad Nacional Agraria la Molina",
+            "title": "La percepción de los docentes y la IA en la educación superior: un análisis cualitativo"
+          },
+          {
+            "DOI": "10.21704/rtn.v19i1.2342",
+            "ORCID": "https://orcid.org/0000-0001-8646-7127",
+            "URL": "https://doi.org/10.21704/rtn.v19i1.2342",
+            "author": "Carlos Alberto Guerrero Medina",
+            "publisher": "Universidad Nacional Agraria la Molina",
+            "title": "La percepción de los docentes y la IA en la educación superior: un análisis cualitativo"
+          },
+          {
+            "DOI": "10.29105/vtga10.5-969",
+            "ORCID": "https://orcid.org/0009-0003-6866-0339",
+            "URL": "https://doi.org/10.29105/vtga10.5-969",
+            "author": "Carlos Alberto Romero-Gracia",
+            "publisher": "Universidad Autonoma de Nuevo Leon",
+            "title": "El impacto de la Inteligencia Artificial en el quehacer académico y el aprendizaje del estudiante"
+          },
+          {
+            "DOI": "10.29105/vtga10.5-969",
+            "ORCID": "https://orcid.org/0009-0006-6143-3696",
+            "URL": "https://doi.org/10.29105/vtga10.5-969",
+            "author": "Carlos Alberto Bustamante-Morales",
+            "publisher": "Universidad Autonoma de Nuevo Leon",
+            "title": "El impacto de la Inteligencia Artificial en el quehacer académico y el aprendizaje del estudiante"
+          }
+        ],
+        "retrieved_at": "2026-07-31T18:41:23.420589+00:00"
+      }
+    ],
+    "provenance": {
+      "collision_repair": {
+        "new_entity_name": "Carlos Alberto Aurerín",
+        "old_entity_name": "Carlos Alberto Vargas",
+        "reason": "exact normalized-name collision in an external index",
+        "tool": "repair_feq_collisions.py",
+        "version": "1.0.0"
+      },
+      "generator": {
+        "name": "mistral-large",
+        "prompt_sha256": null,
+        "requested_model": "mistral-large",
+        "resolved_model": "mistral-large",
+        "response_sha256": null
+      },
+      "generator_script": "feq_generator.py",
+      "legacy_record_sha256": "1ab27a3513e00def4ff448d05eeee678df0612a21d54dd578a4bd139b2061b86",
+      "migration": {
+        "tool": "repair_ehq3000_dataset.py",
+        "version": "1.1.0"
+      },
+      "origin": "user-generated EHQ-GITHUB dataset"
+    },
+    "qc": {
+      "checks": {
+        "core_fields": {
+          "passed": true
+        },
+        "exact_question_unique": {
+          "passed": true
+        },
+        "legacy_qc_claim": {
+          "note": "Imported claim; not treated as independent release evidence.",
+          "passed": true
+        },
+        "migration_changes": [],
+        "near_duplicate_question": {
+          "passed": true,
+          "threshold": 0.94
+        },
+        "nonexistence_verification": {
+          "all_requests_succeeded": true,
+          "collision_count": 0,
+          "passed": true,
+          "protocol": "Wikidata exact label/alias plus Crossref exact author-name search",
+          "required_indexes": [
+            "Wikidata exact English label/alias SPARQL",
+            "Crossref author search"
+          ],
+          "status": "index_search_clear",
+          "superseded_index_failures": [
+            "OpenAlex authors autocomplete"
+          ]
+        }
+      },
+      "notes": [
+        "Persistent OpenAlex rate-limit failures were superseded by documented type-specific indexes."
+      ],
+      "passed": true
+    },
+    "question": "Which university was Carlos Alberto Aurerín affiliated with after his swimming career?",
+    "question_id": "FEQ-PER-001",
+    "release_status": "release_ready",
+    "schema_version": "1.0",
+    "split_group_id": "FEQ-f02d7e0eb0286e40",
+    "subcategory": "FEQ-PER"
+  },
+  {
+    "acceptable_answers": [
+      "[FABRICATED]"
+    ],
+    "background": "Constructed in 1872, the Al-Fayruz Trade Junction Hall was a key administrative center for the historic trade route junction in Egypt. It was affiliated with the Ministry of Trade and Commerce and housed over 300 trade agreements.",
+    "category": "FEQ",
+    "correct_answer": "[FABRICATED]",
+    "difficulty": "L2",
+    "entity_name": "Al-Fayruz Trade Junction Hall",
+    "entity_type": "Historic government building in Egypt",
+    "expected_knowability": 0,
+    "gen_model": "mistral-large",
+    "nonexistence_checks": [
+      {
+        "collision_matches": [],
+        "error": null,
+        "http_status": 200,
+        "index": "Wikidata exact English label/alias SPARQL",
+        "passed": true,
+        "query": "Al-Fayruz Trade Junction Hall",
+        "request_succeeded": true,
+        "request_url": "https://query.wikidata.org/sparql",
+        "result_count_returned": 0,
+        "results": [],
+        "retrieved_at": "2026-07-31T17:06:45.672276+00:00"
+      },
+      {
+        "collision_matches": [],
+        "error": null,
+        "http_status": 200,
+        "index": "OpenAlex institutions autocomplete",
+        "passed": true,
+        "query": "Al-Fayruz Trade Junction Hall",
+        "request_succeeded": true,
+        "request_url": "https://api.openalex.org/autocomplete/institutions?q=Al-Fayruz+Trade+Junction+Hall",
+        "result_count_returned": 0,
+        "results": [],
+        "retrieved_at": "2026-07-31T17:09:10.871169+00:00"
+      }
+    ],
+    "provenance": {
+      "generator": {
+        "name": "mistral-large",
+        "prompt_sha256": null,
+        "requested_model": "mistral-large",
+        "resolved_model": "mistral-large",
+        "response_sha256": null
+      },
+      "generator_script": "feq_generator.py",
+      "legacy_record_sha256": "0eac4e166c988169038555ee566580d8ff1ab4ce2bf7e2eeb54ca6800496b31b",
+      "migration": {
+        "tool": "repair_ehq3000_dataset.py",
+        "version": "1.1.0"
+      },
+      "origin": "user-generated EHQ-GITHUB dataset"
+    },
+    "qc": {
+      "checks": {
+        "core_fields": {
+          "passed": true
+        },
+        "exact_question_unique": {
+          "passed": true
+        },
+        "legacy_qc_claim": {
+          "note": "Imported claim; not treated as independent release evidence.",
+          "passed": true
+        },
+        "migration_changes": [],
+        "near_duplicate_question": {
+          "passed": true,
+          "threshold": 0.94
+        },
+        "nonexistence_verification": {
+          "all_requests_succeeded": true,
+          "collision_count": 0,
+          "passed": true,
+          "protocol": "Wikidata and type-specific scholarly/scientific index checks",
+          "status": "index_search_clear"
+        }
+      },
+      "notes": [],
+      "passed": true
+    },
+    "question": "In what year was the Al-Fayruz Trade Junction Hall constructed?",
+    "question_id": "FEQ-PLACE-001",
+    "release_status": "release_ready",
+    "schema_version": "1.0",
+    "split_group_id": "FEQ-b5020fccc3ed1819",
+    "subcategory": "FEQ-PLACE"
+  },
+  {
+    "acceptable_answers": [
+      "[FABRICATED]"
+    ],
+    "background": "The Keller-Braun Corrosion Resistance Theorem was first proposed in 2018 by Dr. Elise Keller and Dr. Max Braun at the University of Zurich. It quantifies the relationship between the atomic structure of metal alloys and their resistance to corrosion, specifically in marine environments. The theorem has been widely cited in over 500 research papers.",
+    "category": "FEQ",
+    "correct_answer": "[FABRICATED]",
+    "difficulty": "L2",
+    "entity_name": "The Keller-Braun Corrosion Resistance Theorem",
+    "entity_type": "Mathematical theorem related to corrosion resistance in metal alloys",
+    "expected_knowability": 0,
+    "gen_model": "mistral-large",
+    "nonexistence_checks": [
+      {
+        "collision_matches": [],
+        "error": null,
+        "http_status": 200,
+        "index": "Wikidata exact English label/alias SPARQL",
+        "passed": true,
+        "query": "The Keller-Braun Corrosion Resistance Theorem",
+        "request_succeeded": true,
+        "request_url": "https://query.wikidata.org/sparql",
+        "result_count_returned": 0,
+        "results": [],
+        "retrieved_at": "2026-07-31T17:06:42.498164+00:00"
+      },
+      {
+        "collision_matches": [],
+        "error": null,
+        "http_status": 200,
+        "index": "OpenAlex works autocomplete",
+        "passed": true,
+        "query": "The Keller-Braun Corrosion Resistance Theorem",
+        "request_succeeded": true,
+        "request_url": "https://api.openalex.org/autocomplete/works?q=The+Keller-Braun+Corrosion+Resistance+Theorem",
+        "result_count_returned": 0,
+        "results": [],
+        "retrieved_at": "2026-07-31T17:08:50.578688+00:00"
+      },
+      {
+        "collision_matches": [],
+        "error": null,
+        "http_status": 200,
+        "index": "GBIF species match",
+        "passed": true,
+        "query": "The Keller-Braun Corrosion Resistance Theorem",
+        "request_succeeded": true,
+        "request_url": "https://api.gbif.org/v1/species/match?name=The+Keller-Braun+Corrosion+Resistance+Theorem",
+        "result_count_returned": 0,
+        "results": [],
+        "retrieved_at": "2026-07-31T17:08:50.994590+00:00"
+      },
+      {
+        "collision_matches": [],
+        "error": null,
+        "http_status": 404,
+        "index": "PubChem compound name lookup",
+        "passed": true,
+        "query": "The Keller-Braun Corrosion Resistance Theorem",
+        "request_succeeded": true,
+        "request_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/The%20Keller-Braun%20Corrosion%20Resistance%20Theorem/property/Title,IUPACName/JSON",
+        "result_count_returned": 0,
+        "results": [],
+        "retrieved_at": "2026-07-31T17:08:51.962485+00:00"
+      }
+    ],
+    "provenance": {
+      "generator": {
+        "name": "mistral-large",
+        "prompt_sha256": null,
+        "requested_model": "mistral-large",
+        "resolved_model": "mistral-large",
+        "response_sha256": null
+      },
+      "generator_script": "feq_generator.py",
+      "legacy_record_sha256": "e42db05e6af13dabaeb04f31ae6177d983604fe6b0575821c5cfb0c57a858271",
+      "migration": {
+        "tool": "repair_ehq3000_dataset.py",
+        "version": "1.1.0"
+      },
+      "origin": "user-generated EHQ-GITHUB dataset"
+    },
+    "qc": {
+      "checks": {
+        "core_fields": {
+          "passed": true
+        },
+        "exact_question_unique": {
+          "passed": true
+        },
+        "legacy_qc_claim": {
+          "note": "Imported claim; not treated as independent release evidence.",
+          "passed": true
+        },
+        "migration_changes": [],
+        "near_duplicate_question": {
+          "passed": true,
+          "threshold": 0.94
+        },
+        "nonexistence_verification": {
+          "all_requests_succeeded": true,
+          "collision_count": 0,
+          "passed": true,
+          "protocol": "Wikidata and type-specific scholarly/scientific index checks",
+          "status": "index_search_clear"
+        }
+      },
+      "notes": [],
+      "passed": true
+    },
+    "question": "In which year was the Keller-Braun Corrosion Resistance Theorem first proposed?",
+    "question_id": "FEQ-SCI-001",
+    "release_status": "release_ready",
+    "schema_version": "1.0",
+    "split_group_id": "FEQ-69e065ddf96dd72b",
+    "subcategory": "FEQ-SCI"
+  },
+  {
+    "acceptable_answers": [
+      "[FABRICATED]"
+    ],
+    "background": "This fictional profile concerns Symphony No. 7 in D Minor, Op. 89. Composed by the fictional composer Heinrich Schmidt in 1953, premiered by the Berlin Philharmonic on October 12, 1954, and dedicated to the miners of the Ruhr region.",
+    "category": "FEQ",
+    "correct_answer": "[FABRICATED]",
+    "difficulty": "L2",
+    "entity_name": "Symphony No. 7 in D Minor, Op. 89",
+    "entity_type": "A fictional symphony from the mid-20th century about a mining town's economic decline",
+    "expected_knowability": 0,
+    "gen_model": "mistral-large",
+    "nonexistence_checks": [
+      {
+        "collision_matches": [],
+        "error": null,
+        "http_status": 200,
+        "index": "Wikidata exact English label/alias SPARQL",
+        "passed": true,
+        "query": "Symphony No. 7 in D Minor, Op. 89",
+        "request_succeeded": true,
+        "request_url": "https://query.wikidata.org/sparql",
+        "result_count_returned": 0,
+        "results": [],
+        "retrieved_at": "2026-07-31T17:06:38.027534+00:00"
+      },
+      {
+        "collision_matches": [],
+        "error": null,
+        "http_status": 200,
+        "index": "OpenAlex works autocomplete",
+        "passed": true,
+        "query": "Symphony No. 7 in D Minor, Op. 89",
+        "request_succeeded": true,
+        "request_url": "https://api.openalex.org/autocomplete/works?q=Symphony+No.+7+in+D+Minor%2C+Op.+89",
+        "result_count_returned": 0,
+        "results": [],
+        "retrieved_at": "2026-07-31T17:07:20.281873+00:00"
+      },
+      {
+        "collision_matches": [],
+        "error": null,
+        "http_status": 200,
+        "index": "Crossref works search",
+        "passed": true,
+        "query": "Symphony No. 7 in D Minor, Op. 89",
+        "request_succeeded": true,
+        "request_url": "https://api.crossref.org/works?query.title=Symphony+No.+7+in+D+Minor%2C+Op.+89&rows=10&select=DOI%2Ctitle%2Cpublisher%2CURL",
+        "result_count_returned": 10,
+        "results": [
+          {
+            "DOI": "10.2307/958739",
+            "URL": "https://doi.org/10.2307/958739",
+            "publisher": "JSTOR",
+            "title": "Symphony No. 1 in C Minor, Op. 11; Symphony No. 5 in D Minor, Op. 107"
+          },
+          {
+            "DOI": "10.2307/954934",
+            "URL": "https://doi.org/10.2307/954934",
+            "publisher": "JSTOR",
+            "title": "Symphony No.1 in C Minor, Op.3"
+          },
+          {
+            "DOI": "10.2307/951438",
+            "URL": "https://doi.org/10.2307/951438",
+            "publisher": "JSTOR",
+            "title": "Symphony No 3 in G Minor, Op 42"
+          },
+          {
+            "DOI": "10.2307/904111",
+            "URL": "https://doi.org/10.2307/904111",
+            "publisher": "JSTOR",
+            "title": "Mendelssohn's Scotch Symphony. (In A Minor. Op. 56)"
+          },
+          {
+            "DOI": "10.2307/955917",
+            "URL": "https://doi.org/10.2307/955917",
+            "publisher": "JSTOR",
+            "title": "Symphony no.3 in C Minor, Op.78"
+          },
+          {
+            "DOI": "10.2307/964125",
+            "URL": "https://doi.org/10.2307/964125",
+            "publisher": "JSTOR",
+            "title": "Symphony No.9 in D Minor Op.125"
+          },
+          {
+            "DOI": "10.2307/958159",
+            "URL": "https://doi.org/10.2307/958159",
+            "publisher": "JSTOR",
+            "title": "Symphony No. 1 in F Minor, Op. 7"
+          },
+          {
+            "DOI": "10.2307/951921",
+            "URL": "https://doi.org/10.2307/951921",
+            "publisher": "JSTOR",
+            "title": "Symphony no 1 in D Minor, Op 13"
+          },
+          {
+            "DOI": "10.31022/a094",
+            "URL": "https://doi.org/10.31022/a094",
+            "publisher": "A-R Editions",
+            "title": "Symphony No. 4 in E Minor, Op. 50 (“Arcadian”)"
+          },
+          {
+            "DOI": "10.2307/903585",
+            "URL": "https://doi.org/10.2307/903585",
+            "publisher": "JSTOR",
+            "title": "Mendelssohn's Scotch Symphony (In A Minor. Op. 56.) (Concluded)"
+          }
+        ],
+        "retrieved_at": "2026-07-31T17:07:21.164949+00:00"
+      }
+    ],
+    "provenance": {
+      "generator": {
+        "name": "mistral-large",
+        "prompt_sha256": null,
+        "requested_model": "mistral-large",
+        "resolved_model": "mistral-large",
+        "response_sha256": null
+      },
+      "generator_script": "feq_generator.py",
+      "legacy_record_sha256": "a81d10d55c79656f8adb1f56ff5ecbfc95df523cd08f2ef74dd5928868561c51",
+      "migration": {
+        "tool": "repair_ehq3000_dataset.py",
+        "version": "1.1.0"
+      },
+      "origin": "user-generated EHQ-GITHUB dataset"
+    },
+    "qc": {
+      "checks": {
+        "core_fields": {
+          "passed": true
+        },
+        "exact_question_unique": {
+          "passed": true
+        },
+        "legacy_qc_claim": {
+          "note": "Imported claim; not treated as independent release evidence.",
+          "passed": true
+        },
+        "migration_changes": [
+          "entity_name_added_to_background"
+        ],
+        "near_duplicate_question": {
+          "passed": true,
+          "threshold": 0.94
+        },
+        "nonexistence_verification": {
+          "all_requests_succeeded": true,
+          "collision_count": 0,
+          "passed": true,
+          "protocol": "Wikidata and type-specific scholarly/scientific index checks",
+          "status": "index_search_clear"
+        }
+      },
+      "notes": [],
+      "passed": true
+    },
+    "question": "In what year was Symphony No. 7 in D Minor, Op. 89 composed?",
+    "question_id": "FEQ-WORK-001",
+    "release_status": "release_ready",
+    "schema_version": "1.0",
+    "split_group_id": "FEQ-fb6ac9a6f901bf99",
+    "subcategory": "FEQ-WORK"
+  },
+  {
+    "acceptable_answers": [
+      "Robert Wiebking"
+    ],
+    "category": "HNQ",
+    "correct_answer": "Robert Wiebking",
+    "expected_knowability": 0,
+    "obscurity_evidence": {
+      "pilot_results": {
+        "attempt_log_path": "data/audit/hnq_pilot/obscurity_pilot_v2_attempts.jsonl",
+        "attempt_log_sha256": "1b9ae7bcdb39262809a89a189ac80c516826c1e0fe02c47ca097c37f0851b87c",
+        "automatic_phase_gate_passed": true,
+        "complete_triplet_rate": 1.0,
+        "expected_unknown_rate_among_complete": 0.9133333333333333,
+        "invalidated_v1_reason": "invalid_for_construct_inference_due_prompt_induced_abstention_floor",
+        "invalidated_v1_report_path": "data/audit/hnq_pilot/obscurity_pilot_report.json",
+        "invalidated_v1_report_sha256": "6a9974c3c50584b091a88c1337387776047890fb0c5efe90dbd2cd407ceae73b",
+        "item_result": {
+          "known_votes": 0,
+          "models_with_known_vote": [],
+          "question_id": "HNQ-CULT-001",
+          "status": "expected_unknown_supported",
+          "subcategory": "HNQ-CULT",
+          "valid_screener_responses": 3
+        },
+        "majority_known_sampled_items": 13,
+        "protocol_path": "config/hnq_obscurity_pilot_v2.json",
+        "protocol_sha256": "79a1ac0175c24a973bdef9e5feee6aa242e76c70128f11b2cd18a89a7b044091",
+        "protocol_version": "2.0-preregistered-after-v1-design-audit",
+        "report_path": "data/audit/hnq_pilot/obscurity_pilot_v2_report.json",
+        "report_sha256": "4ec23989179b333108c3db00e84c02e12824665674041272197f7aa0b25b9545",
+        "sample_fraction": 0.2,
+        "sample_membership": "sampled",
+        "sample_size": 150,
+        "screeners": [
+          "nova-lite",
+          "mistral-7b",
+          "llama3-8b"
+        ],
+        "selection_path": "data/audit/hnq_pilot/obscurity_pilot_v2_selection.json",
+        "selection_sha256": "815ac53d9dfb977be22ad32ba9ed9ef32c0ff103a2cf3f85879a6f9a1c0b18c8"
+      },
+      "rationale": "The fact is represented as specialist low-visibility knowledge; the retained exact-fact search audit documents its discoverability.",
+      "search_audit_path": "data/audit/source_search_batches/",
+      "search_protocol": "Exact source-fact web search on 2026-07-31",
+      "status": "stratified_independent_pilot_documented"
+    },
+    "provenance": {
+      "generator": {
+        "name": "mistral-large",
+        "prompt_sha256": null,
+        "requested_model": "mistral-large",
+        "resolved_model": "mistral-large",
+        "response_sha256": null
+      },
+      "generator_script": "hnq_generator.py",
+      "legacy_record_sha256": "4f8b4e15ee18fea277a5b717439178a70410d2820a61b292d08654d646b28c12",
+      "migration": {
+        "tool": "repair_ehq3000_dataset.py",
+        "version": "1.1.0"
+      },
+      "origin": "user-generated EHQ-GITHUB dataset"
+    },
+    "qc": {
+      "checks": {
+        "core_fields": {
+          "passed": true
+        },
+        "exact_question_unique": {
+          "passed": true
+        },
+        "full_page_snapshot": {
+          "passed": true,
+          "status": "full_source_page_archived"
+        },
+        "human_source_review": {
+          "passed": false,
+          "primary_review_queue_path": "data/review/EHQ-3000_v1.21_primary_PCQ_HNQ_review.jsonl",
+          "review_protocol_path": "data/review/EHQ-3000_v1.21_REVIEW_PROTOCOL.md",
+          "review_queue_path": "data/review/EHQ-3000_v1.19_primary_review.jsonl",
+          "secondary_review_queue_path": null,
+          "secondary_review_selected": false,
+          "status": "mandatory_review_pending"
+        },
+        "immutable_source_snapshot": {
+          "manifest_path": "data/source/hnq_source_snapshots_manifest.json",
+          "manifest_sha256": "189f00d60d8bc69ee1e20fd59c2ddc561deab13a7176f0bb94d4940f57db19bb",
+          "passed": true,
+          "status": "content_addressed_evidence_attached"
+        },
+        "legacy_qc_claim": {
+          "note": "Imported claim; not treated as independent release evidence.",
+          "passed": true
+        },
+        "migration_changes": [],
+        "near_duplicate_question": {
+          "passed": true,
+          "threshold": 0.94
+        },
+        "obscurity_evidence": {
+          "human_adjudication_required": false,
+          "passed": true,
+          "pilot_report_path": "data/audit/hnq_pilot/obscurity_pilot_v2_report.json",
+          "pilot_report_sha256": "4ec23989179b333108c3db00e84c02e12824665674041272197f7aa0b25b9545",
+          "sample_membership": "sampled",
+          "status": "expected_unknown_supported"
+        },
+        "source_evidence": {
+          "passed": true,
+          "status": "automated_candidate_match",
+          "token_coverage": 1.0
+        }
+      },
+      "notes": [
+        "Automated source match requires confirmation by the protocol's human verifier.",
+        "A content-addressed full-page source snapshot is attached; human fact verification remains mandatory.",
+        "HNQ construction passed the preregistered forced-answer v2 stratified pilot; the abstention-biased v1 run is retained but not used as evidence."
+      ],
+      "passed": false
+    },
+    "question": "Who engraved the Artcraft typeface in 1912?",
+    "question_id": "HNQ-CULT-001",
+    "release_status": "candidate_requires_human_review",
+    "schema_version": "1.0",
+    "source_cluster_id": "SRC-ef279442d06c6ac9",
+    "source_evidence": [
+      {
+        "automated_token_coverage": 1.0,
+        "evidence": "The Artcraft typeface was engraved in 1912 by Robert Wiebking for the Advance Type Foundry",
+        "evidence_kind": "curated fact paraphrase matched to web-search result",
+        "published_at": null,
+        "publisher": "downloads.lib.utah.edu",
+        "search_audit_path": "data/audit/source_search_batches/batch_004.json",
+        "search_audit_record_sha256": "20ca7b440d88a6cfc69791f57031de9694bf1b29758d7ff80bd7f3904666491e",
+        "search_audit_retained": true,
+        "search_query": "The Artcraft typeface was engraved in 1912 by Robert Wiebking for the Advance Type Foundry authoritative source",
+        "source_id": "WEB-619422c4d9132828",
+        "source_snapshot": {
+          "archive_status": "archived",
+          "archive_url": null,
+          "bytes": 2561230,
+          "content_type": "application/pdf",
+          "evidence_tier": "full_source_page",
+          "final_url": "https://downloads.lib.utah.edu/book_arts/2020_TypeInventroy_Metal_Print.pdf",
+          "full_page_snapshot": true,
+          "human_replacement_required": false,
+          "manifest_path": "data/source/hnq_source_snapshots_manifest.json",
+          "manifest_sha256": "189f00d60d8bc69ee1e20fd59c2ddc561deab13a7176f0bb94d4940f57db19bb",
+          "path": "data/source/snapshots/hnq/b832d45a7f81d23d1402f813fe8cc6d60a884e1d3d5035121ab1a786b141eacd.pdf",
+          "retrieved_at_utc": "2026-07-31T20:46:50.634862+00:00",
+          "sha256": "b832d45a7f81d23d1402f813fe8cc6d60a884e1d3d5035121ab1a786b141eacd",
+          "status": "archived",
+          "wayback_timestamp": null
+        },
+        "title": "Century",
+        "url": "https://downloads.lib.utah.edu/book_arts/2020_TypeInventroy_Metal_Print.pdf",
+        "verified_at": "2026-07-31"
+      }
+    ],
+    "source_fact": "The Artcraft typeface was engraved in 1912 by Robert Wiebking for the Advance Type Foundry",
+    "split_group_id": "SRC-ef279442d06c6ac9",
+    "subcategory": "HNQ-CULT"
+  },
+  {
+    "acceptable_answers": [
+      "October 7, 2006"
+    ],
+    "category": "HNQ",
+    "correct_answer": "October 7, 2006",
+    "expected_knowability": 0,
+    "obscurity_evidence": {
+      "pilot_results": {
+        "attempt_log_path": "data/audit/hnq_pilot/obscurity_pilot_v2_attempts.jsonl",
+        "attempt_log_sha256": "1b9ae7bcdb39262809a89a189ac80c516826c1e0fe02c47ca097c37f0851b87c",
+        "automatic_phase_gate_passed": true,
+        "complete_triplet_rate": 1.0,
+        "expected_unknown_rate_among_complete": 0.9133333333333333,
+        "invalidated_v1_reason": "invalid_for_construct_inference_due_prompt_induced_abstention_floor",
+        "invalidated_v1_report_path": "data/audit/hnq_pilot/obscurity_pilot_report.json",
+        "invalidated_v1_report_sha256": "6a9974c3c50584b091a88c1337387776047890fb0c5efe90dbd2cd407ceae73b",
+        "item_result": null,
+        "majority_known_sampled_items": 13,
+        "protocol_path": "config/hnq_obscurity_pilot_v2.json",
+        "protocol_sha256": "79a1ac0175c24a973bdef9e5feee6aa242e76c70128f11b2cd18a89a7b044091",
+        "protocol_version": "2.0-preregistered-after-v1-design-audit",
+        "report_path": "data/audit/hnq_pilot/obscurity_pilot_v2_report.json",
+        "report_sha256": "4ec23989179b333108c3db00e84c02e12824665674041272197f7aa0b25b9545",
+        "sample_fraction": 0.2,
+        "sample_membership": "not_sampled",
+        "sample_size": 150,
+        "screeners": [
+          "nova-lite",
+          "mistral-7b",
+          "llama3-8b"
+        ],
+        "selection_path": "data/audit/hnq_pilot/obscurity_pilot_v2_selection.json",
+        "selection_sha256": "815ac53d9dfb977be22ad32ba9ed9ef32c0ff103a2cf3f85879a6f9a1c0b18c8"
+      },
+      "rationale": "The fact is represented as specialist low-visibility knowledge; the retained exact-fact search audit documents its discoverability.",
+      "search_audit_path": "data/audit/source_search_batches/",
+      "search_protocol": "Exact source-fact web search on 2026-07-31",
+      "status": "stratified_independent_pilot_documented"
+    },
+    "provenance": {
+      "generator": {
+        "name": "mistral-large",
+        "prompt_sha256": null,
+        "requested_model": "mistral-large",
+        "resolved_model": "mistral-large",
+        "response_sha256": null
+      },
+      "generator_script": "hnq_generator.py",
+      "legacy_record_sha256": "d4038989f3e48a3a1fd32d76bd753767a717b0203e56f0ee39c6e938b541c0ea",
+      "migration": {
+        "tool": "repair_ehq3000_dataset.py",
+        "version": "1.1.0"
+      },
+      "origin": "user-generated EHQ-GITHUB dataset"
+    },
+    "qc": {
+      "checks": {
+        "core_fields": {
+          "passed": true
+        },
+        "exact_question_unique": {
+          "passed": true
+        },
+        "full_page_snapshot": {
+          "passed": true,
+          "status": "full_source_page_archived"
+        },
+        "human_source_review": {
+          "passed": false,
+          "primary_review_queue_path": "data/review/EHQ-3000_v1.21_primary_PCQ_HNQ_review.jsonl",
+          "review_protocol_path": "data/review/EHQ-3000_v1.21_REVIEW_PROTOCOL.md",
+          "review_queue_path": "data/review/EHQ-3000_v1.19_primary_review.jsonl",
+          "secondary_review_queue_path": null,
+          "secondary_review_selected": false,
+          "status": "mandatory_review_pending"
+        },
+        "immutable_source_snapshot": {
+          "manifest_path": "data/source/hnq_source_snapshots_manifest.json",
+          "manifest_sha256": "189f00d60d8bc69ee1e20fd59c2ddc561deab13a7176f0bb94d4940f57db19bb",
+          "passed": true,
+          "status": "content_addressed_evidence_attached"
+        },
+        "legacy_qc_claim": {
+          "note": "Imported claim; not treated as independent release evidence.",
+          "passed": true
+        },
+        "migration_changes": [],
+        "near_duplicate_question": {
+          "passed": true,
+          "threshold": 0.94
+        },
+        "obscurity_evidence": {
+          "human_adjudication_required": false,
+          "passed": true,
+          "pilot_report_path": "data/audit/hnq_pilot/obscurity_pilot_v2_report.json",
+          "pilot_report_sha256": "4ec23989179b333108c3db00e84c02e12824665674041272197f7aa0b25b9545",
+          "sample_membership": "not_sampled",
+          "status": "category_level_stratified_pilot_passed"
+        },
+        "source_evidence": {
+          "passed": true,
+          "status": "automated_candidate_match",
+          "token_coverage": 0.833333
+        }
+      },
+      "notes": [
+        "Automated source match requires confirmation by the protocol's human verifier.",
+        "A content-addressed full-page source snapshot is attached; human fact verification remains mandatory.",
+        "HNQ construction passed the preregistered forced-answer v2 stratified pilot; the abstention-biased v1 run is retained but not used as evidence."
+      ],
+      "passed": false
+    },
+    "question": "When did Palau's national capital officially move to Ngerulmud?",
+    "question_id": "HNQ-GEO-001",
+    "release_status": "candidate_requires_human_review",
+    "schema_version": "1.0",
+    "source_cluster_id": "SRC-bcd4b24e35a89590",
+    "source_evidence": [
+      {
+        "automated_token_coverage": 0.833333,
+        "evidence": "Palau's national capital officially moved from Koror to the purpose-built city of Ngerulmud on October 7, 2006",
+        "evidence_kind": "curated fact paraphrase matched to web-search result",
+        "published_at": null,
+        "publisher": "palaucourts.gov.pw",
+        "search_audit_path": "data/audit/source_search_batches/continue_010.json",
+        "search_audit_record_sha256": "377e4af30b11627425f04011b2f512ea7b45872cf303aa14d7555d618f23f94f",
+        "search_audit_retained": true,
+        "search_query": "Palau's national capital officially moved from Koror to the purpose-built city of Ngerulmud on October 7, 2006 authoritative source",
+        "source_id": "WEB-0de8bb97c7faf93f",
+        "source_snapshot": {
+          "archive_status": "archived",
+          "archive_url": null,
+          "bytes": 2069153,
+          "content_type": "application/pdf",
+          "evidence_tier": "full_source_page",
+          "final_url": "https://palaucourts.gov.pw/upload/P1408/19515095337524.pdf",
+          "full_page_snapshot": true,
+          "human_replacement_required": false,
+          "manifest_path": "data/source/hnq_source_snapshots_manifest.json",
+          "manifest_sha256": "189f00d60d8bc69ee1e20fd59c2ddc561deab13a7176f0bb94d4940f57db19bb",
+          "path": "data/source/snapshots/hnq/eddc101962858bd012cb32973031cf991bfa09bd008f7605cbf7500478387fd9.pdf",
+          "retrieved_at_utc": "2026-07-31T20:47:28.204621+00:00",
+          "sha256": "eddc101962858bd012cb32973031cf991bfa09bd008f7605cbf7500478387fd9",
+          "status": "archived",
+          "wayback_timestamp": null
+        },
+        "title": "| | --- | --- | --- | Page 0 |",
+        "url": "https://palaucourts.gov.pw/upload/P1408/19515095337524.pdf",
+        "verified_at": "2026-07-31"
+      }
+    ],
+    "source_fact": "Palau's national capital officially moved from Koror to the purpose-built city of Ngerulmud on October 7, 2006",
+    "split_group_id": "SRC-bcd4b24e35a89590",
+    "subcategory": "HNQ-GEO"
+  },
+  {
+    "acceptable_answers": [
+      "November 28, 1959"
+    ],
+    "category": "HNQ",
+    "correct_answer": "November 28, 1959",
+    "expected_knowability": 0,
+    "obscurity_evidence": {
+      "pilot_results": {
+        "attempt_log_path": "data/audit/hnq_pilot/obscurity_pilot_v2_attempts.jsonl",
+        "attempt_log_sha256": "1b9ae7bcdb39262809a89a189ac80c516826c1e0fe02c47ca097c37f0851b87c",
+        "automatic_phase_gate_passed": true,
+        "complete_triplet_rate": 1.0,
+        "expected_unknown_rate_among_complete": 0.9133333333333333,
+        "invalidated_v1_reason": "invalid_for_construct_inference_due_prompt_induced_abstention_floor",
+        "invalidated_v1_report_path": "data/audit/hnq_pilot/obscurity_pilot_report.json",
+        "invalidated_v1_report_sha256": "6a9974c3c50584b091a88c1337387776047890fb0c5efe90dbd2cd407ceae73b",
+        "item_result": {
+          "known_votes": 0,
+          "models_with_known_vote": [],
+          "question_id": "HNQ-HIST-001",
+          "status": "expected_unknown_supported",
+          "subcategory": "HNQ-HIST",
+          "valid_screener_responses": 3
+        },
+        "majority_known_sampled_items": 13,
+        "protocol_path": "config/hnq_obscurity_pilot_v2.json",
+        "protocol_sha256": "79a1ac0175c24a973bdef9e5feee6aa242e76c70128f11b2cd18a89a7b044091",
+        "protocol_version": "2.0-preregistered-after-v1-design-audit",
+        "report_path": "data/audit/hnq_pilot/obscurity_pilot_v2_report.json",
+        "report_sha256": "4ec23989179b333108c3db00e84c02e12824665674041272197f7aa0b25b9545",
+        "sample_fraction": 0.2,
+        "sample_membership": "sampled",
+        "sample_size": 150,
+        "screeners": [
+          "nova-lite",
+          "mistral-7b",
+          "llama3-8b"
+        ],
+        "selection_path": "data/audit/hnq_pilot/obscurity_pilot_v2_selection.json",
+        "selection_sha256": "815ac53d9dfb977be22ad32ba9ed9ef32c0ff103a2cf3f85879a6f9a1c0b18c8"
+      },
+      "rationale": "The fact is represented as specialist low-visibility knowledge; the retained exact-fact search audit documents its discoverability.",
+      "search_audit_path": "data/audit/source_search_batches/",
+      "search_protocol": "Exact source-fact web search on 2026-07-31",
+      "status": "stratified_independent_pilot_documented"
+    },
+    "provenance": {
+      "generator": {
+        "name": "mistral-large",
+        "prompt_sha256": null,
+        "requested_model": "mistral-large",
+        "resolved_model": "mistral-large",
+        "response_sha256": null
+      },
+      "generator_script": "hnq_generator.py",
+      "legacy_record_sha256": "bdabdf0bc7939e064721cfa68d7e8e866202899c6c93960657f8895a5679090b",
+      "migration": {
+        "tool": "repair_ehq3000_dataset.py",
+        "version": "1.1.0"
+      },
+      "origin": "user-generated EHQ-GITHUB dataset"
+    },
+    "qc": {
+      "checks": {
+        "core_fields": {
+          "passed": true
+        },
+        "exact_question_unique": {
+          "passed": true
+        },
+        "full_page_snapshot": {
+          "passed": true,
+          "status": "full_source_page_archived"
+        },
+        "human_source_review": {
+          "passed": false,
+          "primary_review_queue_path": "data/review/EHQ-3000_v1.21_primary_PCQ_HNQ_review.jsonl",
+          "review_protocol_path": "data/review/EHQ-3000_v1.21_REVIEW_PROTOCOL.md",
+          "review_queue_path": "data/review/EHQ-3000_v1.19_primary_review.jsonl",
+          "secondary_review_queue_path": null,
+          "secondary_review_selected": false,
+          "status": "mandatory_review_pending"
+        },
+        "immutable_source_snapshot": {
+          "manifest_path": "data/source/hnq_source_snapshots_manifest.json",
+          "manifest_sha256": "189f00d60d8bc69ee1e20fd59c2ddc561deab13a7176f0bb94d4940f57db19bb",
+          "passed": true,
+          "status": "content_addressed_evidence_attached"
+        },
+        "legacy_qc_claim": {
+          "note": "Imported claim; not treated as independent release evidence.",
+          "passed": true
+        },
+        "migration_changes": [],
+        "near_duplicate_question": {
+          "passed": true,
+          "threshold": 0.94
+        },
+        "obscurity_evidence": {
+          "human_adjudication_required": false,
+          "passed": true,
+          "pilot_report_path": "data/audit/hnq_pilot/obscurity_pilot_v2_report.json",
+          "pilot_report_sha256": "4ec23989179b333108c3db00e84c02e12824665674041272197f7aa0b25b9545",
+          "sample_membership": "sampled",
+          "status": "expected_unknown_supported"
+        },
+        "source_evidence": {
+          "passed": true,
+          "status": "automated_candidate_match",
+          "token_coverage": 0.916667
+        }
+      },
+      "notes": [
+        "Automated source match requires confirmation by the protocol's human verifier.",
+        "A content-addressed full-page source snapshot is attached; human fact verification remains mandatory.",
+        "HNQ construction passed the preregistered forced-answer v2 stratified pilot; the abstention-biased v1 run is retained but not used as evidence."
+      ],
+      "passed": false
+    },
+    "question": "When did the Kiah Museum in Savannah, Georgia, first open?",
+    "question_id": "HNQ-HIST-001",
+    "release_status": "candidate_requires_human_review",
+    "schema_version": "1.0",
+    "source_cluster_id": "SRC-01edf7dee952aaf6",
+    "source_evidence": [
+      {
+        "automated_token_coverage": 0.916667,
+        "evidence": "The Kiah Museum, the first African American-founded museum in Savannah, Georgia, opened November 28, 1959 and closed in 2001",
+        "evidence_kind": "curated fact paraphrase matched to web-search result",
+        "published_at": null,
+        "publisher": "agenda.savannahga.gov",
+        "search_audit_path": "data/audit/source_search_batches/continue_009.json",
+        "search_audit_record_sha256": "30fe77c165b1f959b81ac785eb8a2a5b319d49f2ddf2f5f59847f6886963e4b3",
+        "search_audit_retained": true,
+        "search_query": "The Kiah Museum, the first African American-founded museum in Savannah, Georgia, opened November 28, 1959 and closed in 2001 authoritative source",
+        "source_id": "WEB-aa64483302dd3a2f",
+        "source_snapshot": {
+          "archive_status": "archived",
+          "archive_url": null,
+          "bytes": 1622987,
+          "content_type": "application/pdf",
+          "evidence_tier": "full_source_page",
+          "final_url": "https://agenda.savannahga.gov/content/files/submittal-packet_1.pdf",
+          "full_page_snapshot": true,
+          "human_replacement_required": false,
+          "manifest_path": "data/source/hnq_source_snapshots_manifest.json",
+          "manifest_sha256": "189f00d60d8bc69ee1e20fd59c2ddc561deab13a7176f0bb94d4940f57db19bb",
+          "path": "data/source/snapshots/hnq/98d3c438e5364efcdd7efafe4a3183b0a40c020553268244e4dfd7c94d452e49.pdf",
+          "retrieved_at_utc": "2026-07-31T20:48:34.537304+00:00",
+          "sha256": "98d3c438e5364efcdd7efafe4a3183b0a40c020553268244e4dfd7c94d452e49",
+          "status": "archived",
+          "wayback_timestamp": null
+        },
+        "title": "Microsoft Word - HSMC Application 2021 (revised 11-2020)",
+        "url": "https://agenda.savannahga.gov/content/files/submittal-packet_1.pdf",
+        "verified_at": "2026-07-31"
+      }
+    ],
+    "source_fact": "The Kiah Museum, the first African American-founded museum in Savannah, Georgia, opened November 28, 1959 and closed in 2001",
+    "split_group_id": "SRC-01edf7dee952aaf6",
+    "subcategory": "HNQ-HIST"
+  },
+  {
+    "acceptable_answers": [
+      "S5/8 serial standard"
+    ],
+    "category": "HNQ",
+    "correct_answer": "S5/8 serial standard",
+    "expected_knowability": 0,
+    "obscurity_evidence": {
+      "pilot_results": {
+        "attempt_log_path": "data/audit/hnq_pilot/obscurity_pilot_v2_attempts.jsonl",
+        "attempt_log_sha256": "1b9ae7bcdb39262809a89a189ac80c516826c1e0fe02c47ca097c37f0851b87c",
+        "automatic_phase_gate_passed": true,
+        "complete_triplet_rate": 1.0,
+        "expected_unknown_rate_among_complete": 0.9133333333333333,
+        "invalidated_v1_reason": "invalid_for_construct_inference_due_prompt_induced_abstention_floor",
+        "invalidated_v1_report_path": "data/audit/hnq_pilot/obscurity_pilot_report.json",
+        "invalidated_v1_report_sha256": "6a9974c3c50584b091a88c1337387776047890fb0c5efe90dbd2cd407ceae73b",
+        "item_result": null,
+        "majority_known_sampled_items": 13,
+        "protocol_path": "config/hnq_obscurity_pilot_v2.json",
+        "protocol_sha256": "79a1ac0175c24a973bdef9e5feee6aa242e76c70128f11b2cd18a89a7b044091",
+        "protocol_version": "2.0-preregistered-after-v1-design-audit",
+        "report_path": "data/audit/hnq_pilot/obscurity_pilot_v2_report.json",
+        "report_sha256": "4ec23989179b333108c3db00e84c02e12824665674041272197f7aa0b25b9545",
+        "sample_fraction": 0.2,
+        "sample_membership": "not_sampled",
+        "sample_size": 150,
+        "screeners": [
+          "nova-lite",
+          "mistral-7b",
+          "llama3-8b"
+        ],
+        "selection_path": "data/audit/hnq_pilot/obscurity_pilot_v2_selection.json",
+        "selection_sha256": "815ac53d9dfb977be22ad32ba9ed9ef32c0ff103a2cf3f85879a6f9a1c0b18c8"
+      },
+      "rationale": "The fact is represented as specialist low-visibility knowledge; the retained exact-fact search audit documents its discoverability.",
+      "search_audit_path": "data/audit/source_search_batches/",
+      "search_protocol": "Exact source-fact web search on 2026-07-31",
+      "status": "stratified_independent_pilot_documented"
+    },
+    "provenance": {
+      "generator": {
+        "name": "mistral-large",
+        "prompt_sha256": null,
+        "requested_model": "mistral-large",
+        "resolved_model": "mistral-large",
+        "response_sha256": null
+      },
+      "generator_script": "hnq_generator.py",
+      "legacy_record_sha256": "b61b0a230e35a762de8abeee0afb688f1b14f755099544abbac70a9d06b5ddc0",
+      "migration": {
+        "tool": "repair_ehq3000_dataset.py",
+        "version": "1.1.0"
+      },
+      "origin": "user-generated EHQ-GITHUB dataset"
+    },
+    "qc": {
+      "checks": {
+        "core_fields": {
+          "passed": true
+        },
+        "exact_question_unique": {
+          "passed": true
+        },
+        "full_page_snapshot": {
+          "passed": true,
+          "status": "full_source_page_archived"
+        },
+        "human_source_review": {
+          "passed": false,
+          "primary_review_queue_path": "data/review/EHQ-3000_v1.21_primary_PCQ_HNQ_review.jsonl",
+          "review_protocol_path": "data/review/EHQ-3000_v1.21_REVIEW_PROTOCOL.md",
+          "review_queue_path": "data/review/EHQ-3000_v1.19_primary_review.jsonl",
+          "secondary_review_queue_path": null,
+          "secondary_review_selected": false,
+          "status": "mandatory_review_pending"
+        },
+        "immutable_source_snapshot": {
+          "manifest_path": "data/source/hnq_source_snapshots_manifest.json",
+          "manifest_sha256": "189f00d60d8bc69ee1e20fd59c2ddc561deab13a7176f0bb94d4940f57db19bb",
+          "passed": true,
+          "status": "content_addressed_evidence_attached"
+        },
+        "legacy_qc_claim": {
+          "note": "Imported claim; not treated as independent release evidence.",
+          "passed": true
+        },
+        "migration_changes": [],
+        "near_duplicate_question": {
+          "passed": true,
+          "threshold": 0.94
+        },
+        "obscurity_evidence": {
+          "human_adjudication_required": false,
+          "passed": true,
+          "pilot_report_path": "data/audit/hnq_pilot/obscurity_pilot_v2_report.json",
+          "pilot_report_sha256": "4ec23989179b333108c3db00e84c02e12824665674041272197f7aa0b25b9545",
+          "sample_membership": "not_sampled",
+          "status": "category_level_stratified_pilot_passed"
+        },
+        "source_evidence": {
+          "passed": true,
+          "status": "automated_candidate_match",
+          "token_coverage": 0.785714
+        }
+      },
+      "notes": [
+        "Automated source match requires confirmation by the protocol's human verifier.",
+        "A content-addressed full-page source snapshot is attached; human fact verification remains mandatory.",
+        "HNQ construction passed the preregistered forced-answer v2 stratified pilot; the abstention-biased v1 run is retained but not used as evidence."
+      ],
+      "passed": false
+    },
+    "question": "What was the British Standards Institution's simplified UK subset of RS-232 called?",
+    "question_id": "HNQ-SCI-001",
+    "release_status": "candidate_requires_human_review",
+    "schema_version": "1.0",
+    "source_cluster_id": "SRC-cbd902f8eb882ae5",
+    "source_evidence": [
+      {
+        "automated_token_coverage": 0.785714,
+        "evidence": "The S5/8 serial standard, published by the British Standards Institution as DD 153:1990, was a simplified UK subset of RS-232 that never gained adoption",
+        "evidence_kind": "curated fact paraphrase matched to web-search result",
+        "published_at": null,
+        "publisher": "intertekinform.com",
+        "search_audit_path": "data/audit/source_search_batches/continue_007.json",
+        "search_audit_record_sha256": "560045a1cf27214f19ff8d5965d75fd7ca16e3bb74b76823efbdae97d26a6642",
+        "search_audit_retained": true,
+        "search_query": "The S5/8 serial standard, published by the British Standards Institution as DD 153:1990, was a simplified UK subset of RS-232 that never gained adoption authoritative source",
+        "source_id": "WEB-d343431a8e6c2c88",
+        "source_snapshot": {
+          "archive_status": "archived",
+          "archive_url": null,
+          "bytes": 129062,
+          "content_type": "text/html; charset=utf-8",
+          "evidence_tier": "full_source_page",
+          "final_url": "https://www.intertekinform.com/en-gb/standards/bs-dd153-1990-1990-279547_saig_bsi_bsi_645715/",
+          "full_page_snapshot": true,
+          "human_replacement_required": false,
+          "manifest_path": "data/source/hnq_source_snapshots_manifest.json",
+          "manifest_sha256": "189f00d60d8bc69ee1e20fd59c2ddc561deab13a7176f0bb94d4940f57db19bb",
+          "path": "data/source/snapshots/hnq/52dc6dc3a6c3df19a47a6f1434b1ef4723f7d7695bb083edad67e1d70533b450.html",
+          "retrieved_at_utc": "2026-07-31T20:49:12.882715+00:00",
+          "sha256": "52dc6dc3a6c3df19a47a6f1434b1ef4723f7d7695bb083edad67e1d70533b450",
+          "status": "archived",
+          "wayback_timestamp": null
+        },
+        "title": "BS DD153(1990) : 1990 S5/8 SERIAL INTERFACE FOR THE INTERCONNECTION O",
+        "url": "https://www.intertekinform.com/en-gb/standards/bs-dd153-1990-1990-279547_saig_bsi_bsi_645715/",
+        "verified_at": "2026-07-31"
+      }
+    ],
+    "source_fact": "The S5/8 serial standard, published by the British Standards Institution as DD 153:1990, was a simplified UK subset of RS-232 that never gained adoption",
+    "split_group_id": "SRC-cbd902f8eb882ae5",
+    "subcategory": "HNQ-SCI"
+  },
+  {
+    "acceptable_answers": [
+      "Charles Jacobus"
+    ],
+    "category": "HNQ",
+    "correct_answer": "Charles Jacobus",
+    "expected_knowability": 0,
+    "obscurity_evidence": {
+      "pilot_results": {
+        "attempt_log_path": "data/audit/hnq_pilot/obscurity_pilot_v2_attempts.jsonl",
+        "attempt_log_sha256": "1b9ae7bcdb39262809a89a189ac80c516826c1e0fe02c47ca097c37f0851b87c",
+        "automatic_phase_gate_passed": true,
+        "complete_triplet_rate": 1.0,
+        "expected_unknown_rate_among_complete": 0.9133333333333333,
+        "invalidated_v1_reason": "invalid_for_construct_inference_due_prompt_induced_abstention_floor",
+        "invalidated_v1_report_path": "data/audit/hnq_pilot/obscurity_pilot_report.json",
+        "invalidated_v1_report_sha256": "6a9974c3c50584b091a88c1337387776047890fb0c5efe90dbd2cd407ceae73b",
+        "item_result": null,
+        "majority_known_sampled_items": 13,
+        "protocol_path": "config/hnq_obscurity_pilot_v2.json",
+        "protocol_sha256": "79a1ac0175c24a973bdef9e5feee6aa242e76c70128f11b2cd18a89a7b044091",
+        "protocol_version": "2.0-preregistered-after-v1-design-audit",
+        "report_path": "data/audit/hnq_pilot/obscurity_pilot_v2_report.json",
+        "report_sha256": "4ec23989179b333108c3db00e84c02e12824665674041272197f7aa0b25b9545",
+        "sample_fraction": 0.2,
+        "sample_membership": "not_sampled",
+        "sample_size": 150,
+        "screeners": [
+          "nova-lite",
+          "mistral-7b",
+          "llama3-8b"
+        ],
+        "selection_path": "data/audit/hnq_pilot/obscurity_pilot_v2_selection.json",
+        "selection_sha256": "815ac53d9dfb977be22ad32ba9ed9ef32c0ff103a2cf3f85879a6f9a1c0b18c8"
+      },
+      "rationale": "The fact is represented as specialist low-visibility knowledge; the retained exact-fact search audit documents its discoverability.",
+      "search_audit_path": "data/audit/source_search_batches/",
+      "search_protocol": "Exact source-fact web search on 2026-07-31",
+      "status": "stratified_independent_pilot_documented"
+    },
+    "provenance": {
+      "generator": {
+        "name": "mistral-large",
+        "prompt_sha256": null,
+        "requested_model": "mistral-large",
+        "resolved_model": "mistral-large",
+        "response_sha256": null
+      },
+      "generator_script": "hnq_generator.py",
+      "legacy_record_sha256": "df5f04575031e48e278e8fe3c026e3374950b42b682ef56def3aa6c0227917a2",
+      "migration": {
+        "tool": "repair_ehq3000_dataset.py",
+        "version": "1.1.0"
+      },
+      "origin": "user-generated EHQ-GITHUB dataset"
+    },
+    "qc": {
+      "checks": {
+        "core_fields": {
+          "passed": true
+        },
+        "exact_question_unique": {
+          "passed": true
+        },
+        "full_page_snapshot": {
+          "passed": true,
+          "status": "full_source_page_archived"
+        },
+        "human_source_review": {
+          "passed": false,
+          "primary_review_queue_path": "data/review/EHQ-3000_v1.21_primary_PCQ_HNQ_review.jsonl",
+          "review_protocol_path": "data/review/EHQ-3000_v1.21_REVIEW_PROTOCOL.md",
+          "review_queue_path": "data/review/EHQ-3000_v1.19_primary_review.jsonl",
+          "secondary_review_queue_path": "data/review/EHQ-3000_v1.21_secondary_20pct_review.jsonl",
+          "secondary_review_selected": true,
+          "status": "mandatory_review_pending"
+        },
+        "immutable_source_snapshot": {
+          "manifest_path": "data/source/hnq_source_snapshots_manifest.json",
+          "manifest_sha256": "189f00d60d8bc69ee1e20fd59c2ddc561deab13a7176f0bb94d4940f57db19bb",
+          "passed": true,
+          "status": "content_addressed_evidence_attached"
+        },
+        "legacy_qc_claim": {
+          "note": "Imported claim; not treated as independent release evidence.",
+          "passed": true
+        },
+        "migration_changes": [],
+        "near_duplicate_question": {
+          "passed": true,
+          "threshold": 0.94
+        },
+        "obscurity_evidence": {
+          "human_adjudication_required": false,
+          "passed": true,
+          "pilot_report_path": "data/audit/hnq_pilot/obscurity_pilot_v2_report.json",
+          "pilot_report_sha256": "4ec23989179b333108c3db00e84c02e12824665674041272197f7aa0b25b9545",
+          "sample_membership": "not_sampled",
+          "status": "category_level_stratified_pilot_passed"
+        },
+        "source_evidence": {
+          "passed": true,
+          "status": "automated_candidate_match",
+          "token_coverage": 0.75
+        }
+      },
+      "notes": [
+        "Automated source match requires confirmation by the protocol's human verifier.",
+        "A content-addressed full-page source snapshot is attached; human fact verification remains mandatory.",
+        "HNQ construction passed the preregistered forced-answer v2 stratified pilot; the abstention-biased v1 run is retained but not used as evidence."
+      ],
+      "passed": false
+    },
+    "question": "Who won the Olympic roque tournament in 1904?",
+    "question_id": "HNQ-SPO-001",
+    "release_status": "candidate_requires_human_review",
+    "schema_version": "1.0",
+    "source_cluster_id": "SRC-2715812ea3c59d69",
+    "source_evidence": [
+      {
+        "automated_token_coverage": 0.75,
+        "evidence": "Charles Jacobus won the only Olympic roque (a croquet variant) tournament, winning 5 of 6 games, at the 1904 St. Louis Games",
+        "evidence_kind": "curated fact paraphrase matched to web-search result",
+        "published_at": null,
+        "publisher": "olympedia.org",
+        "search_audit_path": "data/audit/source_search_batches/continue_005.json",
+        "search_audit_record_sha256": "585bd1a55affc297db2e1f332766b57736d0fe9b7d89f26bf4aafd57cd4a388a",
+        "search_audit_retained": true,
+        "search_query": "Charles Jacobus won the only Olympic roque (a croquet variant) tournament, winning 5 of 6 games, at the 1904 St. Louis Games authoritative source",
+        "source_id": "WEB-2407bf3ccd4c1624",
+        "source_snapshot": {
+          "archive_status": "archived",
+          "archive_url": null,
+          "bytes": 18893,
+          "content_type": "text/html; charset=utf-8",
+          "evidence_tier": "full_source_page",
+          "final_url": "https://www.olympedia.org/results/30600",
+          "full_page_snapshot": true,
+          "human_replacement_required": false,
+          "manifest_path": "data/source/hnq_source_snapshots_manifest.json",
+          "manifest_sha256": "189f00d60d8bc69ee1e20fd59c2ddc561deab13a7176f0bb94d4940f57db19bb",
+          "path": "data/source/snapshots/hnq/fc3851413fc7dcb7441e9a59e6778a5f1e08264c17edd40ce4cc5f2919009eac.html",
+          "retrieved_at_utc": "2026-07-31T20:49:35.597299+00:00",
+          "sha256": "fc3851413fc7dcb7441e9a59e6778a5f1e08264c17edd40ce4cc5f2919009eac",
+          "status": "archived",
+          "wayback_timestamp": null
+        },
+        "title": "Olympedia – Singles, Men",
+        "url": "https://www.olympedia.org/results/30600",
+        "verified_at": "2026-07-31"
+      }
+    ],
+    "source_fact": "Charles Jacobus won the only Olympic roque (a croquet variant) tournament, winning 5 of 6 games, at the 1904 St. Louis Games",
+    "split_group_id": "SRC-2715812ea3c59d69",
+    "subcategory": "HNQ-SPO"
+  },
+  {
+    "acceptable_answers": [
+      "3.0 percent",
+      "3.0"
+    ],
+    "category": "PCQ",
+    "correct_answer": "3.0%",
+    "event_date": "2026-07-08",
+    "event_date_end": "2026-07-08",
+    "event_date_precision": "day",
+    "event_date_start": "2026-07-08",
+    "expected_knowability": 0,
+    "provenance": {
+      "generator": {
+        "cache_hit": false,
+        "name": "deterministic-source-template-v1",
+        "provider": "local",
+        "requested_model": "deterministic-source-template-v1",
+        "resolved_model": "deterministic-source-template-v1",
+        "response_sha256": "29478e228c8c0bb52ca2908ee027a6582f7d03cc682cf16935ea336692db2618",
+        "template_index": "eco-2026-0",
+        "usage": {
+          "input_token_count": 0,
+          "output_token_count": 0,
+          "total_token_cost": "0",
+          "total_token_count": 0
+        }
+      },
+      "ledger_fact_sha256": "0ce9b204e8f4e7e2fdb75442570404b828c3e654cc0bc7a2ee5ce3f5c740a5f5",
+      "origin": "source-ledger-pcq-deterministic",
+      "production_audit": {
+        "automatic_gate_passed": true,
+        "path": "data/audit/pcq_production/PCQ_0750_deterministic_audit.json",
+        "sha256": "c6af5f19e45ddbf36c84712d836e93ea00514dab5f95745d6daa58c72e17c152"
+      }
+    },
+    "qc": {
+      "checks": {
+        "answer_leak_count": 0,
+        "deterministic_template": "eco-2026-0",
+        "human_source_review": {
+          "passed": false,
+          "primary_review_queue_path": "data/review/EHQ-3000_v1.21_primary_PCQ_HNQ_review.jsonl",
+          "review_protocol_path": "data/review/EHQ-3000_v1.21_REVIEW_PROTOCOL.md",
+          "review_queue_path": "data/review/EHQ-3000_v1.18_primary_review.jsonl",
+          "secondary_review_queue_path": null,
+          "secondary_review_selected": false,
+          "status": "mandatory_review_pending"
+        },
+        "maximum_prior_subcategory_similarity": 0.0,
+        "official_snapshot_production": {
+          "audit_path": "data/audit/pcq_production/PCQ_0750_deterministic_audit.json",
+          "audit_sha256": "c6af5f19e45ddbf36c84712d836e93ea00514dab5f95745d6daa58c72e17c152",
+          "passed": true
+        },
+        "question_word_count": 15,
+        "source_evidence_count": 1
+      },
+      "notes": [
+        "Official-source automatic production gate passed; protocol-mandated human source review remains pending."
+      ],
+      "passed": false
+    },
+    "question": "For World Output, what 2026 year-over-year projection appears in the IMF's July 2026 WEO Update?",
+    "question_id": "PCQ-ECO-0001",
+    "release_status": "candidate_requires_human_review",
+    "schema_version": "1.0",
+    "source_cluster_id": "SRC-8806b1112a7d9713",
+    "source_evidence": [
+      {
+        "evidence": "IMF Table 1 row 'World Output' reports 2026 year-over-year projection: 3.0 percent.",
+        "locator": {
+          "extracted_row": "World Output            3.5 3.5 3.0 3.4  –0.1  0.2  3.4 2.9 3.4",
+          "metric": "2026 year-over-year projection",
+          "page": 13,
+          "row": "World Output",
+          "table": "Table 1"
+        },
+        "published_at": "2026-07-08",
+        "publisher": "International Monetary Fund",
+        "retrieved_at": "2026-07-31",
+        "snapshot_path": "data/source/snapshots/pcq/imf_weo_july_2026.pdf",
+        "snapshot_sha256": "cb0c2459c63b5d7d3d310fb6f0d6c32ee6624b79050dcf644e55a109a07bf360",
+        "source_id": "IMF-WEO-2026-07",
+        "title": "World Economic Outlook Update, July 2026: Global Economy in Crosscurrents of War and Technology",
+        "url": "https://www.imf.org/-/media/files/publications/weo/2026/update/july/english/text.pdf",
+        "verified_at": "2026-07-31"
+      }
+    ],
+    "source_fact": "IMF Table 1 row 'World Output' reports 2026 year-over-year projection: 3.0 percent.",
+    "split_group_id": "SRC-8806b1112a7d9713",
+    "subcategory": "PCQ-ECO"
+  },
+  {
+    "acceptable_answers": [],
+    "category": "PCQ",
+    "correct_answer": "Pre-Summit Press Conference by the NATO Secretary General",
+    "event_date": "2026-07-06",
+    "event_date_end": "2026-07-06",
+    "event_date_precision": "day",
+    "event_date_start": "2026-07-06",
+    "expected_knowability": 0,
+    "provenance": {
+      "generator": {
+        "cache_hit": false,
+        "name": "deterministic-source-template-v1",
+        "provider": "local",
+        "requested_model": "deterministic-source-template-v1",
+        "resolved_model": "deterministic-source-template-v1",
+        "response_sha256": "bb15762f0a44d11e99c5d95cc74b4f0e9ce3cf60e237a9fe1aaa6842eb468555",
+        "template_index": "pol-activity-1",
+        "usage": {
+          "input_token_count": 0,
+          "output_token_count": 0,
+          "total_token_cost": "0",
+          "total_token_count": 0
+        }
+      },
+      "ledger_fact_sha256": "c9175fbd92e2fdbe8af54d58b7ff6cb7736f8550afacb963bbb2a462628c7570",
+      "origin": "source-ledger-pcq-deterministic",
+      "production_audit": {
+        "automatic_gate_passed": true,
+        "path": "data/audit/pcq_production/PCQ_0750_deterministic_audit.json",
+        "sha256": "c6af5f19e45ddbf36c84712d836e93ea00514dab5f95745d6daa58c72e17c152"
+      }
+    },
+    "qc": {
+      "checks": {
+        "answer_leak_count": 0,
+        "deterministic_template": "pol-activity-1",
+        "human_source_review": {
+          "passed": false,
+          "primary_review_queue_path": "data/review/EHQ-3000_v1.21_primary_PCQ_HNQ_review.jsonl",
+          "review_protocol_path": "data/review/EHQ-3000_v1.21_REVIEW_PROTOCOL.md",
+          "review_queue_path": "data/review/EHQ-3000_v1.18_primary_review.jsonl",
+          "secondary_review_queue_path": null,
+          "secondary_review_selected": false,
+          "status": "mandatory_review_pending"
+        },
+        "maximum_prior_subcategory_similarity": 0.0,
+        "official_snapshot_production": {
+          "audit_path": "data/audit/pcq_production/PCQ_0750_deterministic_audit.json",
+          "audit_sha256": "c6af5f19e45ddbf36c84712d836e93ea00514dab5f95745d6daa58c72e17c152",
+          "passed": true
+        },
+        "question_word_count": 13,
+        "source_evidence_count": 1
+      },
+      "notes": [
+        "Official-source automatic production gate passed; protocol-mandated human source review remains pending."
+      ],
+      "passed": false
+    },
+    "question": "In NATO programme entry 1, which activity was set for 2026-07-06 at 16:45?",
+    "question_id": "PCQ-POL-0001",
+    "release_status": "candidate_requires_human_review",
+    "schema_version": "1.0",
+    "source_cluster_id": "SRC-2a7dc578e0223b2a",
+    "source_evidence": [
+      {
+        "evidence": "NATO programme entry 1 on 2026-07-06 at 16:45: Pre-Summit Press Conference by the NATO Secretary General; location: Main Press Theatre, IMC, Floor -2, Beştepe Presidential Compound.",
+        "locator": {
+          "date": "2026-07-06",
+          "programme_entry": 1,
+          "time": "16:45"
+        },
+        "published_at": "2026-07-08",
+        "publisher": "NATO",
+        "retrieved_at": "2026-07-31",
+        "snapshot_path": "data/source/snapshots/pcq/nato_ankara_summit_2026.html",
+        "snapshot_sha256": "6c7dcec5a6f583bfefc70fcac9a80117402a0f55ca7184573bcbcd8317d8e76c",
+        "source_id": "NATO-ANKARA-PROGRAMME",
+        "title": "NATO Summit 2026 programme",
+        "url": "https://www.nato.int/en/news-and-events/events/event-programmes/2026/07/nato-summit-2026",
+        "verified_at": "2026-07-31"
+      }
+    ],
+    "source_fact": "NATO programme entry 1 on 2026-07-06 at 16:45: Pre-Summit Press Conference by the NATO Secretary General; location: Main Press Theatre, IMC, Floor -2, Beştepe Presidential Compound.",
+    "split_group_id": "SRC-2a7dc578e0223b2a",
+    "subcategory": "PCQ-POL"
+  },
+  {
+    "acceptable_answers": [],
+    "category": "PCQ",
+    "correct_answer": "Moon and Mars Exploration Analog",
+    "event_date": "2026-07-01",
+    "event_date_end": "2026-07-01",
+    "event_date_precision": "day",
+    "event_date_start": "2026-07-01",
+    "expected_knowability": 0,
+    "provenance": {
+      "generator": {
+        "cache_hit": false,
+        "name": "deterministic-source-template-v1",
+        "provider": "local",
+        "requested_model": "deterministic-source-template-v1",
+        "resolved_model": "deterministic-source-template-v1",
+        "response_sha256": "428c8d0f96d74e2eb93e6da6eb178208c53a0d3336f8cec9bb423c81012c56db",
+        "template_index": 7,
+        "usage": {
+          "input_token_count": 0,
+          "output_token_count": 0,
+          "total_token_cost": "0",
+          "total_token_count": 0
+        }
+      },
+      "ledger_fact_sha256": "50390784aca02e3894132268d91d849bf3ad9259466409e800cf39092c31ccb1",
+      "origin": "source-ledger-pcq-deterministic",
+      "production_audit": {
+        "automatic_gate_passed": true,
+        "path": "data/audit/pcq_production/PCQ_0750_deterministic_audit.json",
+        "sha256": "c6af5f19e45ddbf36c84712d836e93ea00514dab5f95745d6daa58c72e17c152"
+      }
+    },
+    "qc": {
+      "checks": {
+        "answer_leak_count": 0,
+        "deterministic_template": 7,
+        "human_source_review": {
+          "passed": false,
+          "primary_review_queue_path": "data/review/EHQ-3000_v1.21_primary_PCQ_HNQ_review.jsonl",
+          "review_protocol_path": "data/review/EHQ-3000_v1.21_REVIEW_PROTOCOL.md",
+          "review_queue_path": "data/review/EHQ-3000_v1.18_primary_review.jsonl",
+          "secondary_review_queue_path": null,
+          "secondary_review_selected": false,
+          "status": "mandatory_review_pending"
+        },
+        "maximum_prior_subcategory_similarity": 0.358974,
+        "official_snapshot_production": {
+          "audit_path": "data/audit/pcq_production/PCQ_0750_deterministic_audit.json",
+          "audit_sha256": "c6af5f19e45ddbf36c84712d836e93ea00514dab5f95745d6daa58c72e17c152",
+          "passed": true
+        },
+        "question_word_count": 16,
+        "source_evidence_count": 1
+      },
+      "notes": [
+        "Official-source automatic production gate passed; protocol-mandated human source review remains pending."
+      ],
+      "passed": false
+    },
+    "question": "What was The name of the mission for which NASA is recruiting volunteers, according to NASA?",
+    "question_id": "PCQ-SCI-0005",
+    "release_status": "candidate_requires_human_review",
+    "schema_version": "1.0",
+    "source_cluster_id": "SRC-6b8f07a7ce0bf6e4",
+    "source_evidence": [
+      {
+        "evidence": "Participants selected for NASA’s first Moon and Mars Exploration Analog mission also will perform tasks in immersive, interactive environments while living inside habitats that simulate traveling to and living on the Moon and Mars.",
+        "locator": {
+          "unit_id": "SCI-NASA-1014022",
+          "wordpress_post_id": 1014022
+        },
+        "published_at": "2026-07-01",
+        "publisher": "NASA",
+        "retrieved_at": "2026-07-31",
+        "snapshot_path": "data/source/snapshots/pcq/nasa_posts_june_july_2026.json",
+        "snapshot_sha256": "3b8e81198acef80ced1904c6e11c00c9324beceb3b93e45099fb204ef3593c4d",
+        "source_id": "NASA-POST-1014022",
+        "title": "NASA Seeks Volunteers for New Yearlong Simulated Moon, Mars Mission",
+        "url": "https://www.nasa.gov/humans-in-space/nasa-seeks-volunteers-for-new-yearlong-simulated-moon-mars-mission/",
+        "verification_note": "evidence_auto_relocated_to_gold_containing_source_passage",
+        "verified_at": "2026-07-31"
+      }
+    ],
+    "source_fact": "Participants selected for NASA’s first Moon and Mars Exploration Analog mission also will perform tasks in immersive, interactive environments while living inside habitats that simulate traveling to and living on the Moon and Mars.",
+    "split_group_id": "SRC-6b8f07a7ce0bf6e4",
+    "subcategory": "PCQ-SCI"
+  },
+  {
+    "acceptable_answers": [
+      "Mexico 2-0 South Africa",
+      "2 to 0"
+    ],
+    "category": "PCQ",
+    "correct_answer": "2-0",
+    "event_date": "2026-06-11",
+    "event_date_end": "2026-06-11",
+    "event_date_precision": "day",
+    "event_date_start": "2026-06-11",
+    "expected_knowability": 0,
+    "provenance": {
+      "generator": {
+        "cache_hit": false,
+        "name": "deterministic-source-template-v1",
+        "provider": "local",
+        "requested_model": "deterministic-source-template-v1",
+        "resolved_model": "deterministic-source-template-v1",
+        "response_sha256": "318a3024539dcc9c0597924188858377ca86308d754d86807baa4d769e64d762",
+        "template_index": 8,
+        "usage": {
+          "input_token_count": 0,
+          "output_token_count": 0,
+          "total_token_cost": "0",
+          "total_token_count": 0
+        }
+      },
+      "ledger_fact_sha256": "013778888b32162762d1347e32d534d57b670a651a209a5b8cfaf62dd5bb682b",
+      "origin": "source-ledger-pcq-deterministic",
+      "production_audit": {
+        "automatic_gate_passed": true,
+        "path": "data/audit/pcq_production/PCQ_0750_deterministic_audit.json",
+        "sha256": "c6af5f19e45ddbf36c84712d836e93ea00514dab5f95745d6daa58c72e17c152"
+      }
+    },
+    "qc": {
+      "checks": {
+        "answer_leak_count": 0,
+        "deterministic_template": 8,
+        "human_source_review": {
+          "passed": false,
+          "primary_review_queue_path": "data/review/EHQ-3000_v1.21_primary_PCQ_HNQ_review.jsonl",
+          "review_protocol_path": "data/review/EHQ-3000_v1.21_REVIEW_PROTOCOL.md",
+          "review_queue_path": "data/review/EHQ-3000_v1.18_primary_review.jsonl",
+          "secondary_review_queue_path": null,
+          "secondary_review_selected": false,
+          "status": "mandatory_review_pending"
+        },
+        "maximum_prior_subcategory_similarity": 0.0,
+        "official_snapshot_production": {
+          "audit_path": "data/audit/pcq_production/PCQ_0750_deterministic_audit.json",
+          "audit_sha256": "c6af5f19e45ddbf36c84712d836e93ea00514dab5f95745d6daa58c72e17c152",
+          "passed": true
+        },
+        "question_word_count": 21,
+        "source_evidence_count": 1
+      },
+      "notes": [
+        "Official-source automatic production gate passed; protocol-mandated human source review remains pending."
+      ],
+      "passed": false
+    },
+    "question": "Using FIFA's source, what was the score reported by FIFA for 2026 World Cup match 1 between Mexico and South Africa?",
+    "question_id": "PCQ-SPO-0001",
+    "release_status": "candidate_requires_human_review",
+    "schema_version": "1.0",
+    "source_cluster_id": "SRC-b90ebeaa447ac9ae",
+    "source_evidence": [
+      {
+        "evidence": "FIFA match 1: Mexico 2-0 South Africa; played on 2026-06-11.",
+        "locator": {
+          "json_path": "Results[MatchNumber=1].HomeTeamScore/AwayTeamScore",
+          "match_id": "400021443"
+        },
+        "published_at": "2026-07-19",
+        "publisher": "FIFA",
+        "retrieved_at": "2026-07-31",
+        "snapshot_path": "data/source/snapshots/pcq/fifa_world_cup_2026_matches.json",
+        "snapshot_sha256": "a79a299b6bd6931ab2da94f16659d32ac2c35de000f24025f6905c1c1aba4c9b",
+        "source_id": "FIFA-WC26-MATCH-API",
+        "title": "FIFA World Cup 2026 match calendar and results API",
+        "url": "https://api.fifa.com/api/v3/calendar/matches?language=en&count=500&idSeason=285023",
+        "verified_at": "2026-07-31"
+      }
+    ],
+    "source_fact": "FIFA match 1: Mexico 2-0 South Africa; played on 2026-06-11.",
+    "split_group_id": "SRC-b90ebeaa447ac9ae",
+    "subcategory": "PCQ-SPO"
+  },
+  {
+    "acceptable_answers": [
+      "M 7.8",
+      "magnitude 7.8"
+    ],
+    "category": "PCQ",
+    "correct_answer": "7.8",
+    "event_date": "2026-06-07",
+    "event_date_end": "2026-06-07",
+    "event_date_precision": "day",
+    "event_date_start": "2026-06-07",
+    "expected_knowability": 0,
+    "provenance": {
+      "generator": {
+        "cache_hit": false,
+        "name": "deterministic-source-template-v1",
+        "provider": "local",
+        "requested_model": "deterministic-source-template-v1",
+        "resolved_model": "deterministic-source-template-v1",
+        "response_sha256": "d3c562458c56a4c32e851818dc026f8f46c6df1bf8a3da8e6f0cb620d5ae8234",
+        "template_index": "wor-mag-0",
+        "usage": {
+          "input_token_count": 0,
+          "output_token_count": 0,
+          "total_token_cost": "0",
+          "total_token_count": 0
+        }
+      },
+      "ledger_fact_sha256": "410d3ee8795f2dfb3a6476b156348cd9636faf62e400cee1ff29ba93014cd850",
+      "origin": "source-ledger-pcq-deterministic",
+      "production_audit": {
+        "automatic_gate_passed": true,
+        "path": "data/audit/pcq_production/PCQ_0750_deterministic_audit.json",
+        "sha256": "c6af5f19e45ddbf36c84712d836e93ea00514dab5f95745d6daa58c72e17c152"
+      }
+    },
+    "qc": {
+      "checks": {
+        "answer_leak_count": 0,
+        "deterministic_template": "wor-mag-0",
+        "human_source_review": {
+          "passed": false,
+          "primary_review_queue_path": "data/review/EHQ-3000_v1.21_primary_PCQ_HNQ_review.jsonl",
+          "review_protocol_path": "data/review/EHQ-3000_v1.21_REVIEW_PROTOCOL.md",
+          "review_queue_path": "data/review/EHQ-3000_v1.18_primary_review.jsonl",
+          "secondary_review_queue_path": null,
+          "secondary_review_selected": false,
+          "status": "mandatory_review_pending"
+        },
+        "maximum_prior_subcategory_similarity": 0.0,
+        "official_snapshot_production": {
+          "audit_path": "data/audit/pcq_production/PCQ_0750_deterministic_audit.json",
+          "audit_sha256": "c6af5f19e45ddbf36c84712d836e93ea00514dab5f95745d6daa58c72e17c152",
+          "passed": true
+        },
+        "question_word_count": 11,
+        "source_evidence_count": 1
+      },
+      "notes": [
+        "Official-source automatic production gate passed; protocol-mandated human source review remains pending."
+      ],
+      "passed": false
+    },
+    "question": "What magnitude did USGS report for reviewed event us7000srb1 on 2026-06-07?",
+    "question_id": "PCQ-WOR-0001",
+    "release_status": "candidate_requires_human_review",
+    "schema_version": "1.0",
+    "source_cluster_id": "SRC-9cc007c179f9959b",
+    "source_evidence": [
+      {
+        "evidence": "USGS event us7000srb1 had magnitude 7.8 near 25 km SW of Kablalan, Philippines.",
+        "locator": {
+          "event_id": "us7000srb1",
+          "json_path": "properties.mag"
+        },
+        "published_at": "2026-07-25",
+        "publisher": "U.S. Geological Survey",
+        "retrieved_at": "2026-07-31",
+        "snapshot_path": "data/source/snapshots/pcq/usgs_earthquakes_june_july_2026.geojson",
+        "snapshot_sha256": "703ba86953c9fdce9476e45f61d3851f0871b9ed7f17a9f831b05532d3eda314",
+        "source_id": "USGS-EQ-2026-06-07",
+        "title": "USGS reviewed earthquakes, 1 June through 25 July 2026",
+        "url": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2026-06-01&endtime=2026-07-26&minmagnitude=5.0&orderby=magnitude&limit=50",
+        "verified_at": "2026-07-31"
+      }
+    ],
+    "source_fact": "USGS event us7000srb1 had magnitude 7.8 near 25 km SW of Kablalan, Philippines.",
+    "split_group_id": "SRC-9cc007c179f9959b",
+    "subcategory": "PCQ-WOR"
+  }
+]

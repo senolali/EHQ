@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/ehq/schemas/ehq-item-1.0.json",
+  "title": "EHQ benchmark item",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "question_id",
+    "category",
+    "subcategory",
+    "question",
+    "correct_answer",
+    "expected_knowability",
+    "provenance"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "question_id": {"type": "string", "minLength": 3},
+    "category": {"enum": ["FEQ", "PCQ", "HNQ", "CCQ"]},
+    "subcategory": {"type": "string", "minLength": 3},
+    "question": {"type": "string", "minLength": 10},
+    "correct_answer": {"type": "string"},
+    "acceptable_answers": {
+      "type": "array",
+      "items": {"type": "string"},
+      "uniqueItems": true
+    },
+    "expected_knowability": {"const": 0},
+    "document": {"type": "string"},
+    "redacted_value": {"type": "string"},
+    "event_date": {"type": "string"},
+    "temporal_novelty": {
+      "type": "object",
+      "required": [
+        "status",
+        "basis",
+        "claim_became_true_at",
+        "source_id",
+        "reviewer_type",
+        "verified_at",
+        "evidence"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "source-verified-post-cutoff",
+            "human-verified-post-cutoff"
+          ]
+        },
+        "basis": {
+          "enum": [
+            "event_occurrence",
+            "official_result",
+            "official_decision",
+            "official_appointment",
+            "new_measurement",
+            "new_forecast",
+            "new_schedule",
+            "new_release_metadata"
+          ]
+        },
+        "claim_became_true_at": {"type": "string"},
+        "source_id": {"type": "string"},
+        "reviewer_type": {"type": "string"},
+        "verified_at": {"type": "string"},
+        "evidence": {"type": "string"}
+      }
+    },
+    "difficulty": {"type": "string"},
+    "source_evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source_id", "url", "publisher", "verified_at"],
+        "properties": {
+          "source_id": {"type": "string"},
+          "url": {"type": "string", "format": "uri"},
+          "publisher": {"type": "string"},
+          "title": {"type": "string"},
+          "published_at": {"type": ["string", "null"]},
+          "verified_at": {"type": "string"},
+          "evidence": {"type": "string"}
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["origin", "generator"],
+      "properties": {
+        "origin": {"type": "string"},
+        "generator": {
+          "type": "object",
+          "required": ["name"],
+          "properties": {
+            "name": {"type": "string"},
+            "requested_model": {"type": ["string", "null"]},
+            "resolved_model": {"type": ["string", "null"]},
+            "prompt_sha256": {"type": ["string", "null"]},
+            "response_sha256": {"type": ["string", "null"]}
+          }
+        }
+      }
+    },
+    "qc": {
+      "type": "object",
+      "properties": {
+        "passed": {"type": "boolean"},
+        "checks": {"type": "object"},
+        "notes": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"category": {"const": "CCQ"}}},
+      "then": {
+        "required": ["document", "redacted_value"],
+        "properties": {"correct_answer": {"const": "[REDACTED]"}}
+      }
+    },
+    {
+      "if": {"properties": {"category": {"const": "PCQ"}}},
+      "then": {"required": ["event_date", "source_evidence"]}
+    }
+  ],
+  "additionalProperties": true
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "migration": "finalize_release_gates",
+  "scientific_item_content_changed": false,
+  "dataset": {
+    "dataset_sha256_before": "557efe1385fe0a650c793da653e6f13d4a0aa85a28dae01e54d3874fc9fdc790",
+    "dataset_sha256_after": "3d8e440a21cca46907a2d70378bc1a9d2fc7690cf63ad20d320d3926bb19ddfa",
+    "scientific_content_sha256_before": "f5ed67ce57ff536d6c7a829033c06de4fd22b974a9dc750154798871b0b95921",
+    "scientific_content_sha256_after": "f5ed67ce57ff536d6c7a829033c06de4fd22b974a9dc750154798871b0b95921",
+    "secondary_review_items": 300,
+    "secondary_review_stratum_counts": {
+      "HNQ-CULT": 30,
+      "HNQ-GEO": 30,
+      "HNQ-HIST": 30,
+      "HNQ-SCI": 30,
+      "HNQ-SPO": 30,
+      "PCQ-ECO": 30,
+      "PCQ-POL": 30,
+      "PCQ-SCI": 30,
+      "PCQ-SPO": 30,
+      "PCQ-WOR": 30
+    },
+    "secondary_review_path": "data/review/secondary_human_review_300.jsonl",
+    "secondary_review_sha256": "1235b1bdcb0c7df21a2623c653e2ba9397ccf6256d86f6d4aee7111e15c6adae",
+    "recorded_at_utc": "2026-08-06T17:13:59.425150+00:00"
+  },
+  "model_registry": {
+    "models_sha256": "2a2491bf0fc1f2bdb8b186c7bd2624d96aba5021f15c909fc99418f429d9dffc",
+    "cutoff_attestation_path": "data/review/model_cutoff_attestation.json",
+    "cutoff_attestation_sha256": "dcdefa1e10b7a7757c9b447824f269b394554b3495c8b9f53b3f78de0f38facb",
+    "release_models": 15
+  }
+}

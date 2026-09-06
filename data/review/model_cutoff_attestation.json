@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0",
+  "recorded_at": "2026-08-06",
+  "reviewer": "Ali Şenol",
+  "decision": "all_release_models_pass_common_cutoff_bound",
+  "common_pcq_cutoff_not_after": "2026-01-31",
+  "scope": [
+    "Claude-3-Haiku",
+    "Claude-4.5-Haiku",
+    "Claude-4-Sonnet",
+    "Claude-5-Sonnet",
+    "DeepSeek-V4",
+    "GPT-4o",
+    "GPT-4o-mini",
+    "GPT-5.4-mini",
+    "Gemini-2.5-Flash",
+    "Gemini-2.5-Pro",
+    "Gemma-4-31B",
+    "LLaMA-3-70B",
+    "LLaMA-4-Maverick",
+    "Nova-Micro",
+    "Nova-Pro"
+  ],
+  "models": [
+    {
+      "model": "Claude-3-Haiku",
+      "pcq_cutoff": "2023-08-31",
+      "cutoff_definition": "training_data_cutoff",
+      "cutoff_evidence_status": "verified_primary",
+      "conservative_upper_bound": false,
+      "source_url": "https://www-cdn.anthropic.com/c6a80a657af445f40e31afac050f3bf76d3b1404.pdf"
+    },
+    {
+      "model": "Claude-4.5-Haiku",
+      "pcq_cutoff": "2025-07-31",
+      "cutoff_definition": "training_data_cutoff",
+      "cutoff_evidence_status": "verified_primary",
+      "conservative_upper_bound": false,
+      "source_url": "https://platform.claude.com/docs/en/about-claude/models/overview"
+    },
+    {
+      "model": "Claude-4-Sonnet",
+      "pcq_cutoff": "2025-03-31",
+      "cutoff_definition": "training_data_cutoff",
+      "cutoff_evidence_status": "verified_primary",
+      "conservative_upper_bound": false,
+      "source_url": "https://platform.claude.com/docs/en/about-claude/models/overview"
+    },
+    {
+      "model": "Claude-5-Sonnet",
+      "pcq_cutoff": "2026-01-31",
+      "cutoff_definition": "training_data_cutoff",
+      "cutoff_evidence_status": "verified_primary",
+      "conservative_upper_bound": false,
+      "source_url": "https://platform.claude.com/docs/en/about-claude/models/overview"
+    },
+    {
+      "model": "DeepSeek-V4",
+      "pcq_cutoff": "2026-01-31",
+      "cutoff_definition": "conservative_common_upper_bound",
+      "cutoff_evidence_status": "verified_human_adjudicated",
+      "conservative_upper_bound": true,
+      "source_url": null
+    },
+    {
+      "model": "GPT-4o",
+      "pcq_cutoff": "2023-10-01",
+      "cutoff_definition": "official_knowledge_cutoff",
+      "cutoff_evidence_status": "verified_primary",
+      "conservative_upper_bound": false,
+      "source_url": "https://developers.openai.com/api/docs/models/gpt-4o"
+    },
+    {
+      "model": "GPT-4o-mini",
+      "pcq_cutoff": "2023-10-01",
+      "cutoff_definition": "official_knowledge_cutoff",
+      "cutoff_evidence_status": "verified_primary",
+      "conservative_upper_bound": false,
+      "source_url": "https://developers.openai.com/api/docs/models/gpt-4o-mini"
+    },
+    {
+      "model": "GPT-5.4-mini",
+      "pcq_cutoff": "2025-08-31",
+      "cutoff_definition": "official_knowledge_cutoff",
+      "cutoff_evidence_status": "verified_primary",
+      "conservative_upper_bound": false,
+      "source_url": "https://developers.openai.com/api/docs/models/gpt-5.4-mini"
+    },
+    {
+      "model": "Gemini-2.5-Flash",
+      "pcq_cutoff": "2025-01-31",
+      "cutoff_definition": "official_knowledge_cutoff",
+      "cutoff_evidence_status": "verified_primary",
+      "conservative_upper_bound": false,
+      "source_url": "https://ai.google.dev/gemini-api/docs/models/gemini-2.5-flash"
+    },
+    {
+      "model": "Gemini-2.5-Pro",
+      "pcq_cutoff": "2025-01-31",
+      "cutoff_definition": "official_knowledge_cutoff",
+      "cutoff_evidence_status": "verified_primary",
+      "conservative_upper_bound": false,
+      "source_url": "https://ai.google.dev/gemini-api/docs/models/gemini-2.5-pro"
+    },
+    {
+      "model": "Gemma-4-31B",
+      "pcq_cutoff": "2025-01-31",
+      "cutoff_definition": "training_data_cutoff",
+      "cutoff_evidence_status": "verified_primary",
+      "conservative_upper_bound": false,
+      "source_url": "https://huggingface.co/google/gemma-4-31B-it"
+    },
+    {
+      "model": "LLaMA-3-70B",
+      "pcq_cutoff": "2023-12-31",
+      "cutoff_definition": "training_data_cutoff",
+      "cutoff_evidence_status": "verified_primary",
+      "conservative_upper_bound": false,
+      "source_url": "https://huggingface.co/meta-llama/Meta-Llama-3-70B-Instruct"
+    },
+    {
+      "model": "LLaMA-4-Maverick",
+      "pcq_cutoff": "2024-08-31",
+      "cutoff_definition": "official_knowledge_cutoff",
+      "cutoff_evidence_status": "verified_primary",
+      "conservative_upper_bound": false,
+      "source_url": "https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct"
+    },
+    {
+      "model": "Nova-Micro",
+      "pcq_cutoff": "2024-10-31",
+      "cutoff_definition": "official_knowledge_cutoff",
+      "cutoff_evidence_status": "verified_primary",
+      "conservative_upper_bound": false,
+      "source_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-amazon-nova-micro.html"
+    },
+    {
+      "model": "Nova-Pro",
+      "pcq_cutoff": "2024-10-31",
+      "cutoff_definition": "official_knowledge_cutoff",
+      "cutoff_evidence_status": "verified_primary",
+      "conservative_upper_bound": false,
+      "source_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-amazon-nova-pro.html"
+    }
+  ],
+  "note": "For DeepSeek-V4 the recorded date is a conservative upper bound, not a claim about an exact unpublished training cutoff."
+}

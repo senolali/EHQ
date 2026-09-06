@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: >-
+  If you use EHQ, the evaluation framework, or EHQ-3000, please cite the paper
+  and this versioned software/data release.
+title: "EHQ: Epistemic Honesty Quotient Evaluation Framework and EHQ-3000"
+type: software
+version: 0.4.0
+date-released: 2026-09-06
+license: MIT
+authors:
+  - family-names: "Şenol"
+    given-names: "Ali"
+    email: "alisenol@tarsus.edu.tr"
+    affiliation: "Tarsus University"
+  - family-names: "Bernard"
+    given-names: "H. Russell"
+    affiliation: "Arizona State University"
+  - family-names: "Liu"
+    given-names: "Huan"
+    affiliation: "Arizona State University"
+repository-code: "https://github.com/senolali/EHQ"
+url: "https://github.com/senolali/EHQ"
+keywords:
+  - epistemic honesty
+  - large language models
+  - hallucination
+  - abstention
+  - calibration
+  - benchmark
+preferred-citation:
+  type: article
+  title: "Do LLMs Know What They Don't Know? Measuring Epistemic Honesty in Large Language Models"
+  authors:
+    - family-names: "Şenol"
+      given-names: "Ali"
+    - family-names: "Bernard"
+      given-names: "H. Russell"
+    - family-names: "Liu"
+      given-names: "Huan"
+  year: 2026

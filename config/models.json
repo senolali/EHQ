@@ -1,0 +1,50 @@
+{
+  "schema_version": "3.0",
+  "registry_mode": "custom",
+  "models": [
+    {
+      "name": "openai-example",
+      "provider": "openai",
+      "provider_model": "gpt-4.1-mini",
+      "api_key_env": "OPENAI_API_KEY",
+      "requires_api_key": true,
+      "model_identity_policy": "record",
+      "model_provider": "openai",
+      "reported_model_name": "GPT-4.1 mini",
+      "pcq_eligible": false,
+      "cutoff_evidence_status": "unknown",
+      "operational_status": "unverified",
+      "reasoning_mode": "disabled",
+      "model_reference_url": "https://developers.openai.com/api/docs/models/gpt-4.1-mini"
+    },
+    {
+      "name": "huggingface-example",
+      "provider": "huggingface",
+      "provider_model": "meta-llama/Llama-3.1-8B-Instruct:fastest",
+      "api_key_env": "HF_TOKEN",
+      "requires_api_key": true,
+      "model_identity_policy": "record",
+      "model_provider": "huggingface-inference-providers",
+      "reported_model_name": "Llama 3.1 8B Instruct",
+      "pcq_eligible": false,
+      "cutoff_evidence_status": "unknown",
+      "operational_status": "unverified",
+      "reasoning_mode": "disabled",
+      "model_reference_url": "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct"
+    },
+    {
+      "name": "local-example",
+      "provider": "openai_compatible",
+      "provider_model": "local-model",
+      "base_url": "http://localhost:8000/v1",
+      "requires_api_key": false,
+      "model_identity_policy": "record",
+      "model_provider": "local",
+      "reported_model_name": "Local OpenAI-compatible model",
+      "pcq_eligible": false,
+      "cutoff_evidence_status": "unknown",
+      "operational_status": "unverified",
+      "reasoning_mode": "disabled"
+    }
+  ]
+}

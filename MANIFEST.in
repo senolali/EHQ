@@ -1,0 +1,19 @@
+include README.md
+include LICENSE
+include DATA_LICENSE.md
+include CITATION.cff
+include CITATION.bib
+recursive-include src/ehq/resources *
+global-exclude *.py[cod]
+global-exclude __pycache__
+global-exclude desktop.ini
+global-exclude Thumbs.db
+global-exclude .DS_Store
+prune data
+prune outputs
+prune results
+prune cache
+prune checkpoints
+prune pilot_outputs
+prune pilot_cache
+prune pilot_checkpoints

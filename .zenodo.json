@@ -1,0 +1,30 @@
+{
+  "title": "EHQ: Epistemic Honesty Quotient Evaluation Framework and EHQ-3000",
+  "upload_type": "software",
+  "description": "A provider-neutral, reproducible framework and 3,000-item benchmark for evaluating restraint, avoidance of unqualified false assertion, and confidence calibration at model knowledge and context boundaries.",
+  "creators": [
+    {
+      "name": "Şenol, Ali",
+      "affiliation": "Tarsus University"
+    },
+    {
+      "name": "Bernard, H. Russell",
+      "affiliation": "Arizona State University"
+    },
+    {
+      "name": "Liu, Huan",
+      "affiliation": "Arizona State University"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "epistemic honesty",
+    "large language models",
+    "hallucination",
+    "abstention",
+    "calibration",
+    "benchmark"
+  ],
+  "access_right": "open",
+  "version": "0.4.0"
+}

@@ -1,0 +1,23 @@
+name: Publish dataset to Hugging Face
+on:
+  release:
+    types: [published]
+
+jobs:
+  hf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -U huggingface_hub
+      - name: Verify canonical SHA-256
+        run: |
+          echo "3d8e440a21cca46907a2d70378bc1a9d2fc7690cf63ad20d320d3926bb19ddfa  data/releases/EHQ-3000.json" | sha256sum -c -
+      - name: Upload to Hugging Face
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          hf upload alisenol/EHQ-3000 data/releases/EHQ-3000.json EHQ-3000.json --repo-type dataset
+          hf upload alisenol/EHQ-3000 docs/hf/README.md README.md --repo-type dataset

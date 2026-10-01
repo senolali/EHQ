@@ -29,7 +29,7 @@ keywords:
   - benchmark
 preferred-citation:
   type: article
-  title: "Do LLMs Know What They Don't Know? Measuring Epistemic Honesty in Large Language Models"
+  title: "Do Large Language Models Know What They Don't Know II? A Fully Behavioral, Non-Cognitive Measure of Epistemic Honesty"
   authors:
     - family-names: "Şenol"
       given-names: "Ali"
@@ -38,3 +38,6 @@ preferred-citation:
     - family-names: "Liu"
       given-names: "Huan"
   year: 2026
+  journal: "arXiv preprint"
+  notes: "arXiv:2609.07879"
+  url: "https://arxiv.org/abs/2609.07879"
